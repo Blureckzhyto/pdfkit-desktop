@@ -1,0 +1,37 @@
+# UI
+customtkinter>=5.2.2
+tkinterdnd2>=0.4.2
+
+# PDF manipulation
+pypdf>=4.2.0
+pikepdf>=8.15.0
+PyMuPDF>=1.24.0        # redacción real (borra el contenido, no solo lo tapa)
+cryptography>=42.0     # cifrado AES-256 en Proteger PDF
+
+# Conversions
+pdf2docx>=0.5.8
+docx2pdf>=0.1.8
+pywin32>=306; sys_platform == "win32"
+camelot-py[cv]>=0.11.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+reportlab>=4.0.0
+python-pptx>=1.0.0     # PowerPoint <-> PDF
+# HTML a PDF. En Windows el paquete necesita GTK/Pango instalados, por eso la app
+# usa el ejecutable autónomo de WeasyPrint incluido en assets/weasyprint.
+weasyprint>=62.0
+
+# OCR (Tesseract viene incluido en assets/tesseract)
+pytesseract>=0.3.10
+
+# PDF <-> images (Poppler viene incluido en assets/poppler)
+pdf2image>=1.17.0
+img2pdf>=0.5.1
+
+# Images
+Pillow>=10.3.0
+pillow-heif>=0.16.0
+
+# Build
+pyinstaller>=6.0
+pefile>=2023.2.7       # solo para elegir las DLL mínimas de Tesseract al actualizarlo

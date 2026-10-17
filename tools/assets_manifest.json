@@ -1,0 +1,2249 @@
+{
+ "components": {
+  "poppler": {
+   "url": "https://github.com/oschwartz10612/poppler-windows/releases/download/v26.02.0-0/Release-26.02.0-0.zip",
+   "license": "GPL-2.0-or-later",
+   "home": "https://poppler.freedesktop.org/",
+   "kind": "zip",
+   "sha256": "993e4a94376ed712fafc7058d724ea0b943d118bbd2305cd9ed55174eb85cda5",
+   "files": [
+    {
+     "dest": "poppler/Lerc.dll",
+     "member": "poppler-26.02.0/Library/bin/Lerc.dll",
+     "sha256": "7844ff388c1fe684c95f176a9f256a55af4511c136e3b3340fd8050741ef5d3f"
+    },
+    {
+     "dest": "poppler/cairo.dll",
+     "member": "poppler-26.02.0/Library/bin/cairo.dll",
+     "sha256": "b13e3b0d401d73a38f9aa7228d723dae2d4c8f3fd7216c3442ee2c22d873b54a"
+    },
+    {
+     "dest": "poppler/charset.dll",
+     "member": "poppler-26.02.0/Library/bin/charset.dll",
+     "sha256": "c2e0e0c3746cd0adea79cd97ca45d5ae0a4b1cf4ee13d638606d93541964d71c"
+    },
+    {
+     "dest": "poppler/deflate.dll",
+     "member": "poppler-26.02.0/Library/bin/deflate.dll",
+     "sha256": "0c8d7e40b4512d86969e2003a7d8bede601cfb9bc0a2d2472056a08a769769d5"
+    },
+    {
+     "dest": "poppler/expat.dll",
+     "member": "poppler-26.02.0/Library/bin/expat.dll",
+     "sha256": "c7c8c7459ad8f36d77b516af86d63f38dfb409a9b0f7e46d4ec26a98eefa8ddc"
+    },
+    {
+     "dest": "poppler/fontconfig-1.dll",
+     "member": "poppler-26.02.0/Library/bin/fontconfig-1.dll",
+     "sha256": "10d3157559661c7ad74ccd33b192bf6471a7592e57f5cefeac681559103573fa"
+    },
+    {
+     "dest": "poppler/freetype.dll",
+     "member": "poppler-26.02.0/Library/bin/freetype.dll",
+     "sha256": "94c2a7fbceb4e28d7c6d7364939569669d2e592236c0f758f726b44e41426c6c"
+    },
+    {
+     "dest": "poppler/iconv.dll",
+     "member": "poppler-26.02.0/Library/bin/iconv.dll",
+     "sha256": "772ed247d3d4a6d5625b737dfd1c1d238f74d1c48e560b2d551edfe734a34a1d"
+    },
+    {
+     "dest": "poppler/jpeg8.dll",
+     "member": "poppler-26.02.0/Library/bin/jpeg8.dll",
+     "sha256": "77bef8b5257987800e01806f64a189e312ba057e138356e69dc4367555bd0d93"
+    },
+    {
+     "dest": "poppler/lcms2.dll",
+     "member": "poppler-26.02.0/Library/bin/lcms2.dll",
+     "sha256": "13ca89317d709ec3b3c8aaa8a02629b96e25aeb1bda2fc0a003dc5394bb5a48a"
+    },
+    {
+     "dest": "poppler/libcrypto-3-x64.dll",
+     "member": "poppler-26.02.0/Library/bin/libcrypto-3-x64.dll",
+     "sha256": "23263b220487605daaa64aba45253603f837e5f90a31dde2409d0bb8f22e8582"
+    },
+    {
+     "dest": "poppler/libcurl.dll",
+     "member": "poppler-26.02.0/Library/bin/libcurl.dll",
+     "sha256": "966f1d3f78a29f7fcc2db28785dbfcb5fc46a64bbbb04463ed803d12c468657f"
+    },
+    {
+     "dest": "poppler/libexpat.dll",
+     "member": "poppler-26.02.0/Library/bin/libexpat.dll",
+     "sha256": "c7c8c7459ad8f36d77b516af86d63f38dfb409a9b0f7e46d4ec26a98eefa8ddc"
+    },
+    {
+     "dest": "poppler/liblzma.dll",
+     "member": "poppler-26.02.0/Library/bin/liblzma.dll",
+     "sha256": "64eb6567bead1a5b7386bd7acd1cdd9db8f9a03133eef7ae8208ae555738d680"
+    },
+    {
+     "dest": "poppler/libpng16.dll",
+     "member": "poppler-26.02.0/Library/bin/libpng16.dll",
+     "sha256": "c3fc74e2bfa2d944cbea22e1db31f06247a54634f8f489f04b5ceec921118f3f"
+    },
+    {
+     "dest": "poppler/libssh2.dll",
+     "member": "poppler-26.02.0/Library/bin/libssh2.dll",
+     "sha256": "1563642bed85fcb68fdcf3c8d2c23c742e95aa5dbb11234b2ba5d7a634775327"
+    },
+    {
+     "dest": "poppler/libtiff.dll",
+     "member": "poppler-26.02.0/Library/bin/libtiff.dll",
+     "sha256": "57ad7d27c81d140cfe9b16a6b1e75ce7fa360d613add138dcdc8a61ba0872459"
+    },
+    {
+     "dest": "poppler/libzstd.dll",
+     "member": "poppler-26.02.0/Library/bin/libzstd.dll",
+     "sha256": "ca228f0f33b8296d6650b4694bb38ba9ea8796c523b6b5e0682fcc05a5edab0a"
+    },
+    {
+     "dest": "poppler/openjp2.dll",
+     "member": "poppler-26.02.0/Library/bin/openjp2.dll",
+     "sha256": "274e6a200cd564b014389546f6472d387717dece95b7d03db5f99195bd1d6e03"
+    },
+    {
+     "dest": "poppler/pdfattach.exe",
+     "member": "poppler-26.02.0/Library/bin/pdfattach.exe",
+     "sha256": "8262bdcf53627fa4c8aa050b4b52bff73084a560341a6006c86b0af85a83b9f9"
+    },
+    {
+     "dest": "poppler/pdfdetach.exe",
+     "member": "poppler-26.02.0/Library/bin/pdfdetach.exe",
+     "sha256": "692af0746c6f974d1cf565c91f7b83c54d6e44ccf71c4599f241314309e92d86"
+    },
+    {
+     "dest": "poppler/pdffonts.exe",
+     "member": "poppler-26.02.0/Library/bin/pdffonts.exe",
+     "sha256": "5866916326bf67deedbf1a961254c58a47bce4e7df8da4a6567930ef600a93b7"
+    },
+    {
+     "dest": "poppler/pdfimages.exe",
+     "member": "poppler-26.02.0/Library/bin/pdfimages.exe",
+     "sha256": "22ce0c5fc3fac7c19ae526bd3bd3f6fa90592699bb867bf0b62676c72a890d0a"
+    },
+    {
+     "dest": "poppler/pdfinfo.exe",
+     "member": "poppler-26.02.0/Library/bin/pdfinfo.exe",
+     "sha256": "34040ff62bef73d6847a7b443457ac7fe216eb331bfbeadec62ae555618b2aae"
+    },
+    {
+     "dest": "poppler/pdfseparate.exe",
+     "member": "poppler-26.02.0/Library/bin/pdfseparate.exe",
+     "sha256": "a3f397b2bb866799e8e075ac8a8f61ab5f1d4ee4d1037a8197bd69b5b2d3d142"
+    },
+    {
+     "dest": "poppler/pdftocairo.exe",
+     "member": "poppler-26.02.0/Library/bin/pdftocairo.exe",
+     "sha256": "251bcb843327c116c2bd112b487b607039d3b8228608a0e262e7bbd1c39ca7c4"
+    },
+    {
+     "dest": "poppler/pdftohtml.exe",
+     "member": "poppler-26.02.0/Library/bin/pdftohtml.exe",
+     "sha256": "9fb2802fe026a3ce9967229738e98861b20619b25829f273d3656a05656b0b2f"
+    },
+    {
+     "dest": "poppler/pdftoppm.exe",
+     "member": "poppler-26.02.0/Library/bin/pdftoppm.exe",
+     "sha256": "575a2f66073b256f69084c4f12f34427e6076b7854b2505cb09ecbdc9957fd7f"
+    },
+    {
+     "dest": "poppler/pdftops.exe",
+     "member": "poppler-26.02.0/Library/bin/pdftops.exe",
+     "sha256": "a3c7623a82437952f4d1f0712726233f30df86bc96de342b8bf6f72fe0610fde"
+    },
+    {
+     "dest": "poppler/pdftotext.exe",
+     "member": "poppler-26.02.0/Library/bin/pdftotext.exe",
+     "sha256": "c7392e92727abbb54c07662268eef7348e4edd1cd741c264e20f76e757c0b467"
+    },
+    {
+     "dest": "poppler/pdfunite.exe",
+     "member": "poppler-26.02.0/Library/bin/pdfunite.exe",
+     "sha256": "a8e52eb8b37338c46fef0a988fa91bf42dfb56e801d48384ddb6a06fed2d453f"
+    },
+    {
+     "dest": "poppler/pixman-1-0.dll",
+     "member": "poppler-26.02.0/Library/bin/pixman-1-0.dll",
+     "sha256": "242021042d4f09fba57133beaa9080fdd3d35a84af58c4ac1188442d52bb9249"
+    },
+    {
+     "dest": "poppler/poppler-cpp.dll",
+     "member": "poppler-26.02.0/Library/bin/poppler-cpp.dll",
+     "sha256": "114ef75d1cd8c7c867fe2006218bd67b44dd2476c0e661d934311de841b46c80"
+    },
+    {
+     "dest": "poppler/poppler-glib.dll",
+     "member": "poppler-26.02.0/Library/bin/poppler-glib.dll",
+     "sha256": "47d7db9268ea0179cf7782b0bfae03c2042372cac1622c34d7b7886039ab62e0"
+    },
+    {
+     "dest": "poppler/poppler.dll",
+     "member": "poppler-26.02.0/Library/bin/poppler.dll",
+     "sha256": "43248bf36db31c416f420ce5e5a0168eccd2235e42c04906a3e7c2678bfc63be"
+    },
+    {
+     "dest": "poppler/tiff.dll",
+     "member": "poppler-26.02.0/Library/bin/tiff.dll",
+     "sha256": "57ad7d27c81d140cfe9b16a6b1e75ce7fa360d613add138dcdc8a61ba0872459"
+    },
+    {
+     "dest": "poppler/zlib.dll",
+     "member": "poppler-26.02.0/Library/bin/zlib.dll",
+     "sha256": "85c711c83f96bed93184bede15be6b5a3e5444df09dfffef00564107189dc722"
+    },
+    {
+     "dest": "poppler/zstd.dll",
+     "member": "poppler-26.02.0/Library/bin/zstd.dll",
+     "sha256": "ca228f0f33b8296d6650b4694bb38ba9ea8796c523b6b5e0682fcc05a5edab0a"
+    },
+    {
+     "dest": "poppler/zstd.exe",
+     "member": "poppler-26.02.0/Library/bin/zstd.exe",
+     "sha256": "ff6f0a9377ef1546fb4e909ced0faddd90e4aefe2737bf43a78661c2d1153070"
+    }
+   ]
+  },
+  "weasyprint": {
+   "url": "https://github.com/Kozea/WeasyPrint/releases/download/v70.0/weasyprint-windows-onedir.zip",
+   "license": "BSD-3-Clause",
+   "home": "https://weasyprint.org/",
+   "kind": "zip",
+   "sha256": "ab1151f210b4e6bb7aa7a79e91a67e8ddb760094c107bfda55241b6aaefe7d53",
+   "files": [
+    {
+     "dest": "weasyprint/_internal/PIL/_avif.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/PIL/_avif.cp314-win_amd64.pyd",
+     "sha256": "d8bd3032b72992a8166144a4063bae4a55c0f178d237454f17102301731e912a"
+    },
+    {
+     "dest": "weasyprint/_internal/PIL/_imaging.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/PIL/_imaging.cp314-win_amd64.pyd",
+     "sha256": "d823c0e3b54035d08703bb427c553c956c2607b79395f2952e17a5447c5f1105"
+    },
+    {
+     "dest": "weasyprint/_internal/PIL/_imagingcms.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/PIL/_imagingcms.cp314-win_amd64.pyd",
+     "sha256": "dff90929dbeb9d51eebf09f4454d0beb65775f7644145a63d66fa8ca9f5a96fd"
+    },
+    {
+     "dest": "weasyprint/_internal/PIL/_imagingmath.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/PIL/_imagingmath.cp314-win_amd64.pyd",
+     "sha256": "a7b3d6e462d338744694bc332f9f6f9c5717d532b7a74ad2762b3289521d0d9e"
+    },
+    {
+     "dest": "weasyprint/_internal/PIL/_imagingtk.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/PIL/_imagingtk.cp314-win_amd64.pyd",
+     "sha256": "79208042672ff0b9e3669d5078ad35413470861e783feeaf1430458c41036593"
+    },
+    {
+     "dest": "weasyprint/_internal/PIL/_webp.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/PIL/_webp.cp314-win_amd64.pyd",
+     "sha256": "f4d851381d1bd937753ba78e951c96a85f3a6c5ac402beec23fc13fdb6d45198"
+    },
+    {
+     "dest": "weasyprint/_internal/VCRUNTIME140.dll",
+     "member": "onedir/weasyprint/_internal/VCRUNTIME140.dll",
+     "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7"
+    },
+    {
+     "dest": "weasyprint/_internal/VCRUNTIME140_1.dll",
+     "member": "onedir/weasyprint/_internal/VCRUNTIME140_1.dll",
+     "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
+    },
+    {
+     "dest": "weasyprint/_internal/_asyncio.pyd",
+     "member": "onedir/weasyprint/_internal/_asyncio.pyd",
+     "sha256": "f9594a2a4f45570dbfdf1f3471194ae7b27dc117c54b9af6bc22df9c93830f8b"
+    },
+    {
+     "dest": "weasyprint/_internal/_brotli.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/_brotli.cp314-win_amd64.pyd",
+     "sha256": "44f02bcf2b15519a487cf653e16b5f9c65f26d0be559592878988ad47148fc5e"
+    },
+    {
+     "dest": "weasyprint/_internal/_bz2.pyd",
+     "member": "onedir/weasyprint/_internal/_bz2.pyd",
+     "sha256": "b938073c85cf6b9fe80556d7899ed1901e5e60b7adea2832442376239fb36b36"
+    },
+    {
+     "dest": "weasyprint/_internal/_cffi_backend.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/_cffi_backend.cp314-win_amd64.pyd",
+     "sha256": "9e99b2184c60f21a88cafc374386ded3559e8694ed7cf111f2869e066d303334"
+    },
+    {
+     "dest": "weasyprint/_internal/_ctypes.pyd",
+     "member": "onedir/weasyprint/_internal/_ctypes.pyd",
+     "sha256": "408cc4e7a22ffa418ca52f5e13fe9268a3c50a2bc9de02b0530b555ef591bc5a"
+    },
+    {
+     "dest": "weasyprint/_internal/_decimal.pyd",
+     "member": "onedir/weasyprint/_internal/_decimal.pyd",
+     "sha256": "bc3a61685825ae37a4cd2b2b87fa27af12e01575c4f920788ea806e6781a2c79"
+    },
+    {
+     "dest": "weasyprint/_internal/_elementtree.pyd",
+     "member": "onedir/weasyprint/_internal/_elementtree.pyd",
+     "sha256": "d8a17f9c831e313b440e19e0d26e6c0e7ed830ff1f657887cbc26664d6ef4973"
+    },
+    {
+     "dest": "weasyprint/_internal/_hashlib.pyd",
+     "member": "onedir/weasyprint/_internal/_hashlib.pyd",
+     "sha256": "5933ef5eda7c0bca0b3874a6e2c5f13b91b8f2cfc29bc46160df3212a1dbee79"
+    },
+    {
+     "dest": "weasyprint/_internal/_lzma.pyd",
+     "member": "onedir/weasyprint/_internal/_lzma.pyd",
+     "sha256": "d2abf8db7fb0cf6285663b177991691a41b37e215c3d71fd087a98d8ec1bee63"
+    },
+    {
+     "dest": "weasyprint/_internal/_multiprocessing.pyd",
+     "member": "onedir/weasyprint/_internal/_multiprocessing.pyd",
+     "sha256": "cea83c9bf3131d079c20066b626f67ab33021b476777be2d7be26d1fa5e4eb66"
+    },
+    {
+     "dest": "weasyprint/_internal/_overlapped.pyd",
+     "member": "onedir/weasyprint/_internal/_overlapped.pyd",
+     "sha256": "1d7028683e6ec50c159139238f90a6c8431ece139a4764900ca11c941ba05d46"
+    },
+    {
+     "dest": "weasyprint/_internal/_queue.pyd",
+     "member": "onedir/weasyprint/_internal/_queue.pyd",
+     "sha256": "2fd8668f52b34d0e71ae48784bd2e7d35e5d99df6f641edb0fc279235a187c8e"
+    },
+    {
+     "dest": "weasyprint/_internal/_socket.pyd",
+     "member": "onedir/weasyprint/_internal/_socket.pyd",
+     "sha256": "02265dd0d0287f3ffd287ea5d8e3c918a5a056e8ef2c4529857f5e84ec9e2519"
+    },
+    {
+     "dest": "weasyprint/_internal/_ssl.pyd",
+     "member": "onedir/weasyprint/_internal/_ssl.pyd",
+     "sha256": "4cfb154c7cc525d57020c0e64f2dd876a78b46cd38419446392478de6b7b13b8"
+    },
+    {
+     "dest": "weasyprint/_internal/_uuid.pyd",
+     "member": "onedir/weasyprint/_internal/_uuid.pyd",
+     "sha256": "fbfd7fe8583b346ba20b174b2510c0830237f5092bdf9fc26da9d6b25b018385"
+    },
+    {
+     "dest": "weasyprint/_internal/_wmi.pyd",
+     "member": "onedir/weasyprint/_internal/_wmi.pyd",
+     "sha256": "b6fd41f079da0c0054829855360e88b8b762f5c42bb474c2fa02eae367839ad2"
+    },
+    {
+     "dest": "weasyprint/_internal/_zstd.pyd",
+     "member": "onedir/weasyprint/_internal/_zstd.pyd",
+     "sha256": "33c6eca99470c3eb9d776b617c550ad41b002a668336f062a9ab7be677a7409a"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-console-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-console-l1-1-0.dll",
+     "sha256": "88ace577a9c51061cb7d1a36babbbefa48212fadc838ffde98fdfff60de18386"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-datetime-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-datetime-l1-1-0.dll",
+     "sha256": "1bd81dfd19204b44662510d9054852fb77c9f25c1088d647881c9b976cc16818"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-debug-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-debug-l1-1-0.dll",
+     "sha256": "591358eb4d1531e9563ee0813e4301c552ce364c912ce684d16576eabf195dc3"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-errorhandling-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-errorhandling-l1-1-0.dll",
+     "sha256": "d56ce7b1cd76108ad6c137326ec694a14c99d48c3d7b0ace8c3ff4d9bcee3ce8"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-fibers-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-fibers-l1-1-0.dll",
+     "sha256": "91d249d7bc0e38ef6bcb17158b1fdc6dd8888dc086615c9b8b750b87e52a5fb3"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-fibers-l1-1-1.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-fibers-l1-1-1.dll",
+     "sha256": "fc9d86cec621383eab636ebc87ddd3f5c19a3cb2a33d97be112c051d0b275429"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-file-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-file-l1-1-0.dll",
+     "sha256": "1ca895aba4e7435563a6b43e85eba67a0f8c74aa6a6a94d0fc48fa35535e2585"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-file-l1-2-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-file-l1-2-0.dll",
+     "sha256": "4cadbc0c39da7c6722206fdcebd670abe5b8d261e7b041dd94f9397a89d1990d"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-file-l2-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-file-l2-1-0.dll",
+     "sha256": "93c624b366ba16c643fc8933070a26f03b073ad0cf7f80173266d67536c61989"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-handle-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-handle-l1-1-0.dll",
+     "sha256": "39095f59c41d76ec81bb2723d646fde4c148e7cc3402f4980d2ade95cb9c84f9"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-heap-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-heap-l1-1-0.dll",
+     "sha256": "8f105771b236dbcb859de271f0a6822ce1cb79c36988dd42c9e3f6f55c5f7eb9"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-interlocked-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-interlocked-l1-1-0.dll",
+     "sha256": "53b25e753ca785bf8b695d89dde5818a318890211dc992a89146f16658f0b606"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+     "sha256": "a9b13a1cd1b8c19b0c6b4afcd5bb0dd29c0e2288231ac9e6db8510094ce68ba6"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-libraryloader-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-libraryloader-l1-1-0.dll",
+     "sha256": "7f39ba298b41e4963047341288cab36b6a241835ee11ba4ad70f44dacd40906c"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-localization-l1-2-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-localization-l1-2-0.dll",
+     "sha256": "6ee44dd0d8510dc024c9f7c79b1b9fa88c987b26b6beb6653ddd11751c34e5dc"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-memory-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-memory-l1-1-0.dll",
+     "sha256": "0512a35316ec9180437f86696a84c5c06a7e4e82e050055a656e5bf9fca206f9"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-namedpipe-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-namedpipe-l1-1-0.dll",
+     "sha256": "c05f1fffe3b5a2738ea54ce9485cca026fb9635f982626fba1e1dcc531897273"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-processenvironment-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-processenvironment-l1-1-0.dll",
+     "sha256": "c4eca98c3c67b6395d5b005b00ac1eb0318b86b23aa71035a44c2b1602befba9"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-processthreads-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-processthreads-l1-1-0.dll",
+     "sha256": "5ccb89e93d67bc3288d4e84649c5346e66e15e3d7cd65d989daf3f4cb584be9a"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-processthreads-l1-1-1.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-processthreads-l1-1-1.dll",
+     "sha256": "4ad565a8ba3ef0ea8ab87221ad11f83ee0bc844ce236607958406663b407333e"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-profile-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-profile-l1-1-0.dll",
+     "sha256": "7809160932f44e59b021699f5bc68799eb7293ee1fa926d6fcca3c3445302e61"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-rtlsupport-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-rtlsupport-l1-1-0.dll",
+     "sha256": "9dc1e91e71c7c054854bd1487cb4e6946d82c9f463430f1c4e8d1471005172b1"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-string-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-string-l1-1-0.dll",
+     "sha256": "60fc31d2a0c634412f529dba76af3b9bf991352877c6dae528186d3935704cfd"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-synch-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-synch-l1-1-0.dll",
+     "sha256": "3a72b4f29f39a265d32ad12f0ce15dbf60129c840e10d84d427829ede45e78ad"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-synch-l1-2-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-synch-l1-2-0.dll",
+     "sha256": "efc1e4460984a73cf47a3def033af1c8f3b1dbc1a56cd27781d3aacf3e3330cb"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-sysinfo-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-sysinfo-l1-1-0.dll",
+     "sha256": "b203d862ddef1dd62bf623fc866c7f7a9c317c1c2ae30d1f52cb41f955b5698e"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-sysinfo-l1-2-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-sysinfo-l1-2-0.dll",
+     "sha256": "2703635d835396afd0f138d7c73751afe7e33a24f4225d08c1690b0a371932c0"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-timezone-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-timezone-l1-1-0.dll",
+     "sha256": "33f4fddc181066fce06b2227bded813f95e94ed1f3d785e982c6b6b56c510c57"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-core-util-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-core-util-l1-1-0.dll",
+     "sha256": "6eda016742a6171205a387a14b3c0b331841567740376f56768f8c151724207d"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-conio-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-conio-l1-1-0.dll",
+     "sha256": "b762061b688aae679afe788904d2c9970f74a7dac98f3b42463d08f25e483d3f"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-convert-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-convert-l1-1-0.dll",
+     "sha256": "ebb2ae5535a64f65daeab8235585114fc9dd2cf1a49f5852d446250b998b6ae4"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-environment-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-environment-l1-1-0.dll",
+     "sha256": "17d63275d00bdd8670422b95bd264c532998e0a1b041079e54fce4b6b7a55819"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-filesystem-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-filesystem-l1-1-0.dll",
+     "sha256": "9a9e2a65a281644e368d0f272b95ba5f6b445d1c35910d06056c5ebeb77402db"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-heap-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-heap-l1-1-0.dll",
+     "sha256": "bab9ac3ec83e380ae51e4295ef3bf2c738627812d3a49d1e713661abbc8dc57a"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-locale-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-locale-l1-1-0.dll",
+     "sha256": "bd14c67ea28e21d6257ad780a37122c9b5773f69e693f5db6bffaee4d839526e"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-math-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-math-l1-1-0.dll",
+     "sha256": "606d66d82db562ea7979179d06486a0f94d079941d26b80a1e2c49d29959df6f"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-multibyte-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-multibyte-l1-1-0.dll",
+     "sha256": "95f49efbe8107786733fa7c474025cf3fee0ac632f240367b296c736d06572aa"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-private-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-private-l1-1-0.dll",
+     "sha256": "1bc82bed6143d2bf1b6b08a7809f4a5e29317d6fddd338a7da3c0223522e4bbf"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-process-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-process-l1-1-0.dll",
+     "sha256": "f6156b1020380ec4f0e48577ebedaaef5fb1ab1f337d8b4e72e6a33a7567a9cc"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-runtime-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-runtime-l1-1-0.dll",
+     "sha256": "c5902934d026d7e15fbe9917d474f3322846a41a25e66f4b2b1f758801879f4b"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-stdio-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-stdio-l1-1-0.dll",
+     "sha256": "a9c5a153d8c0286f9b41a2b1c65854ad9e6471b8755b7de87bae4470e60bcab6"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-string-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-string-l1-1-0.dll",
+     "sha256": "25b8f83a7767211b11132775a0e27a45aa4ec8ab4e6572599f9c172ae3606b40"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-time-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-time-l1-1-0.dll",
+     "sha256": "7c7f6393f06de11750adb09cc5698ae55cd9fb27b2e51e207286feb1b5b2b156"
+    },
+    {
+     "dest": "weasyprint/_internal/api-ms-win-crt-utility-l1-1-0.dll",
+     "member": "onedir/weasyprint/_internal/api-ms-win-crt-utility-l1-1-0.dll",
+     "sha256": "d8ba5f17b9ffcbf3aeaf3fa1da226832d2fa90f81acce0cd669464e76ce434ac"
+    },
+    {
+     "dest": "weasyprint/_internal/base_library.zip",
+     "member": "onedir/weasyprint/_internal/base_library.zip",
+     "sha256": "7bdce96f1f7f9ce605195d562bac632a639a3c5ff3c185059ca919d7b7e76e72"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/10-hinting-slight.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/10-hinting-slight.conf",
+     "sha256": "d138eca2bac3f78d45ff7cfb649ad792caa4a6e61f73cea7cf0ea54b091f1ef4"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/10-scale-bitmap-fonts.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/10-scale-bitmap-fonts.conf",
+     "sha256": "df8e99abb6f82384c61978906a45a95794940545da95790d87f01d9391e0894b"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/10-sub-pixel-none.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/10-sub-pixel-none.conf",
+     "sha256": "0f00b5cf0ce07062ec65b9b340aa888f6c5fbc215aafebd26781be2d5a13ff6a"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/10-yes-antialias.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/10-yes-antialias.conf",
+     "sha256": "e6d82a642d1b37f7d24dc37f938b999f00ff7aa4303b2602d04164d53f221005"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/11-lcdfilter-default.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/11-lcdfilter-default.conf",
+     "sha256": "76aec9d8dac48faabe1bbde9e887cfb09fa45f30be5f8826e945a394a0097e48"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/20-unhint-small-vera.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/20-unhint-small-vera.conf",
+     "sha256": "278732c68c16177f2aa3c7e4ea318b9f720aee13a433c32eb15ba626806c609d"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/30-metric-aliases.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/30-metric-aliases.conf",
+     "sha256": "3baf25c82e1a14c606d45c212296852be06ae9795d60e84aab573226151450a2"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/40-nonlatin.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/40-nonlatin.conf",
+     "sha256": "f5f15e22979e2c98b8446706a24b44a904ef46e369052f9d3e738cd6e864a4d7"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/45-generic.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/45-generic.conf",
+     "sha256": "63fc016a6ef6ad5a6df2caab714822c0cee9a5317c38237e9fbf6cd42f52f514"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/45-latin.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/45-latin.conf",
+     "sha256": "b46e539c25dfd5531c8fcf4f22c3d156b09272ffbc6f8a83a8eeb7431c09aee5"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/48-guessfamily.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/48-guessfamily.conf",
+     "sha256": "f6048ea7d8ed97cc4efef847b98c71ea9d20f16835feb43860b221d40770508e"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/48-spacing.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/48-spacing.conf",
+     "sha256": "4395913fda6088c968f3145f5d41374cfe7b020e99445f56d81de91a1b361135"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/49-sansserif.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/49-sansserif.conf",
+     "sha256": "35b1d7dac8bb9f61a19f5a9f5e16fc6ddff1d0844ac04503a85a54b232a35c67"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/50-user.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/50-user.conf",
+     "sha256": "bc6e31684e4f5e0176200e558a250ff63e9ab0773300f47071223edc320c4c5e"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/51-local.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/51-local.conf",
+     "sha256": "dca9d917e1f66f73bfa495943b4d1eaab2d93810a51bc8e600cf4d4e9df03e67"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/60-generic.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/60-generic.conf",
+     "sha256": "540302fe1576a6de20a3194b64e8090a816ba70cfdb66d61ddbe770aff6e4c23"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/60-latin.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/60-latin.conf",
+     "sha256": "a4b23d19e5348750ec0c2883b0cbb3f31367b22debe63c4113af389a719484a5"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/65-fonts-persian.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/65-fonts-persian.conf",
+     "sha256": "c675fab143a3638346874798be45f51f6878ebec591b4362d83cfffb828ec4ca"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/65-nonlatin.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/65-nonlatin.conf",
+     "sha256": "2a0232e5423f38023efb29b67a95bae982da3c474ec5ec7bbf5b418f42357a50"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/69-unifont.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/69-unifont.conf",
+     "sha256": "fa97c0cf5f79d70e2dc3dc48155d4c9220cd7c6a8bc95b89c4ebcc517f97479e"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/70-no-bitmaps-except-emoji.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/70-no-bitmaps-except-emoji.conf",
+     "sha256": "bb5df65896bf3011b2f2935b63ab12db1ecf078674ff73a533123445f122a92b"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/80-delicious.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/80-delicious.conf",
+     "sha256": "34f27b7fe9cd83b2b6d46f16ef9c477412f2d7ef63634f86b9b38b79bc4f81ad"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/90-synthetic.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/90-synthetic.conf",
+     "sha256": "cdd0aac7840c664a7127b64db66bdfe8dc22be3774d10bc22f4a41c98de5d85e"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/conf.d/README",
+     "member": "onedir/weasyprint/_internal/etc/fonts/conf.d/README",
+     "sha256": "41cea02077ac14623f8d10f12dbc95444200718f3ec18c8a945c99438548eb10"
+    },
+    {
+     "dest": "weasyprint/_internal/etc/fonts/fonts.conf",
+     "member": "onedir/weasyprint/_internal/etc/fonts/fonts.conf",
+     "sha256": "f141c1b89b172d22f213531646c21e288f0ebf3ec46484698896e1b33c626756"
+    },
+    {
+     "dest": "weasyprint/_internal/fontTools/misc/bezierTools.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/fontTools/misc/bezierTools.cp314-win_amd64.pyd",
+     "sha256": "b3903063752f9562f9ee589ad77aa91a93df833d5d06b597146cb3ed88560f4b"
+    },
+    {
+     "dest": "weasyprint/_internal/fontTools/varLib/iup.cp314-win_amd64.pyd",
+     "member": "onedir/weasyprint/_internal/fontTools/varLib/iup.cp314-win_amd64.pyd",
+     "sha256": "b167473b8fd2b76ab7c12ed36eab5716e9b8f9e0cee7c94d6ef8f8baa3dc897c"
+    },
+    {
+     "dest": "weasyprint/_internal/libbrotlicommon.dll",
+     "member": "onedir/weasyprint/_internal/libbrotlicommon.dll",
+     "sha256": "c62c08223e450dfc2fff33c752cc228505ffd9d755201958ba800d5d30481a2c"
+    },
+    {
+     "dest": "weasyprint/_internal/libbrotlidec.dll",
+     "member": "onedir/weasyprint/_internal/libbrotlidec.dll",
+     "sha256": "e270b6e576594ee8ee6e33ccc54e34a54304616dd6225652e11e49d6f17ef896"
+    },
+    {
+     "dest": "weasyprint/_internal/libbz2-1.dll",
+     "member": "onedir/weasyprint/_internal/libbz2-1.dll",
+     "sha256": "1790bf6473c9d48db14c1f0ee8124142327556d281299ea2a72ee361118ee01a"
+    },
+    {
+     "dest": "weasyprint/_internal/libcrypto-3.dll",
+     "member": "onedir/weasyprint/_internal/libcrypto-3.dll",
+     "sha256": "53c529145339fb042a3dcd3a09c2d7753204f8b4fc79d99e0d31e69a33985958"
+    },
+    {
+     "dest": "weasyprint/_internal/libdatrie-1.dll",
+     "member": "onedir/weasyprint/_internal/libdatrie-1.dll",
+     "sha256": "40aee3ae9a62a77454dfe8419fe21b54c54d969e0471c9e817b65d4502a9949f"
+    },
+    {
+     "dest": "weasyprint/_internal/libexpat-1.dll",
+     "member": "onedir/weasyprint/_internal/libexpat-1.dll",
+     "sha256": "fc7b969c07c4a5b7e0426bdee4ac247a8840eac34a217fbe3303a5b21f25280a"
+    },
+    {
+     "dest": "weasyprint/_internal/libffi-8.dll",
+     "member": "onedir/weasyprint/_internal/libffi-8.dll",
+     "sha256": "f96cf79b75f33a10023d001673b564538023395c94b3c58e1db53114976a7c25"
+    },
+    {
+     "dest": "weasyprint/_internal/libfontconfig-1.dll",
+     "member": "onedir/weasyprint/_internal/libfontconfig-1.dll",
+     "sha256": "be30a200fa4000d0a7a1d3911391969627440148f01d0028a319bcb9fa112202"
+    },
+    {
+     "dest": "weasyprint/_internal/libfreetype-6.dll",
+     "member": "onedir/weasyprint/_internal/libfreetype-6.dll",
+     "sha256": "a3271784f8366b3c6412e0c35474884fa12899c392bacb08bc8eac00f4be7e64"
+    },
+    {
+     "dest": "weasyprint/_internal/libfribidi-0.dll",
+     "member": "onedir/weasyprint/_internal/libfribidi-0.dll",
+     "sha256": "73a712fd51fa0085e8660084743a821ae7388de138069cd6cd8c171d4487da84"
+    },
+    {
+     "dest": "weasyprint/_internal/libgcc_s_seh-1.dll",
+     "member": "onedir/weasyprint/_internal/libgcc_s_seh-1.dll",
+     "sha256": "80940372431cc76224dfda06e2d33f01e49af3b4e7c499c535be856ebcadd273"
+    },
+    {
+     "dest": "weasyprint/_internal/libgio-2.0-0.dll",
+     "member": "onedir/weasyprint/_internal/libgio-2.0-0.dll",
+     "sha256": "da8abbcbe4ea8ce650c6cb5953f775699a6cd2126d3291faa35b83cc0659cc12"
+    },
+    {
+     "dest": "weasyprint/_internal/libglib-2.0-0.dll",
+     "member": "onedir/weasyprint/_internal/libglib-2.0-0.dll",
+     "sha256": "052e1d5e9cb072c7d2fb9db3ea6c29c1889b05110b1228e4fb846884eed387dd"
+    },
+    {
+     "dest": "weasyprint/_internal/libgmodule-2.0-0.dll",
+     "member": "onedir/weasyprint/_internal/libgmodule-2.0-0.dll",
+     "sha256": "702e4c3a331d116cf96ac4fb4f04dec64aea7f8236220a639e123ec033b7d4b7"
+    },
+    {
+     "dest": "weasyprint/_internal/libgobject-2.0-0.dll",
+     "member": "onedir/weasyprint/_internal/libgobject-2.0-0.dll",
+     "sha256": "469d2e3b60f5307d00809f1efc0ab494f7c230e58a93cd2cbf75fb64aa2aa786"
+    },
+    {
+     "dest": "weasyprint/_internal/libgraphite2.dll",
+     "member": "onedir/weasyprint/_internal/libgraphite2.dll",
+     "sha256": "93953e4744bcfce9a7bc439b956544bc213095cb1349c3602a58370f32b25c18"
+    },
+    {
+     "dest": "weasyprint/_internal/libharfbuzz-0.dll",
+     "member": "onedir/weasyprint/_internal/libharfbuzz-0.dll",
+     "sha256": "c46184dba5b5420206b8caa4176e284092b9e2580088a61455ba1ff9d3238a92"
+    },
+    {
+     "dest": "weasyprint/_internal/libharfbuzz-subset-0.dll",
+     "member": "onedir/weasyprint/_internal/libharfbuzz-subset-0.dll",
+     "sha256": "9c231fc74a75351a2245369cc2da42075306cded6b92b657a5abc95494fc5c9b"
+    },
+    {
+     "dest": "weasyprint/_internal/libiconv-2.dll",
+     "member": "onedir/weasyprint/_internal/libiconv-2.dll",
+     "sha256": "94ec68fb8d342b6c91b6b48a8d95092819cdcd006a7166e0b68062f946afd08a"
+    },
+    {
+     "dest": "weasyprint/_internal/libintl-8.dll",
+     "member": "onedir/weasyprint/_internal/libintl-8.dll",
+     "sha256": "0e5a178731e6be6d115442a6ade3df7f03265cd1fc4338f8b6f86a8001cbf582"
+    },
+    {
+     "dest": "weasyprint/_internal/libpango-1.0-0.dll",
+     "member": "onedir/weasyprint/_internal/libpango-1.0-0.dll",
+     "sha256": "fd92503a3fcab12fcf555cf8a47610f23b203cf888b48b5628629987d68215b8"
+    },
+    {
+     "dest": "weasyprint/_internal/libpangoft2-1.0-0.dll",
+     "member": "onedir/weasyprint/_internal/libpangoft2-1.0-0.dll",
+     "sha256": "27620f9c842109690616393b3616c29d5dfda8f8a0a980c0a5e869d4f75be925"
+    },
+    {
+     "dest": "weasyprint/_internal/libpcre2-8-0.dll",
+     "member": "onedir/weasyprint/_internal/libpcre2-8-0.dll",
+     "sha256": "52ccc7e4ec5ad0aecf307c0328826340f5d504aa59f7c4143b9a1b9fff16ccda"
+    },
+    {
+     "dest": "weasyprint/_internal/libpng16-16.dll",
+     "member": "onedir/weasyprint/_internal/libpng16-16.dll",
+     "sha256": "5c1dd5410af563f4a3c4aee10d1f749aa71e0d7fb3b4fac240eb9e96cadebd26"
+    },
+    {
+     "dest": "weasyprint/_internal/libssl-3.dll",
+     "member": "onedir/weasyprint/_internal/libssl-3.dll",
+     "sha256": "b17a87979862d19241edc4318f967e24c3ec356ed6c2368f561179fab2311001"
+    },
+    {
+     "dest": "weasyprint/_internal/libstdc++-6.dll",
+     "member": "onedir/weasyprint/_internal/libstdc++-6.dll",
+     "sha256": "69200d6d96b903dac4c873031813485a0455828be8101479efc56008862420cc"
+    },
+    {
+     "dest": "weasyprint/_internal/libthai-0.dll",
+     "member": "onedir/weasyprint/_internal/libthai-0.dll",
+     "sha256": "d8d8b87e9089a811e088f6a01da57c19ed54d2b6613bb85697f1958473f63666"
+    },
+    {
+     "dest": "weasyprint/_internal/libwinpthread-1.dll",
+     "member": "onedir/weasyprint/_internal/libwinpthread-1.dll",
+     "sha256": "e9627114952f819a97cdf72950e18d4d4f3a0a2739ad20bf32dd351e3c89a07e"
+    },
+    {
+     "dest": "weasyprint/_internal/pyexpat.pyd",
+     "member": "onedir/weasyprint/_internal/pyexpat.pyd",
+     "sha256": "e34347c4e11b2ecc57df2ce1627ba7f98fd076e9df59951e9034f5aa8e95a2fc"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_NO.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_NO.txt",
+     "sha256": "cf122e25bfa6f1694023a8afeb6e034197d46e78fb41df27cc45f9f23edcfdad"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_be_BY.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_be_BY.txt",
+     "sha256": "ba3c76d7e9926426ecf93250db3f393c11bc372ec3a64fc49b9639291e809bf3"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_bg_BG.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_bg_BG.txt",
+     "sha256": "26ca94269f58ad71be0985dbab8ed58e735bd9fffee4a17c6ae24575e1d16abf"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_ca.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_ca.txt",
+     "sha256": "2069d317451414a3f34d54a26c85b07cd3268b0a014c4f8a4b64398caae7f514"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_cs_CZ.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_cs_CZ.txt",
+     "sha256": "adc50a58231a94ab7f225d9913da331f9dc2049128c9742cf60d0c32a8b04028"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_da_DK.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_da_DK.txt",
+     "sha256": "6055fdab59b2d781b27a0286f8fd3b09fa3f4d706c023d6481c5044492e405ea"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_de.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_de.txt",
+     "sha256": "be7b3c67a66ea7185a69a3ce3b1e712cd6bb904dce8ac0eecdefd2f1a948baf3"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_el_GR.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_el_GR.txt",
+     "sha256": "0b3e117f4ab079e7cbcdd7f4645f9a4f193ae123e6c781928597b27d22706aa7"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_en_GB.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_en_GB.txt",
+     "sha256": "6f3d1dddcf62d2d452801bd86289ad5826a30d15a502c0825f5c73715372db50"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_en_US.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_en_US.txt",
+     "sha256": "9bcae072bff45cc0333d6b3c508c92d85b9065fc861c743c1506b303eba3f4a1"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_es.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_es.txt",
+     "sha256": "1f1088dce1140d981660faf3f5acc825e74aa1f943a8bec88cb046e4c528a1fb"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_et_EE.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_et_EE.txt",
+     "sha256": "da273b8ec03e35774a426e9df047ad85253ec9e61a5c056f019d57c1395ef1cb"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_eu.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_eu.txt",
+     "sha256": "b0dcf82345f4a6a74e290cd7e7b43b73f8612e14ed5cec53ee736edaeb1d16b5"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_fr.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_fr.txt",
+     "sha256": "6951d9806c65c7f757d303061ca49cd7a1ddeddc552147f5c29de6540821f2cf"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_gl.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_gl.txt",
+     "sha256": "2830f43a0a7e503765d59cc553a32bf1d342fee4e5dd7f0f19136b07e63e371b"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_hr_HR.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_hr_HR.txt",
+     "sha256": "2ba15b47f64eba01489d2962a8c04c6e457a33bba418d6384bda30dfe9e23b65"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_hu_HU.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_hu_HU.txt",
+     "sha256": "d18ff3a0b4e8d2b537982085bc19de03ed77cb29bdfabc67f728bb547e10853a"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_is.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_is.txt",
+     "sha256": "64edf9fc3871e109a0b0d3a12d1ace5f7830b76d6de220e3d68679254e7969c7"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_it_IT.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_it_IT.txt",
+     "sha256": "e6f356c3c49bc6016b6a635c20b468468eef6d011953a7051bbdfd56e17f0d3b"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_lt_LT.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_lt_LT.txt",
+     "sha256": "6cd16fef901c886068d0c755c884bfcb9bc6ea9410f52152d8d01111db402938"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_lv_LV.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_lv_LV.txt",
+     "sha256": "5e2cfa2c9a2b0ea1500c8cafca40256cbfec7de5dc46c5e4ca45950f76fd8659"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_pl_PL.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_pl_PL.txt",
+     "sha256": "99df1756a8d42e035e6ad6e79d2176a31ff71607a09300c9ace259895cc87403"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_pt_BR.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_pt_BR.txt",
+     "sha256": "07400608865ce4c964cc443a9f354c733ca7f3f7d31f4463222b927cb7c54b87"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_pt_PT.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_pt_PT.txt",
+     "sha256": "62f19b9d8b42f2b0ff165ab434f40cfb4210a464f0662c31f6f99d77d0306e06"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_ro_RO.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_ro_RO.txt",
+     "sha256": "4808da6b026988000dd0943e86b77f312901e2759f11b1621e6512bddcbbe986"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_sk_SK.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_sk_SK.txt",
+     "sha256": "17b8f471cf1ec7b177d4a74bcd09e63cb4f122412b43d80489df6551985bdf27"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_sl_SI.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_sl_SI.txt",
+     "sha256": "76e518bc5426ac5e3954f5168e7737a549ad7a3b6d3f81d6fd4473a1679940da"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_sq_AL.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_sq_AL.txt",
+     "sha256": "e4175731cfc7881f595d6d1753e061c36752ff191ac7030757ea00edd0a59359"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_sr.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_sr.txt",
+     "sha256": "c552643a0490b8a68e4c5fb25cf3fb4b6605c2f5e8c9cfdf8dbc1a3c2845bd62"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_sv.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_sv.txt",
+     "sha256": "eee15b8d93b2413256ae1cb8af7d1489935571e0eaf15d9b27bab1203d3aafc2"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_te_IN.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_te_IN.txt",
+     "sha256": "fca0ff51f3bf572f9f6a408cd820e43e34c4d7d298e38169b32fbf5baac59c24"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_th_TH.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_th_TH.txt",
+     "sha256": "32164b4ee0e25b3a46a7370a1b7370ab712bbe4d8abe1443965eec7f7edc30f4"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/README_hyph_uk_UA.txt",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/README_hyph_uk_UA.txt",
+     "sha256": "b5866714694f0e9a7c9d044984b4b39ec6289ade07fa7d2a083a31f5072f3529"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_af_ZA.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_af_ZA.dic",
+     "sha256": "541a45d73d92c69445613ec558c2c1a6829550d1a1ad8aa9dc6dfb752db87da1"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_as_IN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_as_IN.dic",
+     "sha256": "321ffb692c12792dddb4294ab5857821fc1ab8f2d0a8c0fcdced00200602ead6"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_be_BY.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_be_BY.dic",
+     "sha256": "e4339b5a53d2f0fb4179c1060173788d5b6ed3f07bbbccb8b74f5cea614a809e"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_bg_BG.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_bg_BG.dic",
+     "sha256": "7dad4f2ccfce1909b27f53082cf57c7914809a8ba31ccbcee3dc817dcd7c7994"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_ca.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_ca.dic",
+     "sha256": "4a4816e93a92df35819c5f4775106577aa279739a12c687291d747a3ce767b8b"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_cs_CZ.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_cs_CZ.dic",
+     "sha256": "a378d024438b446ac0524237dc6d728dc520550db5fe0fb1fdbb47c2ee0ca525"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_da_DK.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_da_DK.dic",
+     "sha256": "7cd275073e43922adf9ec973506e7b04e3a77b513190982ce6c5dcee176f6abe"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_de_AT.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_de_AT.dic",
+     "sha256": "3e0b4687479d25099e37ebd946998c08fcccc12a0acf9380d8b19319a50b9f3a"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_de_CH.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_de_CH.dic",
+     "sha256": "825159436515ab150d3da0ddf5eedb814c0ec6c7eec98fbd53e3ba5b2a4a1443"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_de_DE.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_de_DE.dic",
+     "sha256": "2e2f5ffea6bc53f67ffe8c076921c7b1b34a2ec2b9ec57a4608374bb65a1a1e1"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_el_GR.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_el_GR.dic",
+     "sha256": "f2284153c3f9a809b959dcaeb349e00d90b4c4cf37c3d3a338b371c32f10e89d"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_en_GB.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_en_GB.dic",
+     "sha256": "9fdc97f7faabcda30c15a9d53bc7fbf21daec795fb3c9a9588f7bdb30c563f41"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_en_US.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_en_US.dic",
+     "sha256": "486fb6840b1049d5d252ef784be11cd4dc2be0bf296568b74b41e4f4e17cba7d"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_eo.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_eo.dic",
+     "sha256": "f2feb4cabe54b696affec72960b1670cfd9e4eae007854944bd02c0d348f59d7"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_es.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_es.dic",
+     "sha256": "a95be7365a482b930ade0ff54d413cd24357ade97cefd434b704286eda828d71"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_et_EE.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_et_EE.dic",
+     "sha256": "2ee13914fcd9e9b110e9e3d56e1d6acc28bf792c15b1b69efc2e71ac96c23c74"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_eu.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_eu.dic",
+     "sha256": "5f499f513435a8432961750fae7b31bc5d3989b686a744c331bb75471a14b71b"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_fr.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_fr.dic",
+     "sha256": "476ca60b958400c8b3fbe55764b4900df87acf60394ef62362705d9c701db191"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_gl.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_gl.dic",
+     "sha256": "357355b82eb82ed081433503327ac4ba5b4f3606b6a3e50d69091d57eef4d5b8"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_hr_HR.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_hr_HR.dic",
+     "sha256": "77613ff6e907d2e9ffd93d45bfb16873aa9182e2215df276dbf850d1b0e28f65"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_hu_HU.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_hu_HU.dic",
+     "sha256": "d253b8c6188cd0f1b2340c31c8202bf1978611385cf69b211b56991321ccbee0"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_id_ID.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_id_ID.dic",
+     "sha256": "ac53214620527f8a145ce4d70f0a3a5d336a145643b52547375aedacef558dc0"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_is.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_is.dic",
+     "sha256": "690ed04b72b60d05f66971ad9fd799656419228bfa8df00190adf02e27c0b1ef"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_it_IT.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_it_IT.dic",
+     "sha256": "8c25b6fb62c2fb97586c6f7c6fb48f29f49e90a5c33c09ac9112dba6942b50cd"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_kn_IN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_kn_IN.dic",
+     "sha256": "a15acb05a834979904330afda768accfa7fee10da386cc534d7944144eb1997f"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_lt.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_lt.dic",
+     "sha256": "05bbdb2c1193cac2aaecec696900a7927dc150def37729a8b52a5702a3101e2b"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_lv_LV.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_lv_LV.dic",
+     "sha256": "775d9a539fd8e98fabbfefd87af5887bb24eb4700b47ed5f8e360b0bab75b078"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_mn_MN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_mn_MN.dic",
+     "sha256": "c49d5ead63948d84c75d43245d837a9d7c8dc36c2a97dc5e8a7ade031c7a00e9"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_mr_IN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_mr_IN.dic",
+     "sha256": "740707cd6d149d1339e921e126a25dcea889712f4889fbc72434d753324409ed"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_nb_NO.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_nb_NO.dic",
+     "sha256": "c6c9b07d9f2c60bb47857fd629d9a453026312c894665d22c72e8e1699420f6c"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_nl_NL.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_nl_NL.dic",
+     "sha256": "0a97b76b259ed4165d094dedf9b6fb98c57734a437df0b5b263ee13e262d5f8f"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_nn_NO.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_nn_NO.dic",
+     "sha256": "c6c9b07d9f2c60bb47857fd629d9a453026312c894665d22c72e8e1699420f6c"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_or_IN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_or_IN.dic",
+     "sha256": "264b3a880fc7dc9f477abac80708172144ec3bb28baa8266539fe7ffff7a8a30"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_pa_IN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_pa_IN.dic",
+     "sha256": "87b2e3d7dc8cc4e4f0bb1d6f4265e8d8eefa478fbc890a60839868af4f5c2c06"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_pl_PL.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_pl_PL.dic",
+     "sha256": "9fe3917ec1fb09b7ffa560e85fb810e098d45a9a45ad6d5c08311544dd92a100"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_pt_BR.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_pt_BR.dic",
+     "sha256": "a8eb1a64e4af4649c739211b397fa37b01f9d5774cf558fe3895fc3f26fd33a4"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_pt_PT.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_pt_PT.dic",
+     "sha256": "6f18ee89de6db21d9b06120a5527ec41d8132514fc112ccfe7d289ba91649840"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_ro_RO.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_ro_RO.dic",
+     "sha256": "24adbfe7cc2267ea5ce4afd34f7d69da5a9163ef3dd57b158bbb196b9d651e94"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_ru_RU.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_ru_RU.dic",
+     "sha256": "e9a6ae92765fc7e63d879f2ccf3f50f2b95bc8ed7618a6f31c34ce7d39844c83"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_sa_IN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_sa_IN.dic",
+     "sha256": "e7f21be6f039cef24a3643ca7bc6d196bee1ee2661e53514f2c7e1392655d733"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_sk_SK.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_sk_SK.dic",
+     "sha256": "7359863ec5d5dbbf35c7d4f38faca1af7b43bc4aa643871e63f2dc0dfac4f922"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_sl_SI.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_sl_SI.dic",
+     "sha256": "3d9026755aa0936e9331595a08bb65c295ccac84acefe58cb6c9fe2ff11ceef8"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_sq_AL.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_sq_AL.dic",
+     "sha256": "99fbce3b0e60cc500e45643dd40903dfa71cfc1605a5b139cfb22129bd665dbe"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_sr.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_sr.dic",
+     "sha256": "ce785026592f525c38e67152699224d47a4cdf555a1a4eb65d50458c5548f69f"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_sr_Latn.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_sr_Latn.dic",
+     "sha256": "b423f910400472979a2b0fe1c95965c940e927f7588dace0e42c17f7b0663376"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_sv.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_sv.dic",
+     "sha256": "44c5a59f1ef8a17b9433e4510a1abcac753d34ac875dc27ea95427f1e581f17b"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_te_IN.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_te_IN.dic",
+     "sha256": "2ad470071dfd9bb3ad5101d528e1fb0090d96c841c4f2bb07b325476b3c853fe"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_th_TH.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_th_TH.dic",
+     "sha256": "fbd19d561c19a13d1901a0b9653e24b4c0c2c81177064266e2acb23bac68145b"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_uk_UA.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_uk_UA.dic",
+     "sha256": "ae80645b757d6b57e5cdf34ab6cf7441a2414c60bff2352c7e815c1c12baad3d"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/hyph_zu_ZA.dic",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/hyph_zu_ZA.dic",
+     "sha256": "e75802e08127877d38891c140e8989af559665bae82f94d33c340cba2aa9de20"
+    },
+    {
+     "dest": "weasyprint/_internal/pyphen/dictionaries/update.sh",
+     "member": "onedir/weasyprint/_internal/pyphen/dictionaries/update.sh",
+     "sha256": "37afc8fb1e5ba92bef682e206ccb6e49e4147cdb38f88879e6422608a237fdb5"
+    },
+    {
+     "dest": "weasyprint/_internal/python3.dll",
+     "member": "onedir/weasyprint/_internal/python3.dll",
+     "sha256": "6c45910e7c82617ca6360820de861699cc99f9efee434df290aa4c6e38f39886"
+    },
+    {
+     "dest": "weasyprint/_internal/python314.dll",
+     "member": "onedir/weasyprint/_internal/python314.dll",
+     "sha256": "0f9857ffdfe010fe6b99328d58c2e3c7472ce75f336bf9c2ad9bd5bca3bce700"
+    },
+    {
+     "dest": "weasyprint/_internal/select.pyd",
+     "member": "onedir/weasyprint/_internal/select.pyd",
+     "sha256": "722328e7fad8048057fc966474ba73966d2ceebaa32e7344cce09640ab4dc9bd"
+    },
+    {
+     "dest": "weasyprint/_internal/setuptools/_vendor/jaraco/text/Lorem ipsum.txt",
+     "member": "onedir/weasyprint/_internal/setuptools/_vendor/jaraco/text/Lorem ipsum.txt",
+     "sha256": "37fedcffbf73c4eb9f058f47677cb33203a436ff9390e4d38a8e01c9dad28e0b"
+    },
+    {
+     "dest": "weasyprint/_internal/ucrtbase.dll",
+     "member": "onedir/weasyprint/_internal/ucrtbase.dll",
+     "sha256": "2e5fb14b7bf8540278f3614a12f0226e56a7cc9e64b81cbd976c6fcf2f71cbfb"
+    },
+    {
+     "dest": "weasyprint/_internal/unicodedata.pyd",
+     "member": "onedir/weasyprint/_internal/unicodedata.pyd",
+     "sha256": "280b09bd97b598d18c0ed9542dc18ed35fa57a16e84f8e65fd9c6e96516c28d6"
+    },
+    {
+     "dest": "weasyprint/_internal/weasyprint/css/html5_ph.css",
+     "member": "onedir/weasyprint/_internal/weasyprint/css/html5_ph.css",
+     "sha256": "e06bc94d27efeb8226e8caca76d27da0872b9214456502d27f84d312b43743a7"
+    },
+    {
+     "dest": "weasyprint/_internal/weasyprint/css/html5_ua.css",
+     "member": "onedir/weasyprint/_internal/weasyprint/css/html5_ua.css",
+     "sha256": "4b7a481b7082a25341a5676a8d972b7d18d4e374addb0f7c7b51a42e51eb92e3"
+    },
+    {
+     "dest": "weasyprint/_internal/weasyprint/css/html5_ua_form.css",
+     "member": "onedir/weasyprint/_internal/weasyprint/css/html5_ua_form.css",
+     "sha256": "be20de61c0d0745642f2b17daf62cf8376ae1707768758c9003f0f04ea7c510f"
+    },
+    {
+     "dest": "weasyprint/_internal/weasyprint/pdf/sRGB2014.icc",
+     "member": "onedir/weasyprint/_internal/weasyprint/pdf/sRGB2014.icc",
+     "sha256": "384b832de3412066743b52a75ee906b6fb9fb8d9e09e936fc2c43223815c6e0a"
+    },
+    {
+     "dest": "weasyprint/_internal/zlib1.dll",
+     "member": "onedir/weasyprint/_internal/zlib1.dll",
+     "sha256": "11cd91171765cd65f1c3362e3df67e5f5a618a6b88c8cdec899b802eaf1c7b0d"
+    },
+    {
+     "dest": "weasyprint/_internal/zopfli.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+     "member": "onedir/weasyprint/_internal/zopfli.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+     "sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde"
+    },
+    {
+     "dest": "weasyprint/_internal/zopfli/zopfli.pyd",
+     "member": "onedir/weasyprint/_internal/zopfli/zopfli.pyd",
+     "sha256": "1f26ea1db2160e928f3cf0a2f07beb3a694ba82a0249005e3cdc24fbf03f7f18"
+    },
+    {
+     "dest": "weasyprint/weasyprint.exe",
+     "member": "onedir/weasyprint/weasyprint.exe",
+     "sha256": "2d35d8dafe94c28de4ecc4a9bea35119afea962177004062f38bf52ccea8f870"
+    }
+   ]
+  },
+  "tesseract": {
+   "url": "https://github.com/UB-Mannheim/tesseract/releases/download/v5.4.0.20240606/tesseract-ocr-w64-setup-5.4.0.20240606.exe",
+   "license": "Apache-2.0",
+   "home": "https://github.com/tesseract-ocr/tesseract",
+   "kind": "nsis",
+   "sha256": "c885fff6998e0608ba4bb8ab51436e1c6775c2bafc2559a19b423e18678b60c9",
+   "files": [
+    {
+     "dest": "tesseract/LICENSE-tesseract.txt",
+     "member": "doc/LICENSE",
+     "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+     "dest": "tesseract/libarchive-13.dll",
+     "member": "libarchive-13.dll",
+     "sha256": "98b9b7e9259f23eab6749ee25cca2c0643f09df6b23c58229fd43bf6249195e9"
+    },
+    {
+     "dest": "tesseract/libb2-1.dll",
+     "member": "libb2-1.dll",
+     "sha256": "7fb8418a1172042dab5227fcd466b1bf293737f5b5cf35359e851516227f109c"
+    },
+    {
+     "dest": "tesseract/libbz2-1.dll",
+     "member": "libbz2-1.dll",
+     "sha256": "b79cd3a7102e359ef6324e98966a67939e58ec2b651ae2847cae84a4dfa453f7"
+    },
+    {
+     "dest": "tesseract/libcrypto-3-x64.dll",
+     "member": "libcrypto-3-x64.dll",
+     "sha256": "c0674a225d30f1642ca1da45ac040a9c1885d8f23883532b42987bae458edc4d"
+    },
+    {
+     "dest": "tesseract/libdeflate.dll",
+     "member": "libdeflate.dll",
+     "sha256": "b6ee7b31a23605d8e8b9be5eae782a3ddf7adf2b7ca2c8e0041bdfd4fe4659ee"
+    },
+    {
+     "dest": "tesseract/libexpat-1.dll",
+     "member": "libexpat-1.dll",
+     "sha256": "d9ea333175b1e995bbe6a062567f38ff362f1b2f369fa8ebdb0eeed21813bdc6"
+    },
+    {
+     "dest": "tesseract/libgcc_s_seh-1.dll",
+     "member": "libgcc_s_seh-1.dll",
+     "sha256": "b22b954397a52703579d92db64b57812af70f2afcafe2e742a009c1640b9ec1a"
+    },
+    {
+     "dest": "tesseract/libgif-7.dll",
+     "member": "libgif-7.dll",
+     "sha256": "a1a179853ae6fad8eb045b8e9f12c55e6fc99929446b02fa345512354cf5e582"
+    },
+    {
+     "dest": "tesseract/libiconv-2.dll",
+     "member": "libiconv-2.dll",
+     "sha256": "967189adfbc889fde89aafc867f7a1f02731f8592cf6fd5a4ace1929213e2e13"
+    },
+    {
+     "dest": "tesseract/libjbig-0.dll",
+     "member": "libjbig-0.dll",
+     "sha256": "275a827ba6839d47cfdbe059db1b1b403a92ff26e2b76a29362915487868bef2"
+    },
+    {
+     "dest": "tesseract/libjpeg-8.dll",
+     "member": "libjpeg-8.dll",
+     "sha256": "e44514c4e7753635e79bdb668f1e10315c1a93287f8d044ae74594ed57de619d"
+    },
+    {
+     "dest": "tesseract/libleptonica-6.dll",
+     "member": "libleptonica-6.dll",
+     "sha256": "26861baff4d25446a03ed1f6064d2eae7435eddf51bb36af4e634c0eb4eb3af0"
+    },
+    {
+     "dest": "tesseract/liblerc.dll",
+     "member": "libLerc.dll",
+     "sha256": "4ab688c7c5c4afdfee0f519f942759137067a7876a1c1bb825ee575b0a5760b1"
+    },
+    {
+     "dest": "tesseract/liblz4.dll",
+     "member": "liblz4.dll",
+     "sha256": "1b64d6429ae4aacf9eb35b8158d98556859a5c5e8ee817e155da343e194dd8e3"
+    },
+    {
+     "dest": "tesseract/liblzma-5.dll",
+     "member": "liblzma-5.dll",
+     "sha256": "3a599d97ea4dd002166ee7ffdc527c129d2cf8b05e9152ca7cae006c4187977e"
+    },
+    {
+     "dest": "tesseract/libopenjp2-7.dll",
+     "member": "libopenjp2-7.dll",
+     "sha256": "5ff762ff6d672a06ee502819daf1494aa3aa3acf408805f0429303e026705011"
+    },
+    {
+     "dest": "tesseract/libpng16-16.dll",
+     "member": "libpng16-16.dll",
+     "sha256": "f1b0a9d6cf3b8809c22fa0e27b5b82d9357e5bca43ab0ce8762f55fb303ed23f"
+    },
+    {
+     "dest": "tesseract/libsharpyuv-0.dll",
+     "member": "libsharpyuv-0.dll",
+     "sha256": "60bcc87ac64a834e967e9ec9461be37395dbc090c579f3e23497ef69a5d8323e"
+    },
+    {
+     "dest": "tesseract/libstdc++-6.dll",
+     "member": "libstdc++-6.dll",
+     "sha256": "0d9c01ab1771df439c75f144b2d855b4ac400243f006d14d9a043493de628f0d"
+    },
+    {
+     "dest": "tesseract/libtesseract-5.dll",
+     "member": "libtesseract-5.dll",
+     "sha256": "279488c41bd341edaa03dcd097faa33604ba330e6254ac97bcaf2229d8d7ac1a"
+    },
+    {
+     "dest": "tesseract/libtiff-6.dll",
+     "member": "libtiff-6.dll",
+     "sha256": "e000306d3de299b05ebef443e48c1486d9fa291b0244f6ca6225843b75fdf581"
+    },
+    {
+     "dest": "tesseract/libwebp-7.dll",
+     "member": "libwebp-7.dll",
+     "sha256": "687b8859e1f739dad5800fdc293a6ee1fd0dd4b33380ab283681a5a12eb3d4fa"
+    },
+    {
+     "dest": "tesseract/libwebpmux-3.dll",
+     "member": "libwebpmux-3.dll",
+     "sha256": "ad10bacecd37b44c7c2c813da098a8bf6a42a3bf0152f7f33726d216815558f9"
+    },
+    {
+     "dest": "tesseract/libwinpthread-1.dll",
+     "member": "libwinpthread-1.dll",
+     "sha256": "bbcbe5eb8e806f3537585d4c9832b4ee15f86617328a566695d7d3728aa370ee"
+    },
+    {
+     "dest": "tesseract/libzstd.dll",
+     "member": "libzstd.dll",
+     "sha256": "f216ea8efb5b3bb9ad3d938fb9ac07e3b8f78c2c92faab03d2c468d0b6798a5a"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/alto",
+     "member": "tessdata/configs/alto",
+     "sha256": "23a038ff290c7471a1a8aa4b5d23e310b0bf49f718480dad6b619a7d06eca330"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/ambigs.train",
+     "member": "tessdata/configs/ambigs.train",
+     "sha256": "717e534fd4330ed3f9bdb006f0465aa2633cca866786a8f8d469dbd4b01c10c2"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/api_config",
+     "member": "tessdata/configs/api_config",
+     "sha256": "2929bc0f1d2ba77f28cfc230f7b835b2b54038c0f9d2e8e4c5ada43803c999fd"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/bigram",
+     "member": "tessdata/configs/bigram",
+     "sha256": "65e6583abc617a34d4091285181f2493d312c296a85629ac3c092d3b93b6e554"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/box.train",
+     "member": "tessdata/configs/box.train",
+     "sha256": "a421355e3488bf3fdfc14a1bdcca08c6f6414ec92c53f0eea22317c868c1a623"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/box.train.stderr",
+     "member": "tessdata/configs/box.train.stderr",
+     "sha256": "3e62cd37d2383abf0c6dfa5ba39fd1187fcff6856c4f4f27ea1554cb4c1874d2"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/digits",
+     "member": "tessdata/configs/digits",
+     "sha256": "e757d95bb1e51444860ea10d7f2c8bb8a0c9c4ccc58a0e8c67e8dc2933a56e2e"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/get.images",
+     "member": "tessdata/configs/get.images",
+     "sha256": "28c774c157a2f48d835a1d58f5a35dd70106c136e176572ee43bbf46f3d65c92"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/hocr",
+     "member": "tessdata/configs/hocr",
+     "sha256": "d6a7ec7c5143317a59fce2393054f6b7a8261824b934e7426fdd24febc929ad6"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/inter",
+     "member": "tessdata/configs/inter",
+     "sha256": "46303bf83668e446f4966d1ebf7418ad9f0c5e08836bc59d98cae3bbfc3aee9d"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/kannada",
+     "member": "tessdata/configs/kannada",
+     "sha256": "7d34fec99283142a3a22d157dc5cc8824b93ee923e576e6bfd1b026039c2e8f0"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/linebox",
+     "member": "tessdata/configs/linebox",
+     "sha256": "eb0279527b009a53432a9e1dde85bf42814901393546bc365bb61837f83355c9"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/logfile",
+     "member": "tessdata/configs/logfile",
+     "sha256": "5eed5e41e5fbbf0862836c0e4cda7821f8e08441645858ec6821ab41d926e195"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/lstm.train",
+     "member": "tessdata/configs/lstm.train",
+     "sha256": "3d1f8e5ab4e41467fdd938dc4d266eea081b477f8d74ab6b198dd1d854b5301c"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/lstmbox",
+     "member": "tessdata/configs/lstmbox",
+     "sha256": "61255d1b7c9df76b673ff43d2d91cda7f4c3c2e7d7f0643a71b212739833017e"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/lstmdebug",
+     "member": "tessdata/configs/lstmdebug",
+     "sha256": "62d40d7a7d80315e10cdca2561d2ddf2981f53dfdbd567513b04d36f3add7f4e"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/makebox",
+     "member": "tessdata/configs/makebox",
+     "sha256": "a8fe20a2bc9ff1e9e8ed06d56845336c978627b8e965600abd63f1f412c18ffe"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/page",
+     "member": "tessdata/configs/page",
+     "sha256": "6e4b43f27a77124e66c87fce8de518ff81e918d3cc36fe71a3d01179c1856a07"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/pdf",
+     "member": "tessdata/configs/pdf",
+     "sha256": "54d56e81dfefe289b0d2e4c7bc9bbe662711f5b8255c128b73bcd66efb6bba1a"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/quiet",
+     "member": "tessdata/configs/quiet",
+     "sha256": "8a93fad8251f61b5f17b8628203a0e068c71e0907cd63012ab22afb7b560fce3"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/rebox",
+     "member": "tessdata/configs/rebox",
+     "sha256": "73ca35d7d71084fb88e2eb9a5c53ad91682754b3aecb918dece7591ec22a0b26"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/strokewidth",
+     "member": "tessdata/configs/strokewidth",
+     "sha256": "ffb140aadd3e26d0d9b3b355d592b50cff8b2c3ce0394b4a6de4fabc1c0942c9"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/tsv",
+     "member": "tessdata/configs/tsv",
+     "sha256": "59d079bb75d8b3d7c839a3564580cb559e362c93a9d70f234e421c0c3e767e04"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/txt",
+     "member": "tessdata/configs/txt",
+     "sha256": "9bcbdbe285fd3a024be563cb237751ceb3435d86610e231f08894023321af5d7"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/unlv",
+     "member": "tessdata/configs/unlv",
+     "sha256": "1b02e7801de71f0757a26ba6d749e9182a0d9971929966bebb67f99db8733f40"
+    },
+    {
+     "dest": "tesseract/tessdata/configs/wordstrbox",
+     "member": "tessdata/configs/wordstrbox",
+     "sha256": "9d1787cdce085ad36dc9d6ba6b2702ac262beaf06a0bb4a0b84355f6458261e5"
+    },
+    {
+     "dest": "tesseract/tessdata/pdf.ttf",
+     "member": "tessdata/pdf.ttf",
+     "sha256": "c7845420925a23d88ed830a63957b8af85a66a8daf8d9fc90e843673b2ef1a59"
+    },
+    {
+     "dest": "tesseract/tesseract.exe",
+     "member": "tesseract.exe",
+     "sha256": "babb405f4366b480d02cd8ff2bac8d497170f6c1711ce6f3d5d8bf0fb7fa6ed9"
+    },
+    {
+     "dest": "tesseract/zlib1.dll",
+     "member": "zlib1.dll",
+     "sha256": "cb7ab3788d10940df874acd97b1821bbb5ee4a91f3eec11982bb5bf7a3c96443"
+    }
+   ],
+   "tessdata": [
+    {
+     "dest": "tesseract/tessdata/eng.traineddata",
+     "url": "https://github.com/tesseract-ocr/tessdata_fast/raw/4.1.0/eng.traineddata",
+     "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+    },
+    {
+     "dest": "tesseract/tessdata/spa.traineddata",
+     "url": "https://github.com/tesseract-ocr/tessdata_fast/raw/4.1.0/spa.traineddata",
+     "sha256": "6f2e04d02774a18f01bed44b1111f2cd7f3ba7ac9dc4373cd3f898a40ea6b464"
+    }
+   ]
+  },
+  "7zip": {
+   "url": "https://www.7-zip.org/a/7z2501-x64.msi",
+   "license": "LGPL-2.1-or-later",
+   "home": "https://www.7-zip.org/",
+   "kind": "tool",
+   "sha256": "e7eb0b7ed5efa4e087b7b17f191797f7af5b7f442d1290c66f3a21777005ef57"
+  },
+  "fonts_library": {
+   "kind": "files",
+   "home": "https://github.com/google/fonts",
+   "commit": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+   "license": "OFL-1.1 / Apache-2.0 / UFL-1.0 (ver cada carpeta)",
+   "files": [
+    {
+     "dest": "fonts/library/Montserrat/Montserrat[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/montserrat/Montserrat[wght].ttf",
+     "sha256": "0f7b311b2f3279e4eef9b2f968bcdbab6e28f4daeb1f049f4f278a902bcd82f7"
+    },
+    {
+     "dest": "fonts/library/Montserrat/Montserrat-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/montserrat/Montserrat-Italic[wght].ttf",
+     "sha256": "51607f316bc020e59f03cbf51543eecffbea501c0b31d73e5b82927c5cca442c"
+    },
+    {
+     "dest": "fonts/library/Montserrat/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/montserrat/OFL.txt",
+     "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e"
+    },
+    {
+     "dest": "fonts/library/Roboto/Roboto[wdth,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/roboto/Roboto[wdth,wght].ttf",
+     "sha256": "d7598e12c5dbef095ff8272cfc55da0250bd07fbdecbac8a530b9b277872a134"
+    },
+    {
+     "dest": "fonts/library/Roboto/Roboto-Italic[wdth,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/roboto/Roboto-Italic[wdth,wght].ttf",
+     "sha256": "9725a847af6b460ffca162ae66d20dad48b01876137947180b42d7dcd7887182"
+    },
+    {
+     "dest": "fonts/library/Roboto/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/roboto/OFL.txt",
+     "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
+    },
+    {
+     "dest": "fonts/library/OpenSans/OpenSans[wdth,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/opensans/OpenSans[wdth,wght].ttf",
+     "sha256": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878"
+    },
+    {
+     "dest": "fonts/library/OpenSans/OpenSans-Italic[wdth,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/opensans/OpenSans-Italic[wdth,wght].ttf",
+     "sha256": "fe269381e992f32e135801740998544d6235061e37c93ec067ad2be3edd5b17b"
+    },
+    {
+     "dest": "fonts/library/OpenSans/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/opensans/OFL.txt",
+     "sha256": "fbbbcfef55318de350562559b671360de6d597112ecc5c73881b05092db89602"
+    },
+    {
+     "dest": "fonts/library/Lato/Lato-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-Regular.ttf",
+     "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+     "dest": "fonts/library/Lato/Lato-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-Bold.ttf",
+     "sha256": "8a0aace75d33794eece4b28187bfc1df0bbd2888b5d8a56e01788c8d65d16be1"
+    },
+    {
+     "dest": "fonts/library/Lato/Lato-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-Italic.ttf",
+     "sha256": "e399c44efe1387100531d26c7e4800c5d12251b890d6654a3098c7c679cb1786"
+    },
+    {
+     "dest": "fonts/library/Lato/Lato-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-BoldItalic.ttf",
+     "sha256": "62c1b7f0d2e74b45960154c3520efc337b553db0961bfdc950d5618334596cc8"
+    },
+    {
+     "dest": "fonts/library/Lato/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/OFL.txt",
+     "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-Light.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-Light.ttf",
+     "sha256": "650ba57fa99d12ec40c31ccfb680be656be4497fbe14164617d67e32ffe9cd46"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-Regular.ttf",
+     "sha256": "7e65201e9b79159e2300267cc885e16c8dcef2424cdfa09a29bfb0980a94a7ba"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-Medium.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-Medium.ttf",
+     "sha256": "90373e7d838d32468438fc3e152dca0bdb12edcab99ea639f158790b1ba1fd05"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-SemiBold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-SemiBold.ttf",
+     "sha256": "d3bf1bdaf0550e83da9ac0b1d1d9fe6db086835a83aa28578e609a394b9a0286"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-Bold.ttf",
+     "sha256": "983676516167748b74de6f4771fb384c664fd913acb8b471122ecacf5da5ea6c"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-ExtraBold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-ExtraBold.ttf",
+     "sha256": "f2ab17c1a63a0ecc12c2461848fc8a469395e3cd2d641803e889c643d9f958e1"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-Black.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-Black.ttf",
+     "sha256": "d82aaaf98a9283f9a8edd24e51173337d8eaf09e25cd3d98831f8ec8461748a1"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-Italic.ttf",
+     "sha256": "4fa76ae75b40f926420514044722cb97f32186cafd3b38263cc34dad7174d46d"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-MediumItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-MediumItalic.ttf",
+     "sha256": "765addf6c7c11ec3c54325cacd68cabd05df8e4b6455302d812a9b9bafd1c614"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-SemiBoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-SemiBoldItalic.ttf",
+     "sha256": "16bb118aa232c9a13fa238027d24d7854dd1a1d9cbaf99b17fec4388d56b432c"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-BoldItalic.ttf",
+     "sha256": "3572ac8116a0ac7317d342262b29937bcbaf94d8f03f90df6fe666fa7e2fb43a"
+    },
+    {
+     "dest": "fonts/library/Poppins/Poppins-BlackItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/Poppins-BlackItalic.ttf",
+     "sha256": "f4852ca89c29f69d800e14f097ed4d1f0a0cc454e9f77d73bfd6db1f71c287a0"
+    },
+    {
+     "dest": "fonts/library/Poppins/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/poppins/OFL.txt",
+     "sha256": "6be04893d770899a015649c7aa3b582f871b272f8747a92b78b17c3e5c8b2573"
+    },
+    {
+     "dest": "fonts/library/Raleway/Raleway[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/raleway/Raleway[wght].ttf",
+     "sha256": "8bbcc3eb8275c388f4bcd998832f8a4b943eadbaf6a595205312774b5951aefb"
+    },
+    {
+     "dest": "fonts/library/Raleway/Raleway-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/raleway/Raleway-Italic[wght].ttf",
+     "sha256": "96629caf2202183fab46c70237055a7d67e6a5400b85413d45a77ed6f2a0770c"
+    },
+    {
+     "dest": "fonts/library/Raleway/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/raleway/OFL.txt",
+     "sha256": "7e946cf1171784d1015279e7dc35f827957a6b5d1f1f659ae0c98e5f5e37ed9b"
+    },
+    {
+     "dest": "fonts/library/Oswald/Oswald[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/oswald/Oswald[wght].ttf",
+     "sha256": "5b38c246e255a12f5712d640d56bcced0472466fc68983d2d0410ec0457c2817"
+    },
+    {
+     "dest": "fonts/library/Oswald/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/oswald/OFL.txt",
+     "sha256": "0fd731a904b729a4e02eaf5e8ebd06783edd9abe400e8882760160230675b652"
+    },
+    {
+     "dest": "fonts/library/Inter/Inter[opsz,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/inter/Inter[opsz,wght].ttf",
+     "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+    },
+    {
+     "dest": "fonts/library/Inter/Inter-Italic[opsz,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/inter/Inter-Italic[opsz,wght].ttf",
+     "sha256": "acd98e64795781b2058f07b18475e0ecee2a0fe2b42a49e2f9e37d0d6bf66ce6"
+    },
+    {
+     "dest": "fonts/library/Inter/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/inter/OFL.txt",
+     "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+     "dest": "fonts/library/Nunito/Nunito[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/nunito/Nunito[wght].ttf",
+     "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207"
+    },
+    {
+     "dest": "fonts/library/Nunito/Nunito-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/nunito/Nunito-Italic[wght].ttf",
+     "sha256": "b520cc871868b0acfca1beda875df7f4a44ebce914f8a89f83977fc9c09529c8"
+    },
+    {
+     "dest": "fonts/library/Nunito/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/nunito/OFL.txt",
+     "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65"
+    },
+    {
+     "dest": "fonts/library/SourceSans3/SourceSans3[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/sourcesans3/SourceSans3[wght].ttf",
+     "sha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
+    },
+    {
+     "dest": "fonts/library/SourceSans3/SourceSans3-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/sourcesans3/SourceSans3-Italic[wght].ttf",
+     "sha256": "39e3ab05ccd7cb94907c31005bb5bec1d5432f0b096a2b782976e217a540eb6c"
+    },
+    {
+     "dest": "fonts/library/SourceSans3/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/sourcesans3/OFL.txt",
+     "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+     "dest": "fonts/library/NotoSans/NotoSans[wdth,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notosans/NotoSans[wdth,wght].ttf",
+     "sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+    },
+    {
+     "dest": "fonts/library/NotoSans/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notosans/OFL.txt",
+     "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+     "dest": "fonts/library/NotoSerif/NotoSerif[wdth,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notoserif/NotoSerif[wdth,wght].ttf",
+     "sha256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713"
+    },
+    {
+     "dest": "fonts/library/NotoSerif/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notoserif/OFL.txt",
+     "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+     "dest": "fonts/library/Merriweather/Merriweather[opsz,wdth,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/merriweather/Merriweather[opsz,wdth,wght].ttf",
+     "sha256": "d0ed0e359e396af7ad05e73dffd11a3a4c326ea0d0283c56bd9361cb2cc86a96"
+    },
+    {
+     "dest": "fonts/library/Merriweather/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/merriweather/OFL.txt",
+     "sha256": "715bd349bfa6116f99e351e1548321dcfa25b91df65502d22ca8d624557697d2"
+    },
+    {
+     "dest": "fonts/library/PlayfairDisplay/PlayfairDisplay[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/playfairdisplay/PlayfairDisplay[wght].ttf",
+     "sha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6"
+    },
+    {
+     "dest": "fonts/library/PlayfairDisplay/PlayfairDisplay-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/playfairdisplay/PlayfairDisplay-Italic[wght].ttf",
+     "sha256": "a5e26dc5e2e77fb2803a0bf02fd4f81ee136ec8dea863ccdb0c59a263b21378b"
+    },
+    {
+     "dest": "fonts/library/PlayfairDisplay/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/playfairdisplay/OFL.txt",
+     "sha256": "566be814f8e96e93dfa16101331557eb6b5467e9e03f627c0910fe93ca12300e"
+    },
+    {
+     "dest": "fonts/library/Lora/Lora[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lora/Lora[wght].ttf",
+     "sha256": "822a6621ccbe8d97d20ac88c1c41f5615c9c2c202eaa75f272cd452aac6475a7"
+    },
+    {
+     "dest": "fonts/library/Lora/Lora-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lora/Lora-Italic[wght].ttf",
+     "sha256": "22d8d8854b53807aa664ca34f2031a9ed57a1d0dea296b8b96cdd3aad937a2b3"
+    },
+    {
+     "dest": "fonts/library/Lora/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lora/OFL.txt",
+     "sha256": "1d9a970809ac804b582a6ce7f0ebc4e7fefcbfd7ff6299cad35ee656a21be716"
+    },
+    {
+     "dest": "fonts/library/PTSans/PT_Sans-Web-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ptsans/PT_Sans-Web-Regular.ttf",
+     "sha256": "9cc831490532009bae2b3ce0d39c62adfc889060beb421593bfd9d2396d0f10a"
+    },
+    {
+     "dest": "fonts/library/PTSans/PT_Sans-Web-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ptsans/PT_Sans-Web-Bold.ttf",
+     "sha256": "3128bd5ecf01816e59a23d54c57a7a6b14615b07db53ff277c77376010265b05"
+    },
+    {
+     "dest": "fonts/library/PTSans/PT_Sans-Web-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ptsans/PT_Sans-Web-Italic.ttf",
+     "sha256": "5a90fe2d0cd798700935240580bdcc12c0ffc9102c0c7163b3418e13bc21debd"
+    },
+    {
+     "dest": "fonts/library/PTSans/PT_Sans-Web-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ptsans/PT_Sans-Web-BoldItalic.ttf",
+     "sha256": "81ac221cdd02bccfa679c74adb122478e9d092e65a722e31ca11469961483785"
+    },
+    {
+     "dest": "fonts/library/PTSans/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ptsans/OFL.txt",
+     "sha256": "2758cf7a872827f39661cf8cc24188113c030447aefb5ca7145993650076ca8c"
+    },
+    {
+     "dest": "fonts/library/Ubuntu/Ubuntu-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-Regular.ttf",
+     "sha256": "3128df86a31805618436d0ae5651ba4285d0c9de0a39057d025f64ee33bceb64"
+    },
+    {
+     "dest": "fonts/library/Ubuntu/Ubuntu-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-Bold.ttf",
+     "sha256": "679b5c1e09cab3156bb8ef529735f9382bf31ca7ac737382ab959297f8d82ad4"
+    },
+    {
+     "dest": "fonts/library/Ubuntu/Ubuntu-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-Italic.ttf",
+     "sha256": "4ab857e72f781a8967a6e4a9ac8858fbd6b3a9f9782db349d4b62b78ed02860b"
+    },
+    {
+     "dest": "fonts/library/Ubuntu/Ubuntu-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-BoldItalic.ttf",
+     "sha256": "875d776e7f33c50b1d1b594791da0eba9865648f232f08bcba00bba9dfa01d96"
+    },
+    {
+     "dest": "fonts/library/Ubuntu/Ubuntu-Medium.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-Medium.ttf",
+     "sha256": "3cd952b8b52581e48a8fa95b31c8829c2baa41b635042a69587d57f98092961e"
+    },
+    {
+     "dest": "fonts/library/Ubuntu/UFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/UFL.txt",
+     "sha256": "2f0015108d68627bd788d313f529c21ff4da2c2c42a5e1f3883acc83480f9002"
+    },
+    {
+     "dest": "fonts/library/WorkSans/WorkSans[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/worksans/WorkSans[wght].ttf",
+     "sha256": "f50f61f2ba738e239442d40bf1069adb195c224b6a5a73a581fc2f3ed62a9f63"
+    },
+    {
+     "dest": "fonts/library/WorkSans/WorkSans-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/worksans/WorkSans-Italic[wght].ttf",
+     "sha256": "0a9f935ea490d3477fc97e40248f356c29bce11a1973939056c4316b122341ec"
+    },
+    {
+     "dest": "fonts/library/WorkSans/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/worksans/OFL.txt",
+     "sha256": "749aca05078664ce682dce1b1b10096ac397cb088c1a6df4e1bb56f0092a9272"
+    },
+    {
+     "dest": "fonts/library/Rubik/Rubik[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/rubik/Rubik[wght].ttf",
+     "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+    },
+    {
+     "dest": "fonts/library/Rubik/Rubik-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/rubik/Rubik-Italic[wght].ttf",
+     "sha256": "08c6c4018a5ada8b517407b46897e46cf6ebb106853fbd3e89addb51d3b59c62"
+    },
+    {
+     "dest": "fonts/library/Rubik/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/rubik/OFL.txt",
+     "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+    },
+    {
+     "dest": "fonts/library/FiraSans/FiraSans-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/firasans/FiraSans-Regular.ttf",
+     "sha256": "c29556a2719bf613ef3d5e070e40d903a8965d9c081beca1375dc1e6e0f93c23"
+    },
+    {
+     "dest": "fonts/library/FiraSans/FiraSans-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/firasans/FiraSans-Bold.ttf",
+     "sha256": "a4d8e149ecdd4874a0726eb0af894488b3b31c423d6b0017c8f415ed1b795b45"
+    },
+    {
+     "dest": "fonts/library/FiraSans/FiraSans-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/firasans/FiraSans-Italic.ttf",
+     "sha256": "a4204f9a8029c1c55daa5385ac95936f74abea3e232770f1fb2862a19d1dfa13"
+    },
+    {
+     "dest": "fonts/library/FiraSans/FiraSans-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/firasans/FiraSans-BoldItalic.ttf",
+     "sha256": "1b96c16db9819bcaa9d588068bb397bb6e977c4874965d3d50d789a1943757eb"
+    },
+    {
+     "dest": "fonts/library/FiraSans/FiraSans-Medium.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/firasans/FiraSans-Medium.ttf",
+     "sha256": "cbc1842cbed8c1d1146ba7c9db97d8f28c9bedfd25f41c5b0e1259ca48622328"
+    },
+    {
+     "dest": "fonts/library/FiraSans/FiraSans-SemiBold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/firasans/FiraSans-SemiBold.ttf",
+     "sha256": "db0321f83eb3e9f527b8af384a1b3fefdc1039cf2b06fd39b3f61492bda9561c"
+    },
+    {
+     "dest": "fonts/library/FiraSans/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/firasans/OFL.txt",
+     "sha256": "8f24842e9174beda18a556c2ae7d54f5dc444340c19a3a9ef77e23bca366adbd"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-Regular.ttf",
+     "sha256": "95aa02c7c43096e0dd44d787ba6216864a67157e402adab59b35572e0c1577ea"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-Bold.ttf",
+     "sha256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-Italic.ttf",
+     "sha256": "70cf45c354af39e55082fd506e748cc6a0a1812949875f99ded3f76bf691e4ca"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-BoldItalic.ttf",
+     "sha256": "079dcee4a53544177f3b16354b27b40b521e22861a40084ab4d052f0289ed9e8"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-Light.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-Light.ttf",
+     "sha256": "20b1375c0c6606701867bf34c7cc97f44087850567a36587d25abb9510b183cc"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-Medium.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-Medium.ttf",
+     "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-SemiBold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-SemiBold.ttf",
+     "sha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5"
+    },
+    {
+     "dest": "fonts/library/Barlow/Barlow-Black.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/Barlow-Black.ttf",
+     "sha256": "fc4f74e8475b181003f7597450c62d630622b417e367a6842972b286c49f9440"
+    },
+    {
+     "dest": "fonts/library/Barlow/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/barlow/OFL.txt",
+     "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+     "dest": "fonts/library/DMSans/DMSans[opsz,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/dmsans/DMSans[opsz,wght].ttf",
+     "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+     "dest": "fonts/library/DMSans/DMSans-Italic[opsz,wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/dmsans/DMSans-Italic[opsz,wght].ttf",
+     "sha256": "22259c0cc8237221b80f44c76ba8d36e6bce3cda72779f5b2773643d499720ae"
+    },
+    {
+     "dest": "fonts/library/DMSans/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/dmsans/OFL.txt",
+     "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    },
+    {
+     "dest": "fonts/library/Mulish/Mulish[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/mulish/Mulish[wght].ttf",
+     "sha256": "00f1105796291a2fdda117a0fc7f25d8e68f8010cdbb34a411f60b3bd57717ac"
+    },
+    {
+     "dest": "fonts/library/Mulish/Mulish-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/mulish/Mulish-Italic[wght].ttf",
+     "sha256": "4f4d5f97b530500232d9d487101b8283840168dcfe7b8b9a285af65f0fa8aaab"
+    },
+    {
+     "dest": "fonts/library/Mulish/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/mulish/OFL.txt",
+     "sha256": "097e9ac414d9251c8580c073a13f8899798c66db746de60662148789ca693f19"
+    },
+    {
+     "dest": "fonts/library/Quicksand/Quicksand[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/quicksand/Quicksand[wght].ttf",
+     "sha256": "39c9b64223561f56aaff6062a6f04063c4fc86809ad6768722c06614d977e1cc"
+    },
+    {
+     "dest": "fonts/library/Quicksand/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/quicksand/OFL.txt",
+     "sha256": "14d28541780d90f6577bb7abcc6f005bf6969614294e75c82abb8758a696ad46"
+    },
+    {
+     "dest": "fonts/library/EBGaramond/EBGaramond[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ebgaramond/EBGaramond[wght].ttf",
+     "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027"
+    },
+    {
+     "dest": "fonts/library/EBGaramond/EBGaramond-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ebgaramond/EBGaramond-Italic[wght].ttf",
+     "sha256": "bba2c4499c93c9612b90b9825d32b07da52fce2fe57562a1eb6b833553f93c4e"
+    },
+    {
+     "dest": "fonts/library/EBGaramond/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/ebgaramond/OFL.txt",
+     "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7"
+    },
+    {
+     "dest": "fonts/library/Arimo/Arimo[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/arimo/Arimo[wght].ttf",
+     "sha256": "e43898b143ec826ac8cb4034816458a7047fbe0836558de2a1f8c6223ae3e0ca"
+    },
+    {
+     "dest": "fonts/library/Arimo/Arimo-Italic[wght].ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/arimo/Arimo-Italic[wght].ttf",
+     "sha256": "a80fc54fd0233c1dfe298577c4d00f5ae81d5bb83510975e473c47e699b7f4ed"
+    },
+    {
+     "dest": "fonts/library/Arimo/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/arimo/OFL.txt",
+     "sha256": "11cce536cd2f3864d767003af5dcd739e2e15818cf2279b6175edeadd3960992"
+    },
+    {
+     "dest": "fonts/library/Tinos/Tinos-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/tinos/Tinos-Regular.ttf",
+     "sha256": "60a0e8ef0c04dd5dd69ffe91025fa2ae5836cbd35600a82ba031977557e2cb61"
+    },
+    {
+     "dest": "fonts/library/Tinos/Tinos-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/tinos/Tinos-Bold.ttf",
+     "sha256": "393269dbab8899f938db19783eca5eac92eb431f7ae0ab45b8349ca895f1a06b"
+    },
+    {
+     "dest": "fonts/library/Tinos/Tinos-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/tinos/Tinos-Italic.ttf",
+     "sha256": "5942266ed398b155d7dc23e36833e7ec6be988f2439bdbeb8ef1bede808eaa91"
+    },
+    {
+     "dest": "fonts/library/Tinos/Tinos-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/tinos/Tinos-BoldItalic.ttf",
+     "sha256": "a5de79f0fe863ea0954757acb3d47b3ccd0a930ce3dd5b97230cd3866790a06e"
+    },
+    {
+     "dest": "fonts/library/Tinos/LICENSE-Apache-2.0.txt",
+     "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+     "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+     "dest": "fonts/library/Cousine/Cousine-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/cousine/Cousine-Regular.ttf",
+     "sha256": "1da22250675fc4c42fcf3a9736c44bc0570516105331443b663fd5cfbd1412fe"
+    },
+    {
+     "dest": "fonts/library/Cousine/Cousine-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/cousine/Cousine-Bold.ttf",
+     "sha256": "17c8a7245156d2253531c9e529474937b09d9f641c5ae7695c5e33f22822eef4"
+    },
+    {
+     "dest": "fonts/library/Cousine/Cousine-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/cousine/Cousine-Italic.ttf",
+     "sha256": "ea2a76ae3d0ece9cd59f0d30fdc08dd70e8f5f457beee5b0852a7b50c2286c7c"
+    },
+    {
+     "dest": "fonts/library/Cousine/Cousine-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/cousine/Cousine-BoldItalic.ttf",
+     "sha256": "848e858726fee0ae27b754e4cd6a2755209bf1428a8c91f747696d58c33906c3"
+    },
+    {
+     "dest": "fonts/library/Cousine/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/cousine/OFL.txt",
+     "sha256": "b81c4d4dc0a9f72c9155e78187316e016e2012a8102468804173dc61468b906d"
+    },
+    {
+     "dest": "fonts/library/Carlito/Carlito-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/carlito/Carlito-Regular.ttf",
+     "sha256": "f6418f708baede9789daef5d458c0f53d2a888af9820e8062934e504fedc6595"
+    },
+    {
+     "dest": "fonts/library/Carlito/Carlito-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/carlito/Carlito-Bold.ttf",
+     "sha256": "bb5d20f79b82599ec72983597437373a80f2d2085fa91fc144fd74e876a594db"
+    },
+    {
+     "dest": "fonts/library/Carlito/Carlito-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/carlito/Carlito-Italic.ttf",
+     "sha256": "0b019225e58d702bfedcbd35c21696769f8ee115cb6343f84c2f240312450d1c"
+    },
+    {
+     "dest": "fonts/library/Carlito/Carlito-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/carlito/Carlito-BoldItalic.ttf",
+     "sha256": "b32928186c119599e03ca6a1ffc680fdcb7fac95772f4b95d989cf6cd3861517"
+    },
+    {
+     "dest": "fonts/library/Carlito/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/carlito/OFL.txt",
+     "sha256": "58402f82a7c332a700294988fe7554fbb0a63a8d27ccc1ee3bbc640311990a00"
+    },
+    {
+     "dest": "fonts/library/Caladea/Caladea-Regular.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/caladea/Caladea-Regular.ttf",
+     "sha256": "f1e899278b7b4491aba5b6a8253c4b04c050cc59b21865be5c37559a775153cd"
+    },
+    {
+     "dest": "fonts/library/Caladea/Caladea-Bold.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/caladea/Caladea-Bold.ttf",
+     "sha256": "ae3cb2dcbc925809dd29d2a44e9802211cab66be541bacbfc9c08c74b27c3742"
+    },
+    {
+     "dest": "fonts/library/Caladea/Caladea-Italic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/caladea/Caladea-Italic.ttf",
+     "sha256": "4359a8e24f748b6447b1ff6d7a174febe70961d29f8bb8634b56dacd740a3deb"
+    },
+    {
+     "dest": "fonts/library/Caladea/Caladea-BoldItalic.ttf",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/caladea/Caladea-BoldItalic.ttf",
+     "sha256": "ccabaa7b7e2fdf253d2b1a5fa699dd8a3df8d835a9eb285ad82631a677eb76c0"
+    },
+    {
+     "dest": "fonts/library/Caladea/OFL.txt",
+     "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/caladea/OFL.txt",
+     "sha256": "ccdab61d371d8c8683a128a92cd7d498dbdb1d37689f7cb21f1bf6b16658d213"
+    }
+   ]
+  }
+ },
+ "unmatched": []
+}

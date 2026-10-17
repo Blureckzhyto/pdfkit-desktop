@@ -1,0 +1,43 @@
+# --- Componentes de terceros: se descargan con `python tools/fetch_assets.py` ---
+assets/poppler/
+assets/tesseract/
+assets/weasyprint/
+assets/fonts/library/
+# logos viejos (no se usan)
+assets/_old_logo/
+
+# --- Salidas del build ---
+build/
+dist/
+installer/*.exe
+*.spec
+SHA256SUMS.txt
+
+# --- Pruebas: capturas, salidas y ejecutables de versiones anteriores ---
+tests/_capturas/
+tests/_salida/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# --- Datos personales: nunca al repositorio ---
+*.log
+settings.json
+# cualquier PDF o documento de prueba que no esté en una carpeta de ejemplos generados
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+!docs/**/*.pdf
+
+# --- Editor / sistema ---
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
