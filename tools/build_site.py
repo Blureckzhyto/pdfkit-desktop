@@ -389,7 +389,7 @@ def build_assets() -> None:
 
     (ASSETS / "fonts").mkdir(parents=True, exist_ok=True)
     for weight in ("Regular", "SemiBold", "Bold"):
-        font = TTFont(ROOT / "assets" / "fonts" / f"PlusJakartaSans-{weight}.ttf")
+        font = TTFont(ROOT / "assets" / "fonts" / f"PlusJakartaSans-{weight}.ttf", recalcTimestamp=False)  # mismo archivo en cada build
         font.flavor = "woff2"
         font.save(ASSETS / "fonts" / f"PlusJakartaSans-{weight}.woff2")
     shutil.copy(ROOT / "assets" / "fonts" / "PlusJakartaSans-OFL.txt", ASSETS / "fonts" / "OFL.txt")
@@ -429,10 +429,10 @@ def main() -> int:
     version_file = DOCS / "version.json"
     version = json.loads(version_file.read_text(encoding="utf-8")) if version_file.exists() else {}
     version["version"] = version.get("version") or app_version()
-    version_file.write_text(json.dumps(version, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (DOCS / "index.html").write_text(page("es", version), encoding="utf-8")
-    (DOCS / "en" / "index.html").write_text(page("en", version), encoding="utf-8")
-    (DOCS / ".nojekyll").write_text("", encoding="utf-8")
+    version_file.write_text(json.dumps(version, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+    (DOCS / "index.html").write_text(page("es", version), encoding="utf-8", newline="\n")
+    (DOCS / "en" / "index.html").write_text(page("en", version), encoding="utf-8", newline="\n")
+    (DOCS / ".nojekyll").write_text("", encoding="utf-8", newline="\n")
     print("docs/ listo:", version)
     return 0
 

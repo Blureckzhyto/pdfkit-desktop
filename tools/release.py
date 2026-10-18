@@ -79,12 +79,12 @@ def main(argv: list[str]) -> int:
     digest = hashlib.sha256(INSTALLER.read_bytes()).hexdigest()
     size_mb = round(INSTALLER.stat().st_size / 1_000_000)
     sums = OUT / "SHA256SUMS.txt"
-    sums.write_text(f"{digest}  PDFKit_Setup.exe\n", encoding="utf-8")
-    (OUT / "notas.md").write_text(notes(ver), encoding="utf-8")
+    sums.write_text(f"{digest}  PDFKit_Setup.exe\n", encoding="utf-8", newline="\n")
+    (OUT / "notas.md").write_text(notes(ver), encoding="utf-8", newline="\n")
     info = {"version": ver, "size_mb": size_mb, "sha256": digest,
             "date": datetime.date.today().isoformat(),
             "url": f"https://github.com/{project.GITHUB_USER}/{project.REPO}/releases/download/v{ver}/PDFKit_Setup.exe"}
-    (ROOT / "docs" / "version.json").write_text(json.dumps(info, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "docs" / "version.json").write_text(json.dumps(info, indent=2) + "\n", encoding="utf-8", newline="\n")
     run([sys.executable, str(ROOT / "tools" / "build_site.py")])
     print(f"\nVersión {ver} · {size_mb} MB · SHA-256 {digest}")
     print(f"Notas: {OUT / 'notas.md'}")
