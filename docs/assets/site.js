@@ -1,4 +1,4 @@
-// PDFKit · página de descarga: tema claro/oscuro, idioma recordado y datos de la versión.
+// Pliegue · página de descarga: tema claro/oscuro, idioma recordado y datos de la versión.
 // Sin estadísticas ni servicios externos.
 (function () {
   var root = document.documentElement;
@@ -25,7 +25,7 @@
     toggle.addEventListener("click", function () {
       var next = currentTheme() === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
-      store("pdfkit-theme", next);
+      store("pliegue-theme", next);
       syncHeroShot();
     });
   }
@@ -38,7 +38,7 @@
   // el idioma elegido a mano se recuerda (la primera visita usa el del navegador)
   var lang = document.querySelector(".lang");
   if (lang) {
-    lang.addEventListener("click", function () { store("pdfkit-lang", lang.getAttribute("data-lang")); });
+    lang.addEventListener("click", function () { store("pliegue-lang", lang.getAttribute("data-lang")); });
   }
 
   // versión, tamaño y SHA-256 publicados (docs/version.json, lo actualiza tools/release.py)

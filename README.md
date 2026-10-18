@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Blureckzhyto/pliegue/releases/latest"><b>⬇ Descargar para Windows · Download for Windows</b></a>
+  <a href="https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe"><b>⬇ Descargar para Windows · Download for Windows</b></a>
   ·
   <a href="https://blureckzhyto.github.io/pliegue/">Página · Website</a>
   ·
@@ -48,7 +48,8 @@ Es gratis, de código abierto y sin anuncios.
 
 ### Descarga e instalación
 
-1. Descarga el instalador de la versión más reciente en **[Releases](https://github.com/Blureckzhyto/pliegue/releases/latest)**.
+1. Descarga **[Pliegue_Setup.exe](https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe)**
+   (versión más reciente en [Releases](https://github.com/Blureckzhyto/pliegue/releases)).
 2. Ábrelo. Como el instalador no tiene firma digital de pago, Windows puede mostrar
    **«Windows protegió su PC»**: haz clic en **Más información** → **Ejecutar de todas formas**.
    Puedes comprobar el archivo con el SHA-256 publicado en cada versión.
@@ -108,7 +109,8 @@ The interface is in Spanish.
 
 ### Download and install
 
-1. Download the installer for the latest version from **[Releases](https://github.com/Blureckzhyto/pliegue/releases/latest)**.
+1. Download **[Pliegue_Setup.exe](https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe)**
+   (latest version in [Releases](https://github.com/Blureckzhyto/pliegue/releases)).
 2. Run it. Because the installer is not code-signed, Windows may show
    **"Windows protected your PC"**: click **More info** → **Run anyway**. You can verify the
    file with the SHA-256 published with each release.
