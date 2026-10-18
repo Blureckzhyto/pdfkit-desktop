@@ -506,7 +506,7 @@ class EditView(ToolView):
                                     button_fg_color=theme.ACCENT,
                                     button_hover_color=theme.ACCENT_HOVER,
                                     button_text_color=theme.TEXT_ON_ACCENT)
-        # customtkinter pone su propio ícono a los 200 ms: se reemplaza por el de PDFKit
+        # customtkinter pone su propio ícono a los 200 ms: se reemplaza por el de Pliegue
         dialog.after(260, lambda: dialog.winfo_exists() and dialog.iconbitmap(
             str(asset_path("icon.ico"))))
         return dialog

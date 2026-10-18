@@ -1,1 +1,1 @@
-"""Business logic for PDFKit. Nothing in this package may import tkinter."""
+"""Business logic for Pliegue. Nothing in this package may import tkinter."""

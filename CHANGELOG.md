@@ -1,5 +1,17 @@
 # Cambios · Changelog
 
+## 1.4.0
+
+**Español**
+- **PDFKit ahora se llama Pliegue.** Mismo programa, nombre y logo nuevos. Se instala como actualización de PDFKit: tu configuración y tus datos se mudan solos, y en «Agregar o quitar programas» queda una sola entrada, «Pliegue».
+- Si tenías PDFKit anclado a la barra de tareas, quita ese ancla y vuelve a anclar Pliegue (Windows no deja que el instalador lo cambie).
+- Nuevo repositorio y página: github.com/Blureckzhyto/pliegue · blureckzhyto.github.io/pliegue.
+
+**English**
+- **PDFKit is now Pliegue.** Same app, new name and logo. It installs as an upgrade over PDFKit: your settings and data move automatically, and "Add or remove programs" keeps a single entry, "Pliegue".
+- If PDFKit was pinned to the taskbar, unpin it and pin Pliegue again (Windows does not let the installer change pins).
+- New repository and website: github.com/Blureckzhyto/pliegue · blureckzhyto.github.io/pliegue.
+
 ## 1.3.7
 
 **Español**

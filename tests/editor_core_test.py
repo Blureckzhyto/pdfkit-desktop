@@ -16,7 +16,7 @@ from reportlab.pdfgen import canvas
 
 from core.pdf_editor import EditorSession
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_editor_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_editor_"))
 results = []
 
 

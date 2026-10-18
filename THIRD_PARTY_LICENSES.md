@@ -1,11 +1,11 @@
 # Licencias de terceros · Third-party licenses
 
-PDFKit se distribuye bajo la **GNU Affero General Public License v3.0** (ver `LICENSE`).
+Pliegue (antes PDFKit) se distribuye bajo la **GNU Affero General Public License v3.0** (ver `LICENSE`).
 Incluye los componentes de terceros que siguen, cada uno con su propia licencia. Los
 textos completos están en la carpeta `licenses/` del código fuente y en la carpeta
 **Licencias** de la app instalada.
 
-PDFKit is distributed under the **GNU Affero General Public License v3.0** (see `LICENSE`).
+Pliegue (formerly PDFKit) is distributed under the **GNU Affero General Public License v3.0** (see `LICENSE`).
 It bundles the third-party components below, each under its own license. The full texts
 are in the `licenses/` folder of the source code and in the **Licencias** folder of the
 installed app.

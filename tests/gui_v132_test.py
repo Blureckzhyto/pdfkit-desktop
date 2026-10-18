@@ -11,11 +11,11 @@ from PIL import ImageGrab
 from reportlab.lib.colors import HexColor
 from reportlab.pdfgen import canvas as rl_canvas
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_gui132_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_gui132_"))
 SHOTS = Path(__file__).parent / "_capturas" / "shots_v132"
 SHOTS.mkdir(parents=True, exist_ok=True)
 SHOTS.mkdir(exist_ok=True)
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 
 doc_path = TMP / "lineas.pdf"

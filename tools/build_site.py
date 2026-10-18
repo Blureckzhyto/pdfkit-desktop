@@ -26,7 +26,8 @@ from core import project  # noqa: E402
 USER = project.GITHUB_USER or "GITHUB_USER"
 REPO_URL = f"https://github.com/{USER}/{project.REPO}"
 SITE_URL = f"https://{USER.lower()}.github.io/{project.REPO}/"
-DOWNLOAD_URL = f"{REPO_URL}/releases/latest/download/PDFKit_Setup.exe"
+DOWNLOAD_URL = f"{REPO_URL}/releases/latest/download/Pliegue_Setup.exe"
+LOGO_WIDTH = 132          # ancho del logo en la barra superior (px CSS); el archivo va a 3x
 
 
 def app_version() -> str:
@@ -65,8 +66,8 @@ CATEGORIES = [
 
 T = {
     "es": {
-        "lang": "es", "title": "PDFKit · Todas tus herramientas PDF, sin internet",
-        "description": "PDFKit es una caja de herramientas PDF gratuita y de código abierto para Windows: "
+        "lang": "es", "title": "Pliegue · Todas tus herramientas PDF, sin internet",
+        "description": "Pliegue es una caja de herramientas PDF gratuita y de código abierto para Windows: "
                        "unir, dividir, comprimir, convertir, editar y firmar PDFs sin internet. "
                        "Tus archivos nunca salen de tu computadora.",
         "skip": "Saltar al contenido", "nav_features": "Funciones", "nav_privacy": "Privacidad",
@@ -79,24 +80,24 @@ T = {
         "shots_title": "Así se ve", "shot_home": "Inicio en modo claro", "shot_home_dark": "Inicio en modo oscuro",
         "shot_editor": "Editor: doble clic en un texto para cambiarlo con su misma fuente",
         "shot_split": "Dividir un PDF por tamaño máximo",
-        "alt_home": "Pantalla de inicio de PDFKit con todas las herramientas, en modo claro",
-        "alt_home_dark": "Pantalla de inicio de PDFKit en modo oscuro",
+        "alt_home": "Pantalla de inicio de Pliegue con todas las herramientas, en modo claro",
+        "alt_home_dark": "Pantalla de inicio de Pliegue en modo oscuro",
         "alt_editor": "Editor de PDF con una línea de texto seleccionada para editarla",
         "alt_split": "Herramienta Dividir PDF con la opción de tamaño máximo en MB",
         "features_title": "31 herramientas en una sola app",
-        "features_sub": "Las mismas categorías e iconos que verás en PDFKit.",
+        "features_sub": "Las mismas categorías e iconos que verás en Pliegue.",
         "privacy_title": "Tus archivos nunca salen de tu computadora",
-        "privacy_body": "Todo el procesamiento ocurre en tu equipo. PDFKit no tiene telemetría, estadísticas "
+        "privacy_body": "Todo el procesamiento ocurre en tu equipo. Pliegue no tiene telemetría, estadísticas "
                         "ni anuncios, y no se conecta a internet. La única excepción es opcional: en «HTML a "
                         "PDF» puedes escribir la dirección de una página web, y entonces se descarga esa página "
                         "para convertirla.",
         "privacy_points": ["Funciona sin conexión", "Sin cuentas ni registros", "Sin rastreadores ni anuncios",
                            "Código abierto: cualquiera puede revisarlo"],
         "install_title": "Instalación", "install_steps": [
-            "Descarga <strong>PDFKit_Setup.exe</strong> con el botón de arriba.",
+            "Descarga <strong>Pliegue_Setup.exe</strong> con el botón de arriba.",
             "Ábrelo. Si Windows muestra «Windows protegió su PC», haz clic en <strong>Más información</strong> "
             "y luego en <strong>Ejecutar de todas formas</strong>.",
-            "Sigue el asistente. PDFKit queda en el menú Inicio y en el Escritorio."],
+            "Sigue el asistente. Pliegue queda en el menú Inicio y en el Escritorio."],
         "smartscreen_why": "¿Por qué aparece ese aviso? El instalador no tiene una firma digital de pago "
                            "(cuesta cientos de dólares al año), así que Windows no reconoce al autor. No "
                            "significa que tenga virus: el código es público y puedes comprobar que el archivo "
@@ -115,19 +116,20 @@ T = {
             ("¿En qué versiones de Windows funciona?", "En Windows 10 y Windows 11 de 64 bits. Word, PowerPoint "
              "o LibreOffice son opcionales: mejoran «Word a PDF» y «PowerPoint a PDF»."),
             ("¿Cómo lo desinstalo?", "En <em>Configuración → Aplicaciones → Aplicaciones instaladas</em>, busca "
-             "PDFKit y elige <em>Desinstalar</em>."),
+             "Pliegue y elige <em>Desinstalar</em>."),
             ("¿Dónde está el código fuente?", f'En GitHub: <a href="{REPO_URL}">{REPO_URL.replace("https://", "")}</a>. '
              "Puedes revisarlo, compilarlo tú mismo y proponer mejoras."),
             ("¿Está en otros idiomas?", "La aplicación está en español. Esta página también está en inglés."),
         ],
         "footer_license": "Licencia AGPL-3.0", "footer_third": "Licencias de terceros",
         "footer_repo": "Código fuente en GitHub", "footer_changelog": "Cambios",
-        "footer_note": "PDFKit no está relacionado con Apple PDFKit ni con iLovePDF.",
+        "footer_note": "Pliegue se llamaba PDFKit hasta la versión 1.3.7. No está relacionado con iLovePDF.",
+        "formerly": "Antes PDFKit",
         "other_lang": "English", "other_lang_code": "en",
     },
     "en": {
-        "lang": "en", "title": "PDFKit · All your PDF tools, offline",
-        "description": "PDFKit is a free, open-source PDF toolbox for Windows: merge, split, compress, convert, "
+        "lang": "en", "title": "Pliegue · All your PDF tools, offline",
+        "description": "Pliegue is a free, open-source PDF toolbox for Windows: merge, split, compress, convert, "
                        "edit and sign PDFs offline. Your files never leave your computer.",
         "skip": "Skip to content", "nav_features": "Features", "nav_privacy": "Privacy",
         "nav_install": "Install", "nav_faq": "FAQ", "theme": "Toggle light/dark theme",
@@ -139,23 +141,23 @@ T = {
         "shots_title": "Take a look", "shot_home": "Home screen, light mode", "shot_home_dark": "Home screen, dark mode",
         "shot_editor": "Editor: double-click any text to change it with its own font",
         "shot_split": "Splitting a PDF by maximum size",
-        "alt_home": "PDFKit home screen with all the tools, light mode",
-        "alt_home_dark": "PDFKit home screen in dark mode",
+        "alt_home": "Pliegue home screen with all the tools, light mode",
+        "alt_home_dark": "Pliegue home screen in dark mode",
         "alt_editor": "PDF editor with a line of text selected for editing",
         "alt_split": "Split PDF tool with the maximum size (MB) option",
         "features_title": "31 tools in a single app",
-        "features_sub": "The same categories and icons you will see in PDFKit (the app interface is in Spanish).",
+        "features_sub": "The same categories and icons you will see in Pliegue (the app interface is in Spanish).",
         "privacy_title": "Your files never leave your computer",
-        "privacy_body": "All processing happens on your machine. PDFKit has no telemetry, analytics or ads, and "
+        "privacy_body": "All processing happens on your machine. Pliegue has no telemetry, analytics or ads, and "
                         "it does not connect to the internet. The only exception is optional: in \"HTML a PDF\" "
                         "you can type a web address, and that page is then downloaded to convert it.",
         "privacy_points": ["Works offline", "No accounts or sign-ups", "No trackers or ads",
                            "Open source: anyone can review it"],
         "install_title": "Installation", "install_steps": [
-            "Download <strong>PDFKit_Setup.exe</strong> with the button above.",
+            "Download <strong>Pliegue_Setup.exe</strong> with the button above.",
             "Run it. If Windows shows \"Windows protected your PC\", click <strong>More info</strong> and then "
             "<strong>Run anyway</strong>.",
-            "Follow the wizard. PDFKit is added to the Start menu and the Desktop."],
+            "Follow the wizard. Pliegue is added to the Start menu and the Desktop."],
         "smartscreen_why": "Why does that warning appear? The installer has no paid code-signing certificate "
                            "(they cost hundreds of dollars a year), so Windows does not recognize the publisher. "
                            "It does not mean it has a virus: the code is public and you can check that the file "
@@ -173,7 +175,7 @@ T = {
                                            "if you type a web address."),
             ("Which Windows versions are supported?", "Windows 10 and Windows 11, 64-bit. Word, PowerPoint or "
              "LibreOffice are optional: they improve \"Word to PDF\" and \"PowerPoint to PDF\"."),
-            ("How do I uninstall it?", "Go to <em>Settings → Apps → Installed apps</em>, find PDFKit and choose "
+            ("How do I uninstall it?", "Go to <em>Settings → Apps → Installed apps</em>, find Pliegue and choose "
              "<em>Uninstall</em>."),
             ("Where is the source code?", f'On GitHub: <a href="{REPO_URL}">{REPO_URL.replace("https://", "")}</a>. '
              "You can review it, build it yourself and suggest improvements."),
@@ -181,7 +183,8 @@ T = {
         ],
         "footer_license": "AGPL-3.0 license", "footer_third": "Third-party licenses",
         "footer_repo": "Source code on GitHub", "footer_changelog": "Changelog",
-        "footer_note": "PDFKit is not affiliated with Apple PDFKit or iLovePDF.",
+        "footer_note": "Pliegue was called PDFKit up to version 1.3.7. It is not affiliated with iLovePDF.",
+        "formerly": "Formerly PDFKit",
         "other_lang": "Español", "other_lang_code": "es",
     },
 }
@@ -200,6 +203,9 @@ def page(lang: str, version: dict) -> str:
     prefix = "" if lang == "es" else "../"
     other = "en/" if lang == "es" else "../"
     canonical = SITE_URL if lang == "es" else SITE_URL + "en/"
+    from PIL import Image
+    with Image.open(ASSETS / "logo-wordmark.png") as logo:
+        logo_h = round(LOGO_WIDTH * logo.height / logo.width)
     e = html.escape
     features = []
     for key, color, name_es, name_en, tools in CATEGORIES:
@@ -235,7 +241,7 @@ def page(lang: str, version: dict) -> str:
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16171D" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="PDFKit">
+<meta property="og:site_name" content="Pliegue">
 <meta property="og:title" content="{e(t['title'])}">
 <meta property="og:description" content="{e(t['description'])}">
 <meta property="og:url" content="{canonical}">
@@ -258,9 +264,9 @@ def page(lang: str, version: dict) -> str:
 <a class="skip" href="#contenido">{e(t['skip'])}</a>
 <header class="topbar">
   <div class="wrap topbar-row">
-    <a class="brand" href="{prefix or './'}" aria-label="PDFKit">
-      <img class="logo-light" src="{prefix}assets/logo-wordmark.png" width="132" height="44" alt="PDFKit">
-      <img class="logo-dark" src="{prefix}assets/logo-wordmark-dark.png" width="132" height="44" alt="PDFKit">
+    <a class="brand" href="{prefix or './'}" aria-label="Pliegue">
+      <img class="logo-light" src="{prefix}assets/logo-wordmark.png" width="{LOGO_WIDTH}" height="{logo_h}" alt="Pliegue">
+      <img class="logo-dark" src="{prefix}assets/logo-wordmark-dark.png" width="{LOGO_WIDTH}" height="{logo_h}" alt="Pliegue">
     </a>
     <nav aria-label="{'Secciones' if lang == 'es' else 'Sections'}">
       <a href="#funciones">{e(t['nav_features'])}</a>
@@ -289,7 +295,8 @@ def page(lang: str, version: dict) -> str:
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
           {e(t['download'])}
         </a>
-        <p class="meta"><span>{e(t['version'])} <span data-version>{e(version['version'])}</span></span> ·
+        <p class="meta"><span>{e(t['version'])} <span data-version>{e(version['version'])}</span></span>
+          <span class="formerly">{e(t['formerly'])}</span> ·
           <span data-size>{e(size)}</span><span>{e(t['for'])}</span></p>
         <p class="badges">{e(t['badges'])}</p>
       </div>
@@ -337,7 +344,7 @@ def page(lang: str, version: dict) -> str:
           <p class="ss-title">{e(t['ss_title'])}</p>
           <p class="ss-body">{e(t['ss_body'])}</p>
           <p class="ss-link"><span class="ss-mark">{e(t['ss_more'])}</span></p>
-          <p class="ss-detail">{e(t['ss_app'])} PDFKit_Setup.exe<br>{e(t['ss_publisher'])} {e(t['ss_unknown'])}</p>
+          <p class="ss-detail">{e(t['ss_app'])} Pliegue_Setup.exe<br>{e(t['ss_publisher'])} {e(t['ss_unknown'])}</p>
           <div class="ss-buttons"><span class="ss-run ss-mark">{e(t['ss_run'])}</span><span class="ss-dont">{e(t['ss_dont'])}</span></div>
         </div>
         <figcaption><span>{e(t['ss_step1'])}</span><span>{e(t['ss_step2'])}</span></figcaption>
@@ -354,7 +361,7 @@ def page(lang: str, version: dict) -> str:
 </main>
 <footer class="footer">
   <div class="wrap footer-row">
-    <p>PDFKit <span data-version>{e(version['version'])}</span> · © {project.YEAR} {e(USER)}</p>
+    <p>Pliegue <span data-version>{e(version['version'])}</span> · © {project.YEAR} {e(USER)}</p>
     <nav aria-label="{'Enlaces' if lang == 'es' else 'Links'}">
       <a href="{REPO_URL}">{e(t['footer_repo'])}</a>
       <a href="{REPO_URL}/blob/main/LICENSE">{e(t['footer_license'])}</a>
@@ -375,10 +382,10 @@ def early_script(lang: str) -> str:
     other = "en/" if lang == "es" else "../"
     wants_other = ("!/^es\\b/i.test(nav)" if lang == "es" else "/^es\\b/i.test(nav)")
     return ("(function(){var d=document.documentElement,s=null,l=null;"
-            "try{s=localStorage.getItem('pdfkit-theme');l=localStorage.getItem('pdfkit-lang');}catch(e){}"
+            "try{s=localStorage.getItem('pliegue-theme');l=localStorage.getItem('pliegue-lang');}catch(e){}"
             "if(s==='light'||s==='dark')d.setAttribute('data-theme',s);"
             "var nav=(navigator.languages&&navigator.languages[0])||navigator.language||'es';"
-            f"if(!l){{try{{localStorage.setItem('pdfkit-lang',{json.dumps(lang)});}}catch(e){{}}"
+            f"if(!l){{try{{localStorage.setItem('pliegue-lang',{json.dumps(lang)});}}catch(e){{}}"
             f"if({wants_other})location.replace({json.dumps(other)}+location.hash);}}"
             "})();")
 
@@ -398,22 +405,22 @@ def build_assets() -> None:
     for size, name in ((192, "icon-192.png"), (512, "icon-512.png"), (180, "apple-touch-icon.png")):
         icon.resize((size, size), Image.LANCZOS).save(ASSETS / name, optimize=True)
     shutil.copy(ROOT / "assets" / "icon.ico", ASSETS / "favicon.ico")
-    word = Image.open(ROOT / "assets" / "logo_wordmark.png").convert("RGBA")
-    width = 396
-    word.resize((width, round(word.height * width / word.width)), Image.LANCZOS).save(
-        ASSETS / "logo-wordmark.png", optimize=True)
-    dark = Image.open(ROOT / "assets" / "logo" / "wordmark_sidebar_dark@2x.png").convert("RGBA")
-    dark.resize((width, round(dark.height * width / dark.width)), Image.LANCZOS).save(
-        ASSETS / "logo-wordmark-dark.png", optimize=True)
+    # claro y oscuro salen del original, recortados igual que en la app (mismo tamaño en pantalla)
+    sys.path.insert(0, str(ROOT / "tools"))
+    from make_logo_assets import _light_text, _trim
+    trimmed = _trim(Image.open(ROOT / "assets" / "logo_wordmark.png").convert("RGBA"))
+    width = LOGO_WIDTH * 3
+    for img, name in ((trimmed, "logo-wordmark.png"), (_light_text(trimmed), "logo-wordmark-dark.png")):
+        img.resize((width, round(img.height * width / img.width)), Image.LANCZOS).save(ASSETS / name, optimize=True)
 
     # imagen para redes sociales (1200x630)
     og = Image.new("RGB", (1200, 630), "#FFFFFF")
     draw = ImageDraw.Draw(og)
     draw.rectangle((0, 0, 1200, 12), fill="#E5484D")
-    mark = icon.resize((150, 150), Image.LANCZOS)
-    og.paste(mark, (90, 110), mark)
-    big = word.resize((520, round(word.height * 520 / word.width)), Image.LANCZOS)
-    og.paste(big, (270, 118), big)
+    # el wordmark ya trae el icono: va solo, recortado y alineado con el texto
+    height = 150
+    big = trimmed.resize((round(trimmed.width * height / trimmed.height), height), Image.LANCZOS)
+    og.paste(big, (90, 110), big)
     bold = ImageFont.truetype(str(ROOT / "assets" / "fonts" / "PlusJakartaSans-Bold.ttf"), 54)
     regular = ImageFont.truetype(str(ROOT / "assets" / "fonts" / "PlusJakartaSans-Regular.ttf"), 34)
     draw.text((90, 330), "Todas tus herramientas PDF, sin internet", font=bold, fill="#1F2133")

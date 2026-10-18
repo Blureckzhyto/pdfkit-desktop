@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from PIL import ImageChops, ImageGrab
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_gui134_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_gui134_"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fixtures  # noqa: E402
 
@@ -18,7 +18,7 @@ WORK = fixtures.portada(TMP / "portada.pdf")
 SHOTS = Path(__file__).parent / "_capturas" / "shots_v134"
 SHOTS.mkdir(parents=True, exist_ok=True)
 SHOTS.mkdir(exist_ok=True)
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 
 import tkinter as tk

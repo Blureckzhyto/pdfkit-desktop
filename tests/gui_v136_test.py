@@ -13,10 +13,10 @@ from reportlab.pdfgen import canvas as rl_canvas  # noqa: E402
 
 from ui import theme  # noqa: E402
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_v136_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_v136_"))
 SHOTS = Path(__file__).parent / "_capturas" / "shots_v136"
 SHOTS.mkdir(parents=True, exist_ok=True)
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 results, log = [], []
 

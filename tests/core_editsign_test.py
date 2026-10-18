@@ -15,7 +15,7 @@ from reportlab.pdfgen import canvas
 from core import edit_sign as es
 from core import pdf_tools
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_es_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_es_"))
 SCALE = 100 / 72
 results = []
 

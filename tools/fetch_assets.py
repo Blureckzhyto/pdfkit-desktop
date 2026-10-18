@@ -47,7 +47,7 @@ def download(url: str, expected: str | None = None) -> Path:
         return path
     print(f"  descargando {url}", flush=True)
     tmp = path.with_suffix(path.suffix + ".part")
-    request = urllib.request.Request(url, headers={"User-Agent": "pdfkit-desktop"})
+    request = urllib.request.Request(url, headers={"User-Agent": "pliegue"})
     with urllib.request.urlopen(request, timeout=300) as response, open(tmp, "wb") as out:
         shutil.copyfileobj(response, out)
     if expected is not None and sha256(tmp) != expected:
@@ -111,7 +111,7 @@ def fetch_tesseract() -> None:
 
 def fetch_files(name: str) -> None:
     for entry in missing(MANIFEST["components"][name]["files"]):
-        request = urllib.request.Request(entry["url"], headers={"User-Agent": "pdfkit-desktop"})
+        request = urllib.request.Request(entry["url"], headers={"User-Agent": "pliegue"})
         data = urllib.request.urlopen(request, timeout=120).read()
         place([entry], lambda _e: data)
 
@@ -131,7 +131,7 @@ def main(argv: list[str]) -> int:
         print(f"{label}…", flush=True)
         step()
     (ASSETS / "fonts" / "library" / "README.txt").write_text(
-        "Fuentes libres incluidas con PDFKit (sin modificar), descargadas de\n"
+        "Fuentes libres incluidas con Pliegue (sin modificar), descargadas de\n"
         "https://github.com/google/fonts. Cada carpeta incluye su licencia\n"
         "(SIL Open Font License 1.1, Apache 2.0 o Ubuntu Font Licence 1.0).\n"
         "El editor de PDF las usa cuando la fuente original de un documento no\n"

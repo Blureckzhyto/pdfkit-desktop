@@ -1,8 +1,8 @@
-"""PDFKit — offline PDF & image toolbox. Entry point."""
+"""Pliegue — offline PDF & image toolbox. Entry point."""
 import sys
 from pathlib import Path
 
-# Allow running both as `python main.py` (from pdfkit/) and `python pdfkit/main.py`.
+# Allow running both as `python main.py` (from the project folder) and `python <carpeta>/main.py`.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ui import startup

@@ -1,7 +1,7 @@
 """Datos públicos del proyecto (repositorio, sitio). Los usan "Acerca de" y la publicación."""
 
 GITHUB_USER = "Blureckzhyto"   # dueño del repositorio en GitHub
-REPO = "pdfkit-desktop"
+REPO = "pliegue"
 YEAR = 2026
 
 

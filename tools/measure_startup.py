@@ -1,19 +1,20 @@
-"""Mide el arranque de PDFKit: desde que se lanza el .exe hasta que la ventana se ve y hasta
+"""Mide el arranque de Pliegue: desde que se lanza el .exe hasta que la ventana se ve y hasta
 que se puede usar.
 
-    python tools\\measure_startup.py <PDFKit.exe> [veces] [--frio]
+    python tools\\measure_startup.py <Pliegue.exe> [veces] [--frio]
 
 * aviso: aparece la primera ventana del proceso (la pantalla de carga, si la hay);
-* visible: la ventana principal "PDFKit" del proceso (o de sus hijos) está visible;
+* visible: la ventana principal "Pliegue" (o "PDFKit" en versiones viejas) del proceso (o de sus hijos) está visible;
 * usable: visible, responde a mensajes (SendMessageTimeout) y el proceso ya no trabaja
   (menos de 10 % de un núcleo durante 400 ms) — sirve igual para versiones viejas y nuevas.
 `--frio` copia antes la app (el .exe o su carpeta) a una carpeta nueva: archivos nunca
 abiertos, que Windows y el antivirus tienen que leer y revisar como en el primer arranque.
-La configuración del usuario (~/.pdfkit/settings.json) se restaura al final.
+La app corre con una carpeta de datos temporal (no toca la configuración del usuario).
 """
 from __future__ import annotations
 
 import ctypes
+import os
 import shutil
 import statistics
 import subprocess
@@ -26,6 +27,7 @@ from pathlib import Path
 user32 = ctypes.windll.user32
 kernel32 = ctypes.windll.kernel32
 PROCESS_QUERY = 0x1000
+SANDBOX = tempfile.mkdtemp(prefix="pliegue_arranque_")
 WM_NULL, WM_CLOSE = 0x0000, 0x0010
 
 
@@ -68,7 +70,7 @@ def _main_window(pids: set[int], any_title: bool = False):
         if owner.value in pids and user32.IsWindowVisible(hwnd):
             title = ctypes.create_unicode_buffer(64)
             user32.GetWindowTextW(hwnd, title, 64)
-            if title.value == "PDFKit" or any_title:
+            if title.value in ("Pliegue", "PDFKit") or any_title:
                 found.append((hwnd, owner.value))
         return True
 
@@ -94,7 +96,8 @@ def _responds(hwnd) -> bool:
 
 def launch(exe: Path, timeout: float = 90.0):
     start = time.perf_counter()
-    proc = subprocess.Popen([str(exe)], cwd=str(exe.parent))
+    env = dict(os.environ, PLIEGUE_DATA_DIR=SANDBOX, PLIEGUE_LEGACY_DIRS="")
+    proc = subprocess.Popen([str(exe)], cwd=str(exe.parent), env=env)
     first = visible = usable = None
     pids, last_family = {proc.pid}, 0.0
     hwnd = owner = None
@@ -136,14 +139,14 @@ def main(argv: list[str]) -> int:
     exe = Path(argv[0]).resolve()
     runs = int(argv[1]) if len(argv) > 1 and argv[1].isdigit() else 3
     cold = "--frio" in argv
-    settings = Path.home() / ".pdfkit" / "settings.json"
+    settings = Path.home() / ".pdfkit" / "settings.json"   # solo versiones viejas (PDFKit); Pliegue usa datos temporales
     backup = settings.read_bytes() if settings.exists() else None
     results = []
     try:
         for n in range(runs):
             target = exe
             if cold:   # copia nueva: nada en caché para estos archivos
-                folder = Path(tempfile.mkdtemp(prefix="pdfkit_frio_"))
+                folder = Path(tempfile.mkdtemp(prefix="pliegue_frio_"))
                 if (exe.parent / "_internal").is_dir():
                     shutil.copytree(exe.parent, folder / "app")
                     target = folder / "app" / exe.name

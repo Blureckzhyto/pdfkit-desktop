@@ -1,13 +1,15 @@
-"""Tiny persistent key/value store (JSON in the user's home folder)."""
+"""Tiny persistent key/value store (%LOCALAPPDATA%\\Pliegue\\settings.json)."""
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
+from core import paths
+
 
 class Settings:
     def __init__(self, path: str | Path | None = None):
-        self.path = Path(path) if path else Path.home() / ".pdfkit" / "settings.json"
+        self.path = Path(path) if path else paths.settings_file()
         self._data: dict = {}
         try:
             self._data = json.loads(self.path.read_text(encoding="utf-8"))

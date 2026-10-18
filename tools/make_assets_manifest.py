@@ -58,7 +58,7 @@ def download(url: str) -> Path:
     path = CACHE / url.rstrip("/").split("/")[-1]
     if not path.exists():
         print("descargando", url, flush=True)
-        req = urllib.request.Request(url, headers={"User-Agent": "pdfkit-desktop"})
+        req = urllib.request.Request(url, headers={"User-Agent": "pliegue"})
         path.write_bytes(urllib.request.urlopen(req, timeout=300).read())
     return path
 
@@ -135,14 +135,14 @@ def main() -> int:
     # biblioteca de fuentes: google/fonts en un commit fijo
     commit = json.load(urllib.request.urlopen(urllib.request.Request(
         "https://api.github.com/repos/google/fonts/commits/main",
-        headers={"User-Agent": "pdfkit-desktop"})))["sha"]
+        headers={"User-Agent": "pliegue"})))["sha"]
     fonts, missing = [], []
     for folder, (src, names, license_name) in fetch_font_library.FAMILIES.items():
         for name in names + ([license_name] if license_name != "apache" else []):
             dest = f"fonts/library/{folder}/{name}"
             local = ASSETS / dest
             url = f"https://raw.githubusercontent.com/google/fonts/{commit}/{src}/{name}"
-            data = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "pdfkit-desktop"}),
+            data = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "pliegue"}),
                                           timeout=120).read()
             if local.exists() and sha256(local.read_bytes()) == sha256(data):
                 fonts.append({"dest": dest, "url": url, "sha256": sha256(data)})

@@ -64,7 +64,14 @@ def icon(name: str, size: int) -> ctk.CTkImage | None:
     return scaled_image(f"icons/{name}_{size}", (size, size), f"icons/{name}_dark_{size}")
 
 
-def logo(stem: str, size: tuple[int, int]) -> ctk.CTkImage | None:
+def logo(stem: str, size: tuple[int, int] | int) -> ctk.CTkImage | None:
+    """`size`: (ancho, alto), o solo el alto (el ancho sale de la proporción del archivo)."""
+    if isinstance(size, int):
+        path = asset_path(f"logo/{stem}@1x.png")
+        if not path.exists():
+            return None
+        image = _open(str(path))
+        size = (round(size * image.width / image.height), size)
     return scaled_image(f"logo/{stem}", size, f"logo/{stem}_dark")
 
 

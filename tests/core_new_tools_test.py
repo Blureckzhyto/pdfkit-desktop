@@ -13,7 +13,7 @@ from reportlab.pdfgen import canvas
 
 from core import compare, convert_extra, ocr, page_tools
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_new_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_new_"))
 results = []
 
 

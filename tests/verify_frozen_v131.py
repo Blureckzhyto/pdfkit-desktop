@@ -1,4 +1,4 @@
-"""Arranca dist\\PDFKit.exe, espera su ventana, captura solo esa ventana y lo cierra."""
+"""Arranca dist\\Pliegue\\Pliegue.exe, espera su ventana, captura solo esa ventana y lo cierra."""
 import ctypes
 import subprocess
 import sys
@@ -8,7 +8,7 @@ from pathlib import Path
 
 from PIL import ImageGrab
 
-EXE = Path(__file__).resolve().parent.parent / "dist" / "PDFKit" / "PDFKit.exe"
+EXE = Path(__file__).resolve().parent.parent / "dist" / "Pliegue" / "Pliegue.exe"
 OUT = Path(__file__).parent / "_capturas" / "shots_v131" / "frozen_exe.png"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 user32 = ctypes.windll.user32
@@ -17,7 +17,7 @@ proc = subprocess.Popen([str(EXE)])
 hwnd, start = 0, time.time()
 while time.time() - start < 90 and not hwnd:
     time.sleep(0.05)
-    hwnd = user32.FindWindowW(None, "PDFKit")
+    hwnd = user32.FindWindowW(None, "Pliegue")
     if hwnd and not user32.IsWindowVisible(hwnd):
         hwnd = 0
 ok = bool(hwnd) and proc.poll() is None

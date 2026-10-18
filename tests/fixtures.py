@@ -5,7 +5,7 @@ Montserrat-Bold 14,14 pt incrustada como SUBCONJUNTO (solo las letras usadas, to
 mayúsculas) y con el texto dentro de un Form XObject. Necesita la biblioteca de fuentes
 (python tools/fetch_assets.py) para tomar Montserrat.
 
-Si se define la variable de entorno PDFKIT_PORTADA con la ruta de un PDF real, las
+Si se define la variable de entorno PLIEGUE_PORTADA con la ruta de un PDF real, las
 pruebas usan una copia de ese archivo en lugar del generado.
 """
 from __future__ import annotations
@@ -40,7 +40,7 @@ def montserrat_bold() -> bytes:
 
 def portada(path: Path) -> Path:
     path = Path(path)
-    real = os.environ.get("PDFKIT_PORTADA")
+    real = os.environ.get("PLIEGUE_PORTADA")
     if real and Path(real).exists():
         shutil.copy(real, path)
         return path

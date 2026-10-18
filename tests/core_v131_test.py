@@ -10,7 +10,7 @@ from reportlab.pdfgen import canvas
 
 from core import page_tools
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_core131_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_core131_"))
 results, log = [], []
 
 

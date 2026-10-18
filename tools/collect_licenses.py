@@ -1,4 +1,4 @@
-"""Reúne los textos de licencia de todo lo que se distribuye con PDFKit en licenses/ y
+"""Reúne los textos de licencia de todo lo que se distribuye con Pliegue en licenses/ y
 genera THIRD_PARTY_LICENSES.md (lo usa el instalador: carpeta "Licencias").
 
     python tools\\collect_licenses.py
@@ -92,7 +92,7 @@ def home_of(dist: md.Distribution) -> str:
 
 
 def fetch(url: str) -> bytes:
-    return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "pdfkit-desktop"}),
+    return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "pliegue"}),
                                   timeout=60).read()
 
 

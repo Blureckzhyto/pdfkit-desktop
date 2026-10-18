@@ -1,7 +1,7 @@
 """Errores de la app: nada se pierde en silencio.
 
 Todo error inesperado (hilos de trabajo, callbacks de Tk, el editor) queda con su traza
-completa en %LOCALAPPDATA%\\PDFKit\\logs\\errores.log. En el exe (sin consola)
+completa en %LOCALAPPDATA%\\Pliegue\\logs\\errores.log. En el exe (sin consola)
 sys.stderr es None, así que ese archivo es el único lugar donde se ven.
 """
 from __future__ import annotations
@@ -17,8 +17,9 @@ actions = logging.getLogger("pdfkit.actions")   # acciones del usuario que convi
 
 
 def logs_dir() -> Path:
-    base = os.environ.get("LOCALAPPDATA") or str(Path.home() / "AppData" / "Local")
-    return Path(base) / "PDFKit" / "logs"
+    from core import paths
+
+    return paths.logs_dir()
 
 
 def setup() -> None:

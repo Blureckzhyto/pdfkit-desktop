@@ -1,6 +1,6 @@
 """Ventana «Acerca de» (AGPL-3.0): versión, aviso de licencia, enlace al código fuente y
 licencias de terceros. Dentro del exe (run_all.py --exe) comprueba además la carpeta
-«Licencias» junto a PDFKit.exe."""
+«Licencias» junto a Pliegue.exe."""
 import sys
 import time
 from pathlib import Path
@@ -11,7 +11,7 @@ from core import project  # noqa: E402
 from ui import about  # noqa: E402
 from ui.app import VERSION, App  # noqa: E402
 
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 results, log = [], []
 
@@ -49,7 +49,9 @@ def run():
 
     labels = [w.cget("text") for w in dialog.winfo_children()[0].winfo_children() if isinstance(w, ctk.CTkLabel)]
     joined = " ".join(str(t) for t in labels)
-    check("muestra la versión", f"Versión {VERSION}" in joined, joined[:120])
+    check("muestra el nombre, el anterior y la versión", f"Pliegue (antes PDFKit) · versión {VERSION}" in joined,
+          joined[:120])
+    check("el título de la ventana es «Acerca de Pliegue»", dialog.title() == "Acerca de Pliegue", dialog.title())
     check("menciona la GNU Affero General Public License", "GNU Affero General Public License" in joined)
     check("muestra la URL del código fuente", project.source_url() in joined)
     check("botones: código fuente, licencia y terceros",

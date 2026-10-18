@@ -10,11 +10,11 @@ from reportlab.pdfgen import canvas as rl_canvas
 
 from core.utils import clean_filename, named_output, rename_outputs
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_nombre_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_nombre_"))
 SHOTS = Path(__file__).parent / "_capturas" / "shots_v133"
 SHOTS.mkdir(parents=True, exist_ok=True)
 SHOTS.mkdir(exist_ok=True)
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 results, log = [], []
 

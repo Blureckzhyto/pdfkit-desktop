@@ -13,7 +13,7 @@ from core import project
 from ui import theme
 from ui.assets import asset_path, logo
 
-NOTICE = ("PDFKit es software libre: puedes redistribuirlo y modificarlo según los términos de la "
+NOTICE = ("Pliegue es software libre: puedes redistribuirlo y modificarlo según los términos de la "
           "GNU Affero General Public License versión 3, publicada por la Free Software Foundation. "
           "Se distribuye SIN NINGUNA GARANTÍA. El código fuente completo de esta versión está "
           "disponible en el enlace de abajo.")
@@ -35,17 +35,17 @@ def _open(path: Path) -> None:
 
 def show_about(root, version: str) -> ctk.CTkToplevel:
     dialog = ctk.CTkToplevel(root, fg_color=theme.BG_PRIMARY)
-    dialog.title("Acerca de PDFKit")
+    dialog.title("Acerca de Pliegue")
     dialog.resizable(False, False)
     dialog.transient(root)
     body = ctk.CTkFrame(dialog, fg_color="transparent")
     body.pack(padx=28, pady=24)
-    image = logo("wordmark_sidebar", (150, 40))
+    image = logo("wordmark_sidebar", 40)
     if image is not None:
         ctk.CTkLabel(body, text="", image=image).pack(anchor="w")
-    ctk.CTkLabel(body, text=f"Versión {version}", font=theme.FONT_HEADING,
+    ctk.CTkLabel(body, text=f"Pliegue (antes PDFKit) · versión {version}", font=theme.FONT_HEADING,
                  text_color=theme.TEXT_PRIMARY).pack(anchor="w", pady=(12, 0))
-    ctk.CTkLabel(body, text=f"© {project.YEAR} {project.GITHUB_USER or 'PDFKit'} · Licencia AGPL-3.0", font=theme.FONT_SMALL,
+    ctk.CTkLabel(body, text=f"© {project.YEAR} {project.GITHUB_USER or 'Pliegue'} · Licencia AGPL-3.0", font=theme.FONT_SMALL,
                  text_color=theme.TEXT_SECONDARY).pack(anchor="w", pady=(2, 10))
     ctk.CTkLabel(body, text=NOTICE, font=theme.FONT_SMALL, text_color=theme.TEXT_SECONDARY,
                  wraplength=440, justify="left").pack(anchor="w")

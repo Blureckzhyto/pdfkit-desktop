@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import sys
 
-APP_USER_MODEL_ID = "PDFKit.App"
+APP_USER_MODEL_ID = "Pliegue.App"   # hasta 1.3.x: "PDFKit.App"
 _done = False
 _MARKS: list[tuple[str, float]] = []   # (etapa, time.time()) del arranque
 
@@ -48,14 +48,15 @@ def close_splash() -> None:
 def write_timing(version: str) -> None:
     """Deja en logs/inicio.log cuánto tardó cada etapa del arranque (desde el doble clic)."""
     import os
-    from pathlib import Path
 
     start = process_start()
     parts = " · ".join(f"{label} {stamp - start:.2f} s" for label, stamp in _MARKS)
     kind = ("onedir" if getattr(sys, "_MEIPASS", "").startswith(os.path.dirname(sys.executable))
             else "onefile") if getattr(sys, "frozen", False) else "código"
     try:
-        folder = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "PDFKit" / "logs"
+        from core import paths
+
+        folder = paths.logs_dir()
         folder.mkdir(parents=True, exist_ok=True)
         import time
 
@@ -70,7 +71,15 @@ def prepare() -> None:
     if _done:
         return
     _done = True
+    from core import paths
+
+    notes = paths.migrate()   # %LOCALAPPDATA%\\PDFKit y ~\\.pdfkit -> %LOCALAPPDATA%\\Pliegue
     _error_log()
+    if notes:
+        from core import errors
+
+        for note in notes:
+            errors.actions.info(note)
     _tk_cleanup_in_main_thread()
     if sys.platform != "win32":
         return
@@ -154,14 +163,14 @@ def _error_log() -> None:
 
 
 def _font_log() -> None:
-    """Cada decisión de fuente del editor queda en %LOCALAPPDATA%\\PDFKit\\logs\\fuentes.log."""
+    """Cada decisión de fuente del editor queda en %LOCALAPPDATA%\\Pliegue\\logs\\fuentes.log."""
     import logging
-    import os
     from logging.handlers import RotatingFileHandler
-    from pathlib import Path
 
     try:
-        folder = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "PDFKit" / "logs"
+        from core import paths
+
+        folder = paths.logs_dir()
         folder.mkdir(parents=True, exist_ok=True)
         handler = RotatingFileHandler(folder / "fuentes.log", maxBytes=1_000_000, backupCount=2,
                                       encoding="utf-8")

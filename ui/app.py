@@ -30,7 +30,7 @@ except ImportError:
     class _Root(ctk.CTk):  # type: ignore[no-redef]
         dnd_available = False
 
-VERSION = "1.3.7"
+VERSION = "1.4.0"
 VIEW_SLIDE_PX = 12
 THEMES = {"Claro": "claro", "Oscuro": "oscuro", "Sistema": "sistema"}
 THEME_ICONS = {"claro": "ui_sun", "oscuro": "ui_moon", "sistema": "ui_monitor"}
@@ -141,7 +141,7 @@ class App(_Root):
         self.toasts = ToastManager(self)
         self._flush_tk_cleanup()
 
-        self.title("PDFKit")
+        self.title("Pliegue")
         self._set_window_icon()
         self.geometry("1320x840")
         self.minsize(1100, 700)
@@ -213,8 +213,8 @@ class App(_Root):
         sidebar.grid_rowconfigure(1, weight=1)
         sidebar.grid_columnconfigure(0, weight=1)
 
-        self._wordmark = logo("wordmark_sidebar", (126, 34))
-        brand = ctk.CTkLabel(sidebar, text="" if self._wordmark else "PDFKit", image=self._wordmark,
+        self._wordmark = logo("wordmark_sidebar", 34)
+        brand = ctk.CTkLabel(sidebar, text="" if self._wordmark else "Pliegue", image=self._wordmark,
                              font=theme.FONT_TITLE, text_color=theme.TEXT_PRIMARY, cursor="hand2")
         brand.grid(row=0, column=0, sticky="w", padx=22, pady=(24, 14))
         brand.bind("<Button-1>", lambda _e: self.show_view("home"))

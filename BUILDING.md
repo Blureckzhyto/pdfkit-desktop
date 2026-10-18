@@ -1,4 +1,4 @@
-# Compilar PDFKit desde el código · Building from source
+# Compilar Pliegue desde el código · Building from source
 
 *English summary at the end.*
 
@@ -9,13 +9,13 @@ lanzador `py`), [Git](https://git-scm.com/) e [Inno Setup 6](https://jrsoftware.
 (solo para el instalador).
 
 ```powershell
-git clone https://github.com/Blureckzhyto/pdfkit-desktop.git
-cd pdfkit-desktop
+git clone https://github.com/Blureckzhyto/pliegue.git
+cd pliegue
 py -3.11 -m pip install -r requirements.txt
 py -3.11 tools\fetch_assets.py      # Poppler, Tesseract, WeasyPrint y la biblioteca de fuentes
 py -3.11 main.py                    # ejecutar desde el código
-build.bat                           # -> dist\PDFKit\PDFKit.exe
-"%LOCALAPPDATA%\Programs\Inno Setup 6\ISCC.exe" installer.iss   # -> installer\PDFKit_Setup.exe
+build.bat                           # -> dist\Pliegue\Pliegue.exe
+"%LOCALAPPDATA%\Programs\Inno Setup 6\ISCC.exe" installer.iss   # -> installer\Pliegue_Setup.exe
 ```
 
 `tools\fetch_assets.py` descarga los componentes de terceros que no están en el repositorio
@@ -36,38 +36,40 @@ actualizar alguno de esos componentes.
 
 Las licencias de todo lo incluido están en [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)
 y sus textos en `licenses/` (`python tools\collect_licenses.py` los regenera). El build los
-copia a `dist\PDFKit\Licencias` y el instalador a la carpeta **Licencias** de la app.
+copia a `dist\Pliegue\Licencias` y el instalador a la carpeta **Licencias** de la app.
 
 ## El build
 
 `build.bat` usa siempre Python 3.11 (`py -3.11`) y PyInstaller en modo **carpeta**
-(`--onedir --windowed --splash --noupx`) → `dist\PDFKit\` (`PDFKit.exe` + `_internal\`): la app
+(`--onedir --windowed --splash --noupx`) → `dist\Pliegue\` (`Pliegue.exe` + `_internal\`): la app
 se instala una vez y abre en ~1,5 s (el formato de un solo archivo descomprimía ~380 MB en
 cada arranque). Se excluyen módulos que la app no usa y `hooks\hook-playa.py` agrega el
 módulo compilado que necesita camelot ("PDF a Excel"). Las vistas y las bibliotecas pesadas
 se cargan al abrir cada herramienta. `installer.iss` instala la carpeta completa; al
-actualizar desde 1.3.6 o anterior reemplaza el PDFKit.exe de un solo archivo en el mismo
+actualizar desde 1.3.6 o anterior reemplaza el Pliegue.exe de un solo archivo en el mismo
 lugar (mismos accesos directos, una sola entrada en "Agregar o quitar programas").
 
 ## Lista de verificación de cada versión
 
 1. Todas las suites desde el código (`tests\`; las capturas quedan en `tests\_capturas\`):
    `py -3.11 tests\run_all.py`
-2. Las mismas suites **dentro de la app compilada** (`PDFKit.exe --run-script`):
-   `py -3.11 tests\run_all.py --exe dist\PDFKit\PDFKit.exe`
+2. Las mismas suites **dentro de la app compilada** (`Pliegue.exe --run-script`):
+   `py -3.11 tests\run_all.py --exe dist\Pliegue\Pliegue.exe`
 3. La autoprueba del editor dentro del exe (edición con Enter y guardado, falla forzada al
    reinsertar, Enter vacío, y con clics y teclas reales: doble clic con la ventana sin foco,
    escribir y Retroceso sobre un texto elegido, Supr con «Deshacer»):
-   `py -3.11 tools\release_check.py dist\PDFKit\PDFKit.exe [otro.pdf::texto de una línea]`
+   `py -3.11 tools\release_check.py dist\Pliegue\Pliegue.exe [otro.pdf::texto de una línea]`
 4. El instalador sobre una instalación anterior (con otro AppId: no toca la instalación
-   real) y el arranque de esa copia: `py -3.11 tests\installer_upgrade_test.py <PDFKit-onefile-viejo.exe>`
-   y `py -3.11 tools\measure_startup.py dist\PDFKit\PDFKit.exe 4`
+   real) y el arranque de esa copia: `py -3.11 tests\installer_upgrade_test.py <Pliegue-onefile-viejo.exe>`
+   y `py -3.11 tools\measure_startup.py dist\Pliegue\Pliegue.exe 4`
 5. Publicar: `py -3.11 tools\release.py` (instalador, SHA-256, `docs/version.json`, etiqueta y
    release de GitHub).
 
 Las pruebas usan documentos generados (`tests/fixtures.py`); nunca archivos personales.
 
-Registros de la app en `%LOCALAPPDATA%\PDFKit\logs\`: `errores.log`, `acciones.log`
+Datos de la app en `%LOCALAPPDATA%\Pliegue\` (`settings.json`, `font_index.json`, `font_cache\`). Al primer inicio de 1.4.0 se mudan ahí los datos de PDFKit (`%LOCALAPPDATA%\PDFKit` y `~\.pdfkit\settings.json`): se copian, se verifican y recién entonces se borran (`core/paths.py`). Las pruebas usan `PLIEGUE_DATA_DIR` y `PLIEGUE_LEGACY_DIRS` para no tocar los datos reales.
+
+Registros de la app en `%LOCALAPPDATA%\Pliegue\logs\`: `errores.log`, `acciones.log`
 (elementos borrados y qué lo provocó), `fuentes.log` e `inicio.log` (tiempos de arranque).
 
 ## Programas externos opcionales
@@ -102,4 +104,4 @@ importa tkinter. Todo el procesamiento corre en hilos en segundo plano.
 `git clone` → `py -3.11 -m pip install -r requirements.txt` → `py -3.11 tools\fetch_assets.py`
 (downloads Poppler, Tesseract, WeasyPrint and the font library from their official sources
 and verifies SHA-256) → `build.bat` → `ISCC.exe installer.iss`. Run all test suites with
-`tests\run_all.py` (add `--exe dist\PDFKit\PDFKit.exe` to run them inside the built app).
+`tests\run_all.py` (add `--exe dist\Pliegue\Pliegue.exe` to run them inside the built app).

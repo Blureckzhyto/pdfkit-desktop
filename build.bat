@@ -13,14 +13,21 @@ if not exist assets\icon.ico (
     )
 )
 if not exist assets\splash.png %PY% tools\make_splash.py
+rem nombre, version y autor en las propiedades de Pliegue.exe y el Administrador de tareas
+%PY% tools\make_version_info.py >nul
+if errorlevel 1 (
+    echo ERROR: no se pudo generar build\version_info.txt
+    exit /b 1
+)
 
-echo [2/3] Compilando dist\PDFKit\ con PyInstaller (carpeta: arranque rapido)...
+echo [2/3] Compilando dist\Pliegue\ con PyInstaller (carpeta: arranque rapido)...
 rem --onedir: la app se instala una sola vez como carpeta; nada se extrae al abrir
 rem (con --onefile se descomprimian ~380 MB en cada arranque: 10-15 s).
 rem --splash: el logo aparece al instante mientras Python arranca.
 rem Sin UPX: aumenta falsos positivos del antivirus y hace mas lento el arranque.
-%PY% -m PyInstaller --noconfirm --clean --onedir --windowed --noupx --name PDFKit --icon=assets\icon.ico ^
+%PY% -m PyInstaller --noconfirm --clean --onedir --windowed --noupx --name Pliegue --icon=assets\icon.ico ^
   --splash assets\splash.png ^
+  --version-file build\version_info.txt ^
   --additional-hooks-dir hooks ^
   --add-data "assets;assets" ^
   --collect-all customtkinter ^
@@ -74,14 +81,14 @@ if errorlevel 1 (
 )
 
 rem Licencias junto a la app (lo exige la AGPL al distribuir el binario)
-if not exist dist\PDFKit\Licencias mkdir dist\PDFKit\Licencias
-copy /y LICENSE dist\PDFKit\Licencias\LICENSE.txt >nul
-copy /y THIRD_PARTY_LICENSES.md dist\PDFKit\Licencias\ >nul
-xcopy /e /i /y /q licenses dist\PDFKit\Licencias\terceros >nul
+if not exist dist\Pliegue\Licencias mkdir dist\Pliegue\Licencias
+copy /y LICENSE dist\Pliegue\Licencias\LICENSE.txt >nul
+copy /y THIRD_PARTY_LICENSES.md dist\Pliegue\Licencias\ >nul
+xcopy /e /i /y /q licenses dist\Pliegue\Licencias\terceros >nul
 
 echo [3/3] Anclando a la barra de tareas...
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0post_build.ps1"
 
 echo.
-echo Listo: dist\PDFKit\PDFKit.exe  (la carpeta dist\PDFKit completa es la app)
+echo Listo: dist\Pliegue\Pliegue.exe  (la carpeta dist\Pliegue completa es la app)
 endlocal

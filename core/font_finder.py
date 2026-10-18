@@ -13,7 +13,7 @@ subconjuntos solo traen los glifos usados):
 
 Familia, peso y estilo se leen de la tabla de nombres y de OS/2 de cada archivo
 (fontTools), no del nombre del archivo. El índice se arma una vez y se guarda en
-%LOCALAPPDATA%\\PDFKit\\font_index.json (solo se vuelven a leer los archivos que
+%LOCALAPPDATA%\\Pliegue\\font_index.json (solo se vuelven a leer los archivos que
 cambiaron). Cada decisión queda en el registro "pdfkit.fonts".
 """
 from __future__ import annotations
@@ -204,8 +204,9 @@ class Face:
 
 
 def _app_dir() -> Path:
-    base = os.environ.get("LOCALAPPDATA") or str(Path.home() / "AppData" / "Local")
-    return Path(base) / "PDFKit"
+    from core import paths
+
+    return paths.data_dir()
 
 
 def library_dir() -> Path:
@@ -425,7 +426,7 @@ def static_buffer(choice: Choice, extra: str = "") -> bytes:
             return _STATIC[key]
         import hashlib
 
-        tag = hashlib.sha1(repr(("v2", face.path, face.index, choice.weight, sorted(wanted),
+        tag = hashlib.sha1(repr(("v3", face.path, face.index, choice.weight, sorted(wanted),
                                  os.path.getmtime(face.path))).encode()).hexdigest()[:16]
         cache = _app_dir() / "font_cache" / f"{family_key(face.family)}_{choice.weight}_{tag}.ttf"
         if cache.exists():
@@ -481,7 +482,7 @@ def _name_instance(font, choice: Choice) -> None:
     for name_id, value in values.items():
         table.setName(value, name_id, 3, 1, 0x409)
         table.setName(value, name_id, 1, 0, 0)
-    table.setName(f"{values[6]};PDFKit", 3, 3, 1, 0x409)
+    table.setName(f"{values[6]};Pliegue", 3, 3, 1, 0x409)
     if "OS/2" in font:
         os2 = font["OS/2"]
         os2.usWeightClass = int(choice.weight)
@@ -497,7 +498,7 @@ def display_file(choice: Choice) -> tuple[str, str]:
     import tempfile
 
     data = static_buffer(choice)
-    folder = Path(tempfile.gettempdir()) / "pdfkit_fonts"
+    folder = Path(tempfile.gettempdir()) / "pliegue_fonts"
     folder.mkdir(exist_ok=True)
     name = f"{os.getpid()}_{family_key(choice.face.family)}_{choice.weight}{'i' if choice.italic else ''}.ttf"
     path = folder / name

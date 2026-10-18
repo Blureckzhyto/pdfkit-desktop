@@ -1,6 +1,6 @@
 """Autoprueba del editor dentro del programa instalado (también funciona desde el código).
 
-    PDFKit.exe --autotest <reporte.json> <pdf>[::texto de la línea] [<pdf> ...]
+    Pliegue.exe --autotest <reporte.json> <pdf>[::texto de la línea] [<pdf> ...]
 
 Parte de la lista de verificación de cada versión: se corre contra el exe compilado.
 Para cada PDF (sobre una copia; el original no se toca):
@@ -479,7 +479,7 @@ def run(argv: list[str]) -> int:
     faulthandler.dump_traceback_later(90, repeat=True, file=stacks)
     # cada PDF puede llevar la línea a editar: "archivo.pdf::texto de la línea"
     pdfs = [(Path(p.split("::")[0]), p.split("::")[1] if "::" in p else "CARRERA") for p in argv[i + 2:]]
-    work = Path(tempfile.mkdtemp(prefix="pdfkit_autotest_"))
+    work = Path(tempfile.mkdtemp(prefix="pliegue_autotest_"))
     report = {"version": None, "congelado": bool(getattr(sys, "frozen", False)),
               "carpeta": str(work), "resultados": [], "errores_hilos": [], "errores": []}
     thread_errors = report["errores_hilos"]
@@ -545,7 +545,7 @@ def run(argv: list[str]) -> int:
 
 
 def run_script(argv: list[str]) -> int:
-    """PDFKit.exe --run-script <prueba.py> [--salida <archivo>] [argumentos]
+    """Pliegue.exe --run-script <prueba.py> [--salida <archivo>] [argumentos]
 
     Corre una suite de tests/ DENTRO del exe: con el Python, las bibliotecas y el código
     (core/, ui/) empaquetados — así se detecta lo que falte en el paquete (imports diferidos,

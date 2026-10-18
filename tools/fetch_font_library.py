@@ -56,7 +56,7 @@ FAMILIES = {
 
 
 def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": "pdfkit-dev"})
+    req = urllib.request.Request(url, headers={"User-Agent": "pliegue"})
     return urllib.request.urlopen(req, timeout=60).read()
 
 
@@ -83,7 +83,7 @@ def main():
             except Exception as exc:
                 missing.append(f"{src} licencia: {exc}")
     (OUT / "README.txt").write_text(
-        "Fuentes libres incluidas con PDFKit (sin modificar), descargadas de\n"
+        "Fuentes libres incluidas con Pliegue (sin modificar), descargadas de\n"
         "https://github.com/google/fonts. Cada carpeta incluye su licencia\n"
         "(SIL Open Font License 1.1, Apache 2.0 o Ubuntu Font Licence 1.0).\n"
         "El editor de PDF las usa cuando la fuente original de un documento no\n"

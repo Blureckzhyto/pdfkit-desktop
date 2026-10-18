@@ -268,7 +268,7 @@ def _raise_poppler_hint(exc: Exception) -> None:
             "Poppler was not found. This tool needs Poppler for Windows: download it "
             "(e.g. github.com/oschwartz10612/poppler-windows/releases), extract it, and add "
             "its 'Library\\bin' folder to your PATH — or set the POPPLER_PATH environment "
-            "variable to that folder. Then restart PDFKit."
+            "variable to that folder. Then restart Pliegue."
         ) from exc
     raise RuntimeError(f"Could not render the PDF: {exc}") from exc
 

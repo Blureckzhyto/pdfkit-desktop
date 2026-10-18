@@ -16,8 +16,8 @@ from reportlab.pdfgen import canvas
 SHOTS = Path(__file__).parent / "_capturas" / "shots_v13"
 SHOTS.mkdir(parents=True, exist_ok=True)
 SHOTS.mkdir(exist_ok=True)
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_gui13_"))
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_gui13_"))
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 
 # documento con fuente incrustada con mapa Unicode (Georgia) + Times + imagen, 3 páginas

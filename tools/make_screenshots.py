@@ -4,16 +4,19 @@ ejemplo generados aquí mismo (nunca archivos personales).
     python tools\\make_screenshots.py
 
 Genera: home-claro, home-oscuro, editor-claro, editor-oscuro, dividir-claro (WebP).
-La configuración del usuario (~/.pdfkit/settings.json) se restaura al final.
+Usa una carpeta de datos temporal: no toca la configuración del usuario.
 """
 from __future__ import annotations
 
+import os
 import sys
 import tempfile
 import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+os.environ.setdefault("PLIEGUE_DATA_DIR", tempfile.mkdtemp(prefix="pliegue_capturas_datos_"))
+os.environ.setdefault("PLIEGUE_LEGACY_DIRS", "")
 sys.path.insert(0, str(ROOT))
 OUT = ROOT / "docs" / "img"
 
@@ -26,7 +29,7 @@ def sample_pdf(path: Path) -> Path:
     from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
     styles = getSampleStyleSheet()
-    body = ("Este documento de ejemplo muestra cómo PDFKit edita texto en el lugar, con la misma "
+    body = ("Este documento de ejemplo muestra cómo Pliegue edita texto en el lugar, con la misma "
             "fuente, tamaño y color del original. Todo el procesamiento ocurre en tu computadora: "
             "ningún archivo se sube a internet.")
     story = []
@@ -52,9 +55,9 @@ def main() -> int:
     from ui.app import App
 
     OUT.mkdir(parents=True, exist_ok=True)
-    work = Path(tempfile.mkdtemp(prefix="pdfkit_capturas_"))
+    work = Path(tempfile.mkdtemp(prefix="pliegue_capturas_"))
     pdf = sample_pdf(work / "Informe trimestral.pdf")
-    settings = Path.home() / ".pdfkit" / "settings.json"
+    settings = __import__("core.paths").paths.settings_file()
     backup = settings.read_bytes() if settings.exists() else None
     app = App()
     app.geometry("1280x800+30+30")
@@ -69,7 +72,7 @@ def main() -> int:
         """Ruta de salida genérica en las capturas (nunca la carpeta real del usuario)."""
         entry = view.output_selector.entry
         entry.delete(0, "end")
-        entry.insert(0, r"C:\Users\Usuario\Documents\PDFKit")
+        entry.insert(0, r"C:\Users\Usuario\Documents\Pliegue")
 
     def shot(name):
         view = app._views.get(app._active) if getattr(app, "_active", None) else None

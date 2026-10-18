@@ -877,9 +877,9 @@ class EditorSession:
             return fonts_added[key]
         used = {entry[4] for entry in page.get_fonts(full=True)} | set(fonts_added.values())
         n = 1
-        while f"PDFKitF{n}" in used:
+        while f"PliegueF{n}" in used:
             n += 1
-        name = f"PDFKitF{n}"
+        name = f"PliegueF{n}"
         xref = page.insert_font(fontname=name, fontbuffer=resolved.subset_buffer(set(text)))
         if stream != "page":
             _add_form_font(doc, stream, name, xref)
@@ -1130,7 +1130,7 @@ class EditorSession:
         try:
             import tempfile
 
-            folder = Path(tempfile.gettempdir()) / "pdfkit_fonts"
+            folder = Path(tempfile.gettempdir()) / "pliegue_fonts"
             folder.mkdir(exist_ok=True)
             suffix = ".otf" if info.buffer[:4] == b"OTTO" else ".ttf"
             path = folder / f"{os.getpid()}_{info.objnum}{suffix}"

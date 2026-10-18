@@ -1,1 +1,1 @@
-"""PDFKit user interface package."""
+"""Pliegue user interface package."""

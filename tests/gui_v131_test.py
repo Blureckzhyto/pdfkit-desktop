@@ -17,8 +17,8 @@ from reportlab.pdfgen import canvas as rl_canvas
 SHOTS = Path(__file__).parent / "_capturas" / "shots_v131"
 SHOTS.mkdir(parents=True, exist_ok=True)
 SHOTS.mkdir(exist_ok=True)
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_gui131_"))
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_gui131_"))
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 # arranque sin preferencia guardada: debe usar "Sistema"
 if backup is not None:

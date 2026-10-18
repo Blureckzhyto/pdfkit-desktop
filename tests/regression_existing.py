@@ -14,7 +14,7 @@ from pypdf import PdfReader
 
 from core import conversions, image_tools, pdf_tools
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_reg_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_reg_"))
 ok = []
 
 

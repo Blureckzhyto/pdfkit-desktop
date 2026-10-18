@@ -16,8 +16,8 @@ from reportlab.pdfgen import canvas as rl_canvas  # noqa: E402
 
 from ui import selftest  # noqa: E402
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_v137_"))
-SETTINGS = Path.home() / ".pdfkit" / "settings.json"
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_v137_"))
+SETTINGS = __import__("core.paths").paths.settings_file()
 backup = SETTINGS.read_bytes() if SETTINGS.exists() else None
 results, log = [], []
 
@@ -46,7 +46,7 @@ def run():
     d = selftest._Driver(app)
     v = d.v
     # ventana de otro proceso al frente; doble clic real apenas se ve la página
-    # otra app de verdad: un Python aparte (dentro del exe, sys.executable es PDFKit.exe)
+    # otra app de verdad: un Python aparte (dentro del exe, sys.executable es Pliegue.exe)
     python = sys.executable if not getattr(sys, "frozen", False) else (shutil.which("py") or "py")
     other = subprocess.Popen([python] + (["-3.11"] if python.lower().endswith("py.exe") else []) + ["-c",
                               "import tkinter as t; r=t.Tk(); r.title('otra app'); "
@@ -63,7 +63,7 @@ def run():
     d.wait(lambda: v.ed_editor is not None, 3)
     d.settle(300)
     check("PDF abierto", ok)
-    check("al empezar, la ventana de PDFKit no estaba activa", not foreground_is_app)
+    check("al empezar, la ventana de Pliegue no estaba activa", not foreground_is_app)
     check("doble clic con otra app al frente: abre el editor al primer intento",
           v.ed_editor is not None and v.ed_editor[1] == line["id"])
     check("el editor tiene el foco del teclado", v.ed_editor is not None and app.focus_get() is v.ed_editor[0])

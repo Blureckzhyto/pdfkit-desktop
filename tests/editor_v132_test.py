@@ -17,7 +17,7 @@ from reportlab.pdfgen import canvas
 
 from core import font_finder, pdf_editor, pdf_textops
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_v132_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_v132_"))
 WIN = Path(r"C:\Windows\Fonts")
 JAKARTA = Path(Path(__file__).resolve().parent.parent / "assets" / "fonts"
                r"\PlusJakartaSans-Regular.ttf")

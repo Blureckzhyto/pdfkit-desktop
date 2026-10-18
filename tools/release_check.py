@@ -1,7 +1,7 @@
 """Verificación obligatoria antes de publicar una versión: corre la autoprueba del editor
 DENTRO del exe compilado (no desde el código: hay fallas que solo pasan en el exe).
 
-    python tools\\release_check.py [dist\\PDFKit\\PDFKit.exe] [otro.pdf[::texto de la línea] ...]
+    python tools\\release_check.py [dist\\Pliegue\\Pliegue.exe] [otro.pdf[::texto de la línea] ...]
 
 Siempre prueba un PDF generado sin formularios (Helvetica, sin fuente incrustada); los
 PDF que se pasen se prueban sobre copias. Cada uno: edición + Enter en el editor real,
@@ -14,6 +14,7 @@ Termina con código 1 si algo falla. La configuración del usuario no se modific
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -34,28 +35,24 @@ def _simple_pdf(path: Path) -> None:
 
 
 def main(argv: list[str]) -> int:
-    exe = Path(argv[0]) if argv and argv[0].lower().endswith(".exe") else ROOT / "dist" / "PDFKit" / "PDFKit.exe"
+    exe = Path(argv[0]) if argv and argv[0].lower().endswith(".exe") else ROOT / "dist" / "Pliegue" / "Pliegue.exe"
     pdfs = [a for a in argv if not a.lower().endswith(".exe")]
     if not exe.exists():
         print(f"No existe {exe}: primero ejecuta build.bat")
         return 1
-    work = Path(tempfile.mkdtemp(prefix="pdfkit_release_"))
+    work = Path(tempfile.mkdtemp(prefix="pliegue_release_"))
     simple = work / "simple.pdf"
     _simple_pdf(simple)
-    settings = Path.home() / ".pdfkit" / "settings.json"
-    backup = settings.read_bytes() if settings.exists() else None
     report = work / "autoprueba.json"
-    try:
-        code = subprocess.run([str(exe), "--autotest", str(report), str(simple), *pdfs],
-                              timeout=1800).returncode
-    finally:
-        if backup is not None:
-            settings.write_bytes(backup)
+    # datos de la app en una carpeta temporal: no toca la configuración ni los registros reales
+    env = dict(os.environ, PLIEGUE_DATA_DIR=str(work / "datos"), PLIEGUE_LEGACY_DIRS="")
+    code = subprocess.run([str(exe), "--autotest", str(report), str(simple), *pdfs], env=env,
+                          timeout=1800).returncode
     if not report.exists():
         print(f"El exe no escribió el reporte (código {code}). Avance: {report.with_suffix('.log')}")
         return 1
     data = json.loads(report.read_text(encoding="utf-8"))
-    print(f"PDFKit {data['version']} ({'exe' if data['congelado'] else 'código'}) — {report}")
+    print(f"Pliegue {data['version']} ({'exe' if data['congelado'] else 'código'}) — {report}")
     for r in data["resultados"]:
         detail = r.get("error") or r.get("estado") or r.get("texto", "")
         print(f"  {'OK   ' if r.get('ok') else 'FALLA'} {r['pdf']:<28} {r['modo']:<34} {detail}")

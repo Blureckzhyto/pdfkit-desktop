@@ -20,7 +20,7 @@ from reportlab.pdfgen import canvas
 
 from core import font_finder, pdf_editor
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_v134_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_v134_"))
 SHOTS = Path(__file__).parent / "_capturas" / "shots_v134"
 SHOTS.mkdir(parents=True, exist_ok=True)
 SHOTS.mkdir(exist_ok=True)

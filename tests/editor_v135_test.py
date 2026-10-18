@@ -17,7 +17,7 @@ from reportlab.pdfgen import canvas  # noqa: E402
 from core import errors, pdf_editor  # noqa: E402
 from core import pdf_textops as tops  # noqa: E402
 
-TMP = Path(tempfile.mkdtemp(prefix="pdfkit_v135_"))
+TMP = Path(tempfile.mkdtemp(prefix="pliegue_v135_"))
 results = []
 
 
