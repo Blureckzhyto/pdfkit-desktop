@@ -123,9 +123,8 @@ T = {
         ],
         "footer_license": "Licencia AGPL-3.0", "footer_third": "Licencias de terceros",
         "footer_repo": "Código fuente en GitHub", "footer_changelog": "Cambios",
-        "footer_note": "Pliegue se llamaba PDFKit hasta la versión 1.3.7. No está relacionado con iLovePDF.",
+        "footer_note": "Pliegue no está relacionado con iLovePDF.",
         "footer_privacy": "Política de privacidad", "privacy_file": "privacidad.html",
-        "formerly": "Antes PDFKit",
         "other_lang": "English", "other_lang_code": "en",
     },
     "en": {
@@ -184,9 +183,8 @@ T = {
         ],
         "footer_license": "AGPL-3.0 license", "footer_third": "Third-party licenses",
         "footer_repo": "Source code on GitHub", "footer_changelog": "Changelog",
-        "footer_note": "Pliegue was called PDFKit up to version 1.3.7. It is not affiliated with iLovePDF.",
+        "footer_note": "Pliegue is not affiliated with iLovePDF.",
         "footer_privacy": "Privacy policy", "privacy_file": "privacy.html",
-        "formerly": "Formerly PDFKit",
         "other_lang": "Español", "other_lang_code": "es",
     },
 }
@@ -357,8 +355,7 @@ def page(lang: str, version: dict) -> str:
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
           {e(t['download'])}
         </a>
-        <p class="meta"><span>{e(t['version'])} <span data-version>{e(version['version'])}</span></span>
-          <span class="formerly">{e(t['formerly'])}</span> ·
+        <p class="meta"><span>{e(t['version'])} <span data-version>{e(version['version'])}</span></span> ·
           <span data-size>{e(size)}</span><span>{e(t['for'])}</span></p>
         <p class="badges">{e(t['badges'])}</p>
       </div>

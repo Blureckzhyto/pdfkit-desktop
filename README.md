@@ -4,8 +4,7 @@
 
 <p align="center">
   <b>Todas tus herramientas PDF, sin internet.</b><br>
-  <i>All your PDF tools, offline.</i><br>
-  <sub>Antes PDFKit · Formerly PDFKit</sub>
+  <i>All your PDF tools, offline.</i>
 </p>
 
 <p align="center">
@@ -27,7 +26,7 @@
 
 ## Español
 
-Pliegue (antes PDFKit) es una caja de herramientas de PDF e imágenes para Windows, al estilo de iLovePDF,
+Pliegue es una caja de herramientas de PDF e imágenes para Windows, al estilo de iLovePDF,
 que funciona **completamente sin internet**: tus archivos nunca salen de tu computadora.
 Es gratis, de código abierto y sin anuncios.
 
@@ -88,7 +87,7 @@ Poppler, Tesseract, WeasyPrint, fuentes libres, iconos Lucide y otros): ver
 
 ## English
 
-Pliegue (formerly PDFKit) is an iLovePDF-style PDF and image toolbox for Windows that works **completely
+Pliegue is an iLovePDF-style PDF and image toolbox for Windows that works **completely
 offline**: your files never leave your computer. It is free, open source and ad-free.
 The interface is in Spanish.
 
