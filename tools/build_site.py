@@ -88,14 +88,14 @@ T = {
         "features_sub": "Las mismas categorías e iconos que verás en Pliegue.",
         "privacy_title": "Tus archivos nunca salen de tu computadora",
         "privacy_body": "Todo el procesamiento ocurre en tu equipo. Pliegue no tiene telemetría, estadísticas "
-                        "ni anuncios, y no se conecta a internet. La única excepción es opcional: en «HTML a "
-                        "PDF» puedes escribir la dirección de una página web, y entonces se descarga esa página "
+                        "ni anuncios, y no se conecta a internet. La única excepción es opcional: en (HTML a "
+                        "PDF) puedes escribir la dirección de una página web, y entonces se descarga esa página "
                         "para convertirla.",
         "privacy_points": ["Funciona sin conexión", "Sin cuentas ni registros", "Sin rastreadores ni anuncios",
                            "Código abierto: cualquiera puede revisarlo"],
         "install_title": "Instalación", "install_steps": [
             "Descarga <strong>Pliegue_Setup.exe</strong> con el botón de arriba.",
-            "Ábrelo. Si Windows muestra «Windows protegió su PC», haz clic en <strong>Más información</strong> "
+            "Ábrelo. Si Windows muestra (Windows protegió su PC), haz clic en <strong>Más información</strong> "
             "y luego en <strong>Ejecutar de todas formas</strong>.",
             "Sigue el asistente. Pliegue queda en el menú Inicio y en el Escritorio."],
         "smartscreen_why": "¿Por qué aparece ese aviso? El instalador no tiene una firma digital de pago "
@@ -107,14 +107,14 @@ T = {
                    "Ejecutar esta aplicación puede poner su PC en riesgo.",
         "ss_more": "Más información", "ss_app": "Aplicación:", "ss_publisher": "Editor:",
         "ss_unknown": "Editor desconocido", "ss_run": "Ejecutar de todas formas", "ss_dont": "No ejecutar",
-        "ss_step1": "1. Haz clic en «Más información»", "ss_step2": "2. Luego en «Ejecutar de todas formas»",
+        "ss_step1": "1. Haz clic en (Más información)", "ss_step2": "2. Luego en (Ejecutar de todas formas)",
         "sha_label": "SHA-256 del instalador:",
         "faq_title": "Preguntas frecuentes", "faq": [
             ("¿Es gratis?", "Sí, completamente gratis y sin anuncios. Es software libre con licencia AGPL-3.0."),
-            ("¿Necesita internet?", "No. Todas las herramientas funcionan sin conexión. Solo «HTML a PDF» usa "
+            ("¿Necesita internet?", "No. Todas las herramientas funcionan sin conexión. Solo (HTML a PDF) usa "
                                     "internet si tú escribes la dirección de una página web."),
             ("¿En qué versiones de Windows funciona?", "En Windows 10 y Windows 11 de 64 bits. Word, PowerPoint "
-             "o LibreOffice son opcionales: mejoran «Word a PDF» y «PowerPoint a PDF»."),
+             "o LibreOffice son opcionales: mejoran (Word a PDF) y (PowerPoint a PDF)."),
             ("¿Cómo lo desinstalo?", "En <em>Configuración → Aplicaciones → Aplicaciones instaladas</em>, busca "
              "Pliegue y elige <em>Desinstalar</em>."),
             ("¿Dónde está el código fuente?", f'En GitHub: <a href="{REPO_URL}">{REPO_URL.replace("https://", "")}</a>. '
@@ -205,12 +205,12 @@ PRIVACY = {
             ("Tus archivos", ["Todos los archivos se procesan solo en tu computadora. Pliegue nunca los sube a "
                               "internet ni los comparte con nadie."]),
             ("Uso de internet", [
-                "Pliegue funciona sin conexión. Solo usa internet cuando tú lo pides en «HTML a PDF»: si escribes "
+                "Pliegue funciona sin conexión. Solo usa internet cuando tú lo pides en (HTML a PDF): si escribes "
                 "una dirección web (URL), o conviertes un archivo HTML que enlaza imágenes o estilos de internet, "
                 "Pliegue descarga esa página y sus recursos directamente del sitio indicado para convertirla. "
                 "Como en cualquier visita, ese sitio ve una solicitud normal desde tu conexión (por ejemplo, tu "
                 "dirección IP); Pliegue no le envía ningún otro dato.",
-                "El botón «Código fuente» de «Acerca de» abre la página del proyecto en tu navegador, "
+                "El botón (Código fuente) de (Acerca de) abre la página del proyecto en tu navegador, "
                 "solo si haces clic."]),
             ("Datos que quedan en tu equipo", [
                 "Pliegue guarda en tu computadora tus preferencias (por ejemplo, el tema o la carpeta de "
@@ -219,9 +219,9 @@ PRIVACY = {
                 "nunca salen de tu equipo. Se borran al desinstalar la versión de la Store; con la versión del "
                 "instalador puedes borrar esa carpeta cuando quieras."]),
             ("Otros programas", [
-                "En «Word a PDF» y «PowerPoint a PDF», si tienes Microsoft Office, Pliegue le pide a Office que "
+                "En (Word a PDF) y (PowerPoint a PDF), si tienes Microsoft Office, Pliegue le pide a Office que "
                 "convierta el archivo en tu computadora. Microsoft Edge, si está instalado, puede usarse como "
-                "alternativa en «HTML a PDF». Esos programas se rigen por sus propias políticas."]),
+                "alternativa en (HTML a PDF). Esos programas se rigen por sus propias políticas."]),
             ("Microsoft Store", [
                 "Si instalaste Pliegue desde la Microsoft Store, Microsoft puede recopilar datos de instalación y "
                 "de fallas según su propia declaración de privacidad, y compartir con el desarrollador solo "
