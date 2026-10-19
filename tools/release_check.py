@@ -54,8 +54,9 @@ def main(argv: list[str]) -> int:
     data = json.loads(report.read_text(encoding="utf-8"))
     print(f"Pliegue {data['version']} ({'exe' if data['congelado'] else 'código'}) — {report}")
     for r in data["resultados"]:
-        detail = r.get("error") or r.get("estado") or r.get("texto", "")
-        print(f"  {'OK   ' if r.get('ok') else 'FALLA'} {r['pdf']:<28} {r['modo']:<34} {detail}")
+        detail = r.get("omitida") or r.get("error") or r.get("estado") or r.get("texto", "")
+        mark = "OMITIDA" if r.get("omitida") else ("OK     " if r.get("ok") else "FALLA  ")
+        print(f"  {mark} {r['pdf']:<28} {r['modo']:<34} {detail}")
     for kind in ("errores", "errores_hilos"):
         for trace in data[kind]:
             print(f"  [{kind}] {trace.strip().splitlines()[-1]}")

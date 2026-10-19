@@ -306,10 +306,47 @@ def _failure_checks(app, pdf: Path, out_dir: Path, needle: str) -> list[dict]:
 VK = {"x": 0x58, "BackSpace": 0x08, "Delete": 0x2E, "Return": 0x0D, "Escape": 0x1B}
 
 
+class OtherAppInTheWay(RuntimeError):
+    """Un clic o una tecla real iría a otra app: la prueba no lo manda."""
+
+
+def _owned_by_us(hwnd) -> bool:
+    import ctypes
+    import os
+    from ctypes import wintypes
+
+    if not hwnd:
+        return False
+    pid = wintypes.DWORD()
+    ctypes.windll.user32.GetWindowThreadProcessId(wintypes.HWND(hwnd), ctypes.byref(pid))
+    return pid.value == os.getpid()
+
+
+def _wait_clear(clear, problem: str, seconds: float = 6.0) -> None:
+    """Antes de un clic o una tecla real: si otra app está en el camino (una notificación, otra
+    ventana), espera unos segundos y reintenta; si sigue ahí, no manda nada."""
+    import time
+    import tkinter
+
+    end = time.time() + seconds
+    while not clear():
+        if time.time() > end:
+            raise OtherAppInTheWay(problem)
+        if tkinter._default_root is not None:
+            tkinter._default_root.update()
+        time.sleep(0.25)
+
+
 def _mouse(x, y, clicks=1):
     import ctypes
+    from ctypes import wintypes
 
     user32 = ctypes.windll.user32
+    user32.WindowFromPoint.argtypes = [wintypes.POINT]
+    user32.WindowFromPoint.restype = wintypes.HWND
+    point = wintypes.POINT(int(x), int(y))
+    _wait_clear(lambda: _owned_by_us(user32.WindowFromPoint(point)),
+                f"otra ventana tapa el punto ({int(x)}, {int(y)}): no se hizo clic")
     user32.SetCursorPos(int(x), int(y))
     for _ in range(clicks):
         user32.mouse_event(0x0002, 0, 0, 0, 0)
@@ -320,6 +357,9 @@ def _key(name):
     import ctypes
 
     user32 = ctypes.windll.user32
+    user32.GetForegroundWindow.restype = ctypes.c_void_p
+    _wait_clear(lambda: _owned_by_us(user32.GetForegroundWindow()),
+                f"la ventana activa es de otra app: no se mandó la tecla {name}")
     user32.keybd_event(VK[name], 0, 0, 0)
     user32.keybd_event(VK[name], 0, 0x0002, 0)
 
@@ -337,14 +377,24 @@ def _screen_point(v, line):
 
 
 def _input_checks(app, pdf: Path, out_dir: Path, needle: str) -> list[dict]:
-    """Foco y borrado (v1.3.7) con el mouse y el teclado de verdad."""
+    """Foco y borrado (v1.3.7) con el mouse y el teclado de verdad. Si otra app se pone en el
+    camino, esa prueba queda «omitida» (ok None, no cuenta como falla) y no se sigue."""
+    results: list[dict] = []
+    try:
+        _input_cases(app, pdf, out_dir, needle, results)
+    except OtherAppInTheWay as exc:
+        if results:
+            results[-1].update(ok=None, omitida=str(exc))
+    return results
+
+
+def _input_cases(app, pdf: Path, out_dir: Path, needle: str, results: list[dict]) -> list[dict]:
     import tkinter as tk
 
     from core import errors
 
     d = _Driver(app)
     v = d.v
-    results = []
     actions_log = errors.logs_dir() / "acciones.log"
 
     def new_result(name):
@@ -536,7 +586,10 @@ def run(argv: list[str]) -> int:
                 app.destroy()
             except Exception:
                 pass
-    report["ok"] = (bool(report["resultados"]) and all(r.get("ok") for r in report["resultados"])
+    # las omitidas (otra app en el camino: no se mandó el clic o la tecla) no cuentan como falla
+    report["omitidas"] = [r["modo"] for r in report["resultados"] if r.get("omitida")]
+    report["ok"] = (bool(report["resultados"])
+                    and all(r.get("ok") for r in report["resultados"] if not r.get("omitida"))
                     and not report["errores"] and not report["errores_hilos"])
     report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     faulthandler.cancel_dump_traceback_later()

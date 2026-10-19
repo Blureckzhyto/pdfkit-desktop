@@ -124,6 +124,7 @@ T = {
         "footer_license": "Licencia AGPL-3.0", "footer_third": "Licencias de terceros",
         "footer_repo": "Código fuente en GitHub", "footer_changelog": "Cambios",
         "footer_note": "Pliegue se llamaba PDFKit hasta la versión 1.3.7. No está relacionado con iLovePDF.",
+        "footer_privacy": "Política de privacidad", "privacy_file": "privacidad.html",
         "formerly": "Antes PDFKit",
         "other_lang": "English", "other_lang_code": "en",
     },
@@ -184,8 +185,94 @@ T = {
         "footer_license": "AGPL-3.0 license", "footer_third": "Third-party licenses",
         "footer_repo": "Source code on GitHub", "footer_changelog": "Changelog",
         "footer_note": "Pliegue was called PDFKit up to version 1.3.7. It is not affiliated with iLovePDF.",
+        "footer_privacy": "Privacy policy", "privacy_file": "privacy.html",
         "formerly": "Formerly PDFKit",
         "other_lang": "Español", "other_lang_code": "es",
+    },
+}
+
+
+PRIVACY_UPDATED = {"es": "18 de octubre de 2026", "en": "October 18, 2026"}
+# (título, [párrafos en HTML]); {issues} se reemplaza por la página de reportes del repositorio
+PRIVACY = {
+    "es": {
+        "title": "Política de privacidad de Pliegue",
+        "updated": "Última actualización",
+        "intro": "Pliegue es una app de escritorio para Windows que trabaja con tus PDF e imágenes en tu "
+                 "computadora. Esta política aplica a la versión de la Microsoft Store y a la del instalador.",
+        "sections": [
+            ("En resumen", ["<strong>Pliegue no recopila, no guarda en servidores y no envía ningún dato "
+                            "personal.</strong> No tiene cuentas, telemetría, estadísticas de uso, anuncios ni "
+                            "rastreadores."]),
+            ("Tus archivos", ["Todos los archivos se procesan solo en tu computadora. Pliegue nunca los sube a "
+                              "internet ni los comparte con nadie."]),
+            ("Uso de internet", [
+                "Pliegue funciona sin conexión. Solo usa internet cuando tú lo pides en «HTML a PDF»: si escribes "
+                "una dirección web (URL), o conviertes un archivo HTML que enlaza imágenes o estilos de internet, "
+                "Pliegue descarga esa página y sus recursos directamente del sitio indicado para convertirla. "
+                "Como en cualquier visita, ese sitio ve una solicitud normal desde tu conexión (por ejemplo, tu "
+                "dirección IP); Pliegue no le envía ningún otro dato.",
+                "El botón «Código fuente» de «Acerca de» abre la página del proyecto en tu navegador, "
+                "solo si haces clic."]),
+            ("Datos que quedan en tu equipo", [
+                "Pliegue guarda en tu computadora tus preferencias (por ejemplo, el tema o la carpeta de "
+                "salida), registros de errores y una caché de fuentes. Están en la carpeta de datos de la app "
+                "(%LOCALAPPDATA%\\Pliegue o, en la versión de la Microsoft Store, la carpeta del paquete) y "
+                "nunca salen de tu equipo. Se borran al desinstalar la versión de la Store; con la versión del "
+                "instalador puedes borrar esa carpeta cuando quieras."]),
+            ("Otros programas", [
+                "En «Word a PDF» y «PowerPoint a PDF», si tienes Microsoft Office, Pliegue le pide a Office que "
+                "convierta el archivo en tu computadora. Microsoft Edge, si está instalado, puede usarse como "
+                "alternativa en «HTML a PDF». Esos programas se rigen por sus propias políticas."]),
+            ("Microsoft Store", [
+                "Si instalaste Pliegue desde la Microsoft Store, Microsoft puede recopilar datos de instalación y "
+                "de fallas según su propia declaración de privacidad, y compartir con el desarrollador solo "
+                "estadísticas agregadas y anónimas. Pliegue no agrega nada a esos datos."]),
+            ("Menores de edad", ["Pliegue no recopila datos de nadie, incluidos menores de edad."]),
+            ("Cambios y contacto", [
+                "Si esta política cambia, la versión nueva se publicará en esta página. Pliegue es software libre "
+                "(AGPL-3.0): puedes revisar su código fuente. Para dudas o reportes: "
+                '<a href="{issues}">{issues}</a>.']),
+        ],
+    },
+    "en": {
+        "title": "Pliegue privacy policy",
+        "updated": "Last updated",
+        "intro": "Pliegue is a Windows desktop app that works with your PDFs and images on your computer. This "
+                 "policy applies to both the Microsoft Store version and the installer version.",
+        "sections": [
+            ("Summary", ["<strong>Pliegue does not collect, store on servers or send any personal data.</strong> "
+                         "It has no accounts, telemetry, usage analytics, ads or trackers."]),
+            ("Your files", ["All files are processed only on your computer. Pliegue never uploads them to the "
+                            "internet or shares them with anyone."]),
+            ("Internet use", [
+                "Pliegue works offline. It only uses the internet when you ask for it in \"HTML to PDF\": if you "
+                "enter a web address (URL), or convert an HTML file that links to images or styles on the "
+                "internet, Pliegue downloads that page and its resources directly from that site to convert it. "
+                "As with any visit, the site sees a normal request from your connection (for example, your IP "
+                "address); Pliegue sends it no other data.",
+                "The \"Código fuente\" (source code) button in \"Acerca de\" (About) opens the project page in your browser, only if "
+                "you click it."]),
+            ("Data kept on your computer", [
+                "Pliegue stores your preferences (for example, the theme or the output folder), error logs and a "
+                "font cache on your computer, in the app's data folder (%LOCALAPPDATA%\\Pliegue or, in the "
+                "Microsoft Store version, the package folder). They never leave your computer. They are removed "
+                "when you uninstall the Store version; with the installer version you can delete that folder "
+                "at any time."]),
+            ("Other programs", [
+                "In \"Word to PDF\" and \"PowerPoint to PDF\", if you have Microsoft Office, Pliegue asks Office "
+                "to convert the file on your computer. Microsoft Edge, if installed, may be used as a fallback "
+                "for \"HTML to PDF\". Those programs follow their own policies."]),
+            ("Microsoft Store", [
+                "If you installed Pliegue from the Microsoft Store, Microsoft may collect installation and crash "
+                "data under its own privacy statement, and share only aggregated, anonymous statistics with the "
+                "developer. Pliegue adds nothing to that data."]),
+            ("Children", ["Pliegue does not collect data from anyone, including children."]),
+            ("Changes and contact", [
+                "If this policy changes, the new version will be published on this page. Pliegue is free software "
+                "(AGPL-3.0): you can review its source code. For questions or reports: "
+                '<a href="{issues}">{issues}</a>.']),
+        ],
     },
 }
 
@@ -203,9 +290,6 @@ def page(lang: str, version: dict) -> str:
     prefix = "" if lang == "es" else "../"
     other = "en/" if lang == "es" else "../"
     canonical = SITE_URL if lang == "es" else SITE_URL + "en/"
-    from PIL import Image
-    with Image.open(ASSETS / "logo-wordmark.png") as logo:
-        logo_h = round(LOGO_WIDTH * logo.height / logo.width)
     e = html.escape
     features = []
     for key, color, name_es, name_en, tools in CATEGORIES:
@@ -261,29 +345,7 @@ def page(lang: str, version: dict) -> str:
 <script>{early_script(lang)}</script>
 </head>
 <body>
-<a class="skip" href="#contenido">{e(t['skip'])}</a>
-<header class="topbar">
-  <div class="wrap topbar-row">
-    <a class="brand" href="{prefix or './'}" aria-label="Pliegue">
-      <img class="logo-light" src="{prefix}assets/logo-wordmark.png" width="{LOGO_WIDTH}" height="{logo_h}" alt="Pliegue">
-      <img class="logo-dark" src="{prefix}assets/logo-wordmark-dark.png" width="{LOGO_WIDTH}" height="{logo_h}" alt="Pliegue">
-    </a>
-    <nav aria-label="{'Secciones' if lang == 'es' else 'Sections'}">
-      <a href="#funciones">{e(t['nav_features'])}</a>
-      <a href="#privacidad">{e(t['nav_privacy'])}</a>
-      <a href="#instalacion">{e(t['nav_install'])}</a>
-      <a href="#preguntas">{e(t['nav_faq'])}</a>
-    </nav>
-    <div class="controls">
-      <a class="lang" href="{other}" hreflang="{t['other_lang_code']}" lang="{t['other_lang_code']}"
-         data-lang="{t['other_lang_code']}">{t['other_lang']}</a>
-      <button class="theme-toggle" type="button" aria-label="{e(t['theme'])}" title="{e(t['theme'])}">
-        <svg class="i-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
-        <svg class="i-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
+{topbar(lang, prefix, "", other)}
 <main id="contenido">
   <section class="hero">
     <div class="wrap hero-grid">
@@ -359,7 +421,47 @@ def page(lang: str, version: dict) -> str:
     </div>
   </section>
 </main>
-<footer class="footer">
+{footer(lang, version, prefix)}
+</body>
+</html>
+"""
+
+
+def topbar(lang: str, prefix: str, home: str, other: str) -> str:
+    """Barra superior: logo, secciones de la portada (home = "" en la portada o la ruta a ella),
+    cambio de idioma y de tema."""
+    t, e = T[lang], html.escape
+    from PIL import Image
+    with Image.open(ASSETS / "logo-wordmark.png") as logo:
+        logo_h = round(LOGO_WIDTH * logo.height / logo.width)
+    return f"""<a class="skip" href="#contenido">{e(t['skip'])}</a>
+<header class="topbar">
+  <div class="wrap topbar-row">
+    <a class="brand" href="{home or prefix or './'}" aria-label="Pliegue">
+      <img class="logo-light" src="{prefix}assets/logo-wordmark.png" width="{LOGO_WIDTH}" height="{logo_h}" alt="Pliegue">
+      <img class="logo-dark" src="{prefix}assets/logo-wordmark-dark.png" width="{LOGO_WIDTH}" height="{logo_h}" alt="Pliegue">
+    </a>
+    <nav aria-label="{'Secciones' if lang == 'es' else 'Sections'}">
+      <a href="{home}#funciones">{e(t['nav_features'])}</a>
+      <a href="{home}#privacidad">{e(t['nav_privacy'])}</a>
+      <a href="{home}#instalacion">{e(t['nav_install'])}</a>
+      <a href="{home}#preguntas">{e(t['nav_faq'])}</a>
+    </nav>
+    <div class="controls">
+      <a class="lang" href="{other}" hreflang="{t['other_lang_code']}" lang="{t['other_lang_code']}"
+         data-lang="{t['other_lang_code']}">{t['other_lang']}</a>
+      <button class="theme-toggle" type="button" aria-label="{e(t['theme'])}" title="{e(t['theme'])}">
+        <svg class="i-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
+        <svg class="i-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>"""
+
+
+def footer(lang: str, version: dict, prefix: str) -> str:
+    t, e = T[lang], html.escape
+    return f"""<footer class="footer">
   <div class="wrap footer-row">
     <p>Pliegue <span data-version>{e(version['version'])}</span> · © {project.YEAR} {e(USER)}</p>
     <nav aria-label="{'Enlaces' if lang == 'es' else 'Links'}">
@@ -367,19 +469,68 @@ def page(lang: str, version: dict) -> str:
       <a href="{REPO_URL}/blob/main/LICENSE">{e(t['footer_license'])}</a>
       <a href="{REPO_URL}/blob/main/THIRD_PARTY_LICENSES.md">{e(t['footer_third'])}</a>
       <a href="{REPO_URL}/blob/main/CHANGELOG.md">{e(t['footer_changelog'])}</a>
+      <a href="{t['privacy_file']}">{e(t['footer_privacy'])}</a>
     </nav>
     <p class="fine">{e(t['footer_note'])}</p>
   </div>
 </footer>
-<script src="{prefix}assets/site.js" defer></script>
+<script src="{prefix}assets/site.js" defer></script>"""
+
+
+PRIVACY_PATH = {"es": "privacidad.html", "en": "en/privacy.html"}
+
+
+def privacy_page(lang: str, version: dict) -> str:
+    """Política de privacidad (la pide la Microsoft Store): docs/privacidad.html y docs/en/privacy.html."""
+    t, p, e = T[lang], PRIVACY[lang], html.escape
+    prefix = "" if lang == "es" else "../"
+    other = "en/privacy.html" if lang == "es" else "../privacidad.html"
+    home = "./"   # la portada del mismo idioma
+    canonical = SITE_URL + PRIVACY_PATH[lang]
+    issues = project.issues_url()
+    body = "".join(f"<h2>{e(title)}</h2>" + "".join(f"<p>{para.format(issues=issues)}</p>" for para in paras)
+                   for title, paras in p["sections"])
+    return f"""<!doctype html>
+<html lang="{t['lang']}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(p['title'])}</title>
+<meta name="description" content="{e(p['intro'])}">
+<link rel="canonical" href="{canonical}">
+<link rel="alternate" hreflang="es" href="{SITE_URL}{PRIVACY_PATH['es']}">
+<link rel="alternate" hreflang="en" href="{SITE_URL}{PRIVACY_PATH['en']}">
+<link rel="alternate" hreflang="x-default" href="{SITE_URL}{PRIVACY_PATH['es']}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{prefix}assets/favicon.ico" sizes="any">
+<link rel="icon" href="{prefix}assets/icon-192.png" type="image/png">
+<link rel="preload" href="{prefix}assets/fonts/PlusJakartaSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{prefix}assets/site.css">
+<script>{early_script(lang, other)}</script>
+</head>
+<body>
+{topbar(lang, prefix, home, other)}
+<main id="contenido">
+  <section class="section legal">
+    <div class="wrap narrow">
+      <h1>{e(p['title'])}</h1>
+      <p class="updated">{e(p['updated'])}: {e(PRIVACY_UPDATED[lang])}</p>
+      <p class="lead">{e(p['intro'])}</p>
+      {body}
+    </div>
+  </section>
+</main>
+{footer(lang, version, prefix)}
 </body>
 </html>
 """
 
 
-def early_script(lang: str) -> str:
+def early_script(lang: str, other: str | None = None) -> str:
     """Antes de pintar: tema guardado y, en la primera visita, el idioma del navegador."""
-    other = "en/" if lang == "es" else "../"
+    other = other or ("en/" if lang == "es" else "../")
     wants_other = ("!/^es\\b/i.test(nav)" if lang == "es" else "/^es\\b/i.test(nav)")
     return ("(function(){var d=document.documentElement,s=null,l=null;"
             "try{s=localStorage.getItem('pliegue-theme');l=localStorage.getItem('pliegue-lang');}catch(e){}"
@@ -439,6 +590,8 @@ def main() -> int:
     version_file.write_text(json.dumps(version, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     (DOCS / "index.html").write_text(page("es", version), encoding="utf-8", newline="\n")
     (DOCS / "en" / "index.html").write_text(page("en", version), encoding="utf-8", newline="\n")
+    for lang, path in PRIVACY_PATH.items():
+        (DOCS / path).write_text(privacy_page(lang, version), encoding="utf-8", newline="\n")
     (DOCS / ".nojekyll").write_text("", encoding="utf-8", newline="\n")
     print("docs/ listo:", version)
     return 0

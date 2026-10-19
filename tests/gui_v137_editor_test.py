@@ -27,6 +27,11 @@ def check(name, cond, detail=""):
     log.append(("  PASS  " if cond else "  FAIL  ") + name + (f"  [{detail}]" if detail else ""))
 
 
+def skipped(name, reason):
+    """Otra app se puso en el camino: no se mandó el clic o la tecla (no cuenta como falla)."""
+    log.append(f"  OMITIDA  {name}  [{reason}]")
+
+
 pdf = TMP / "simple.pdf"
 c = rl_canvas.Canvas(str(pdf), pagesize=(595, 842))
 c.setFont("Helvetica-Bold", 16)
@@ -59,20 +64,26 @@ def run():
     import ctypes
 
     foreground_is_app = ctypes.windll.user32.GetForegroundWindow() == int(app.wm_frame(), 16)
-    selftest._mouse(x, y, clicks=2)
-    d.wait(lambda: v.ed_editor is not None, 3)
-    d.settle(300)
     check("PDF abierto", ok)
-    check("al empezar, la ventana de Pliegue no estaba activa", not foreground_is_app)
-    check("doble clic con otra app al frente: abre el editor al primer intento",
-          v.ed_editor is not None and v.ed_editor[1] == line["id"])
-    check("el editor tiene el foco del teclado", v.ed_editor is not None and app.focus_get() is v.ed_editor[0])
-    if v.ed_editor:
-        selftest._key("Escape")
+    try:
+        selftest._mouse(x, y, clicks=2)
+        d.wait(lambda: v.ed_editor is not None, 3)
         d.settle(300)
+        check("al empezar, la ventana de Pliegue no estaba activa", not foreground_is_app)
+        check("doble clic con otra app al frente: abre el editor al primer intento",
+              v.ed_editor is not None and v.ed_editor[1] == line["id"])
+        check("el editor tiene el foco del teclado", v.ed_editor is not None and app.focus_get() is v.ed_editor[0])
+        if v.ed_editor:
+            selftest._key("Escape")
+            d.settle(300)
+    except selftest.OtherAppInTheWay as exc:
+        skipped("doble clic con otra app al frente", exc)
     other.kill()
 
     for r in selftest._input_checks(app, pdf, TMP, "CARRERA"):
+        if r.get("omitida"):
+            skipped(r["modo"], r["omitida"])
+            continue
         detail = {k: val for k, val in r.items() if k not in ("pdf", "modo", "ok")}
         check(r["modo"], r.get("ok"), str(detail)[:300])
     app.destroy()

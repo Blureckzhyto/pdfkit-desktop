@@ -28,6 +28,7 @@ rem Sin UPX: aumenta falsos positivos del antivirus y hace mas lento el arranque
 %PY% -m PyInstaller --noconfirm --clean --onedir --windowed --noupx --name Pliegue --icon=assets\icon.ico ^
   --splash assets\splash.png ^
   --version-file build\version_info.txt ^
+  --manifest Pliegue.manifest ^
   --additional-hooks-dir hooks ^
   --add-data "assets;assets" ^
   --collect-all customtkinter ^

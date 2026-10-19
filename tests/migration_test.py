@@ -12,6 +12,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from core import paths  # noqa: E402
 
+# casos 1-5: instalador clásico, también si la suite corre dentro del paquete de la Store
+os.environ["PLIEGUE_PACKAGE_FAMILY"] = ""
 results, log = [], []
 
 
@@ -83,9 +85,51 @@ os.environ["PLIEGUE_LEGACY_DIRS"] = str(Path(tempfile.gettempdir()) / "no_existe
 check("instalación nueva: funciona sin carpeta vieja", paths.migrate() == [])
 check("la carpeta de datos es la de Pliegue", paths.data_dir().name.startswith("pliegue_nuevo_")
       and paths.settings_file().parent == paths.data_dir())
+
+# 6) versión de la Store (MSIX, simulada): solo copia settings.json, una vez, sin borrar nada
+root = Path(tempfile.mkdtemp(prefix="pliegue_msix_"))
+classic = root / "Local" / "Pliegue"
+(classic / "logs").mkdir(parents=True)
+(classic / "settings.json").write_text(json.dumps({"theme": "oscuro"}), encoding="utf-8")
+(classic / "logs" / "errores.log").write_text("del clásico\n", encoding="utf-8")
+old = root / "Local" / "PDFKit"
+old.mkdir()
+(old / "font_index.json").write_text("{}", encoding="utf-8")
+home = root / "home" / ".pdfkit"
+home.mkdir(parents=True)
+(home / "settings.json").write_text(json.dumps({"theme": "claro"}), encoding="utf-8")
+store = root / "Local" / "Packages" / "Blureck.Pliegue_prueba" / "LocalState"
+os.environ.update(PLIEGUE_PACKAGE_FAMILY="Blureck.Pliegue_prueba", PLIEGUE_DATA_DIR=str(store),
+                  PLIEGUE_LEGACY_DIRS=f"{classic};{old};{home}")
+notes = paths.migrate()
+check("Store: importa la configuración del Pliegue clásico",
+      json.loads((store / "settings.json").read_text(encoding="utf-8")).get("theme") == "oscuro", str(notes))
+check("Store: no borra nada de las otras instalaciones", (classic / "settings.json").exists()
+      and (classic / "logs" / "errores.log").exists() and (old / "font_index.json").exists()
+      and (home / "settings.json").exists())
+check("Store: solo la configuración (registros y cachés no se copian)",
+      not (store / "logs").exists() and not (store / "font_index.json").exists())
+(classic / "settings.json").write_text(json.dumps({"theme": "sistema"}), encoding="utf-8")
+check("Store: la importación es una sola vez", paths.migrate() == []
+      and json.loads((store / "settings.json").read_text(encoding="utf-8")).get("theme") == "oscuro")
+store2 = root / "LocalState2"
+os.environ.update(PLIEGUE_DATA_DIR=str(store2), PLIEGUE_LEGACY_DIRS=f"{root / 'no_existe'};{old};{home}")
+paths.migrate()
+check("Store: sin Pliegue clásico toma la configuración de PDFKit (~/.pdfkit)",
+      json.loads((store2 / "settings.json").read_text(encoding="utf-8")).get("theme") == "claro")
+store3 = root / "LocalState3"
+os.environ.update(PLIEGUE_DATA_DIR=str(store3), PLIEGUE_LEGACY_DIRS="")
+check("Store: instalación nueva sin otras versiones", paths.migrate() == [] and (store3 / paths.IMPORT_MARKER).exists())
 del os.environ["PLIEGUE_DATA_DIR"], os.environ["PLIEGUE_LEGACY_DIRS"]
+check("Store: datos en %LOCALAPPDATA%\\Packages\\<familia>\\LocalState y el clásico como origen",
+      paths.data_dir().parts[-3:] == ("Packages", "Blureck.Pliegue_prueba", "LocalState")
+      and [p.name for p, _k in paths.legacy_sources()] == ["Pliegue", "PDFKit", ".pdfkit"])
+
+os.environ["PLIEGUE_PACKAGE_FAMILY"] = ""   # instalador clásico (también si esto corre dentro del paquete)
 check("sin variables: %LOCALAPPDATA%\\Pliegue", paths.data_dir().name == "Pliegue"
       and [p.name for p, _k in paths.legacy_sources()] == ["PDFKit", ".pdfkit"])
+del os.environ["PLIEGUE_PACKAGE_FAMILY"]
+check("detección real del paquete", True, f"paquete: {paths.package_family_name() or 'ninguno'}")
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 print("\n".join(log))

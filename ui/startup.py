@@ -85,14 +85,23 @@ def prepare() -> None:
         return
     import ctypes
 
-    try:  # nitidez en pantallas con escala (125 %, 150 %, ...)
-        ctypes.windll.shcore.SetProcessDpiAwareness(2)
+    # nitidez en pantallas con escala (125 %, 150 %, ...). El exe ya lo declara en su manifiesto
+    # (Pliegue.manifest); desde el código se pide lo mismo: PerMonitorV2 o, si no existe, PerMonitor.
+    try:
+        if not ctypes.windll.user32.SetProcessDpiAwarenessContext(ctypes.c_void_p(-4)):
+            ctypes.windll.shcore.SetProcessDpiAwareness(2)
     except Exception:
-        pass
-    try:  # sin esto la barra de tareas muestra el icono genérico de Python
-        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(APP_USER_MODEL_ID)
-    except Exception:
-        pass
+        try:
+            ctypes.windll.shcore.SetProcessDpiAwareness(2)
+        except Exception:
+            pass
+    # sin esto la barra de tareas muestra el icono genérico de Python. La versión de la Store
+    # (MSIX) ya recibe su identidad del paquete: fijar otra la separaría de su acceso del Inicio.
+    if not paths.is_packaged():
+        try:
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(APP_USER_MODEL_ID)
+        except Exception:
+            pass
     from ui.fonts import register_private_fonts
 
     register_private_fonts()

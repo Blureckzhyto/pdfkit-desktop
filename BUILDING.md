@@ -72,6 +72,34 @@ Datos de la app en `%LOCALAPPDATA%\Pliegue\` (`settings.json`, `font_index.json`
 Registros de la app en `%LOCALAPPDATA%\Pliegue\logs\`: `errores.log`, `acciones.log`
 (elementos borrados y qué lo provocó), `fuentes.log` e `inicio.log` (tiempos de arranque).
 
+## Microsoft Store (MSIX)
+
+Necesita el Windows SDK (`winget install Microsoft.WindowsSDK.10.0.26100`: makeappx, makepri,
+signtool y el kit de certificación WACK).
+
+1. `build.bat` y después `py -3.11 tools\build_msix.py` → `build\msix\Pliegue_<versión>.0_x64.msix`
+   **sin firmar**: es el que se sube a Partner Center (la Store lo firma). La identidad del
+   paquete está en `core/project.py` y debe ser idéntica a la de Partner Center.
+2. Para probarlo en tu PC: `py -3.11 tools\build_msix.py --firmar-prueba` crea además una copia
+   firmada con un certificado de prueba (`build\msix\certificado_prueba\`, nunca en git).
+   Confía en él una vez (PowerShell como administrador):
+   `Import-Certificate -FilePath build\msix\certificado_prueba\Pliegue_prueba.cer -CertStoreLocation Cert:\LocalMachine\TrustedPeople`
+   e instala la copia con `Add-AppxPackage <copia firmada>`.
+3. `py -3.11 tools\msix_check.py`: todas las suites, `tests\msix_runtime_test.py` y la
+   autoprueba del editor **dentro del paquete instalado**.
+4. WACK: `powershell -ExecutionPolicy Bypass -File tools\run_wack.ps1` (pide permiso de
+   administrador; reporte en `build\msix\wack.xml` y resumen en pantalla). Para una app de
+   Python es normal que fallen dos pruebas *opcionales* («Archive files usage» por un .tar.gz de
+   dateutil y «Blocked executables», que busca textos como «cmd» dentro de las DLL).
+5. Al terminar: `Remove-AppxPackage` del paquete de prueba y quitar el certificado de
+   `Cert:\LocalMachine\TrustedPeople`.
+
+La versión de la Store guarda sus datos en `%LOCALAPPDATA%\Packages\Blureck.Pliegue_<id>\LocalState`
+(se borran al desinstalarla), no fija su propio AppUserModelID y, al primer inicio, solo copia
+`settings.json` del Pliegue clásico o de PDFKit, sin borrar nada: las dos versiones conviven.
+Textos, capturas (`tools\make_store_screenshots.py`) y logotipos (`tools\make_store_logos.py`)
+del listado: `store_listing\`.
+
 ## Programas externos opcionales
 
 | Herramienta | Programa | Sin él |
