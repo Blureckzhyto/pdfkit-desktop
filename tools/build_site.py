@@ -28,6 +28,13 @@ REPO_URL = f"https://github.com/{USER}/{project.REPO}"
 SITE_URL = f"https://{USER.lower()}.github.io/{project.REPO}/"
 DOWNLOAD_URL = f"{REPO_URL}/releases/latest/download/Pliegue_Setup.exe"
 LOGO_WIDTH = 132          # ancho del logo en la barra superior (px CSS); el archivo va a 3x
+STORE_URL = project.store_url()   # ficha de la Microsoft Store (opción recomendada)
+# Badge oficial de la Microsoft Store, sin modificar, alojado en docs/assets/store/ (la página no
+# carga nada de otros servidores). Origen: https://get.microsoft.com/images/{es,en-us}%20{dark,light}.svg
+# El badge oscuro va sobre fondo claro y el claro sobre fondo oscuro (como indica Microsoft).
+STORE_BADGE = {"es": ("badge-es-dark.svg", "badge-es-light.svg", "Descargar desde Microsoft Store", "es-mx"),
+               "en": ("badge-en-dark.svg", "badge-en-light.svg", "Download from the Microsoft Store", "en-us")}
+STORE_BADGE_SIZE = (176, 48)   # px CSS, proporción original 161x44; misma altura que el botón de al lado
 
 
 def app_version() -> str:
@@ -75,7 +82,10 @@ T = {
         "hero_title": "Todas tus herramientas PDF, sin internet",
         "hero_sub": "Une, divide, comprime, convierte, edita y firma tus PDFs en tu propia computadora. "
                     "Rápido, privado y sin anuncios.",
-        "download": "Descargar para Windows", "for": "Windows 10/11 · 64 bits",
+        "download": "Descargar instalador (.exe)", "for": "Windows 10/11 · 64 bits",
+        "store_reco": "Recomendado: Microsoft Store.",
+        "store_why": "Se actualiza sola y sin avisos de Windows. El instalador de GitHub (.exe) queda como "
+                     "alternativa.",
         "badges": "Código abierto · Gratis · Sin anuncios", "version": "Versión",
         "shots_title": "Así se ve", "shot_home": "Inicio en modo claro", "shot_home_dark": "Inicio en modo oscuro",
         "shot_editor": "Editor: doble clic en un texto para cambiarlo con su misma fuente",
@@ -93,7 +103,12 @@ T = {
                         "para convertirla.",
         "privacy_points": ["Funciona sin conexión", "Sin cuentas ni registros", "Sin rastreadores ni anuncios",
                            "Código abierto: cualquiera puede revisarlo"],
-        "install_title": "Instalación", "install_steps": [
+        "install_title": "Instalación",
+        "install_store": "<strong>Con la Microsoft Store (recomendado):</strong> abre la "
+                         "<a href=\"{store}\">ficha de Pliegue</a> e instálala desde ahí. Se actualiza "
+                         "sola y no aparece el aviso de SmartScreen de Windows.",
+        "install_alt": "Con el instalador de GitHub (alternativa)",
+        "install_steps": [
             "Descarga <strong>Pliegue_Setup.exe</strong> con el botón de arriba.",
             "Ábrelo. Si Windows muestra (Windows protegió su PC), haz clic en <strong>Más información</strong> "
             "y luego en <strong>Ejecutar de todas formas</strong>.",
@@ -101,7 +116,7 @@ T = {
         "smartscreen_why": "¿Por qué aparece ese aviso? El instalador no tiene una firma digital de pago "
                            "(cuesta cientos de dólares al año), así que Windows no reconoce al autor. No "
                            "significa que tenga virus: el código es público y puedes comprobar que el archivo "
-                           "es el original con su SHA-256.",
+                           "es el original con su SHA-256. Con la Microsoft Store no aparece este aviso.",
         "ss_title": "Windows protegió su PC",
         "ss_body": "Microsoft Defender SmartScreen impidió el inicio de una aplicación no reconocida. "
                    "Ejecutar esta aplicación puede poner su PC en riesgo.",
@@ -115,6 +130,9 @@ T = {
                                     "internet si tú escribes la dirección de una página web."),
             ("¿En qué versiones de Windows funciona?", "En Windows 10 y Windows 11 de 64 bits. Word, PowerPoint "
              "o LibreOffice son opcionales: mejoran (Word a PDF) y (PowerPoint a PDF)."),
+            ("¿Dónde conviene descargarlo?", "En la <a href=\"{store}\">Microsoft Store</a>: se actualiza sola y "
+             "Windows no muestra el aviso de SmartScreen. El instalador de GitHub (Pliegue_Setup.exe) funciona "
+             "igual, pero como no tiene una firma digital de pago, Windows muestra ese aviso al abrirlo."),
             ("¿Cómo lo desinstalo?", "En <em>Configuración → Aplicaciones → Aplicaciones instaladas</em>, busca "
              "Pliegue y elige <em>Desinstalar</em>."),
             ("¿Dónde está el código fuente?", f'En GitHub: <a href="{REPO_URL}">{REPO_URL.replace("https://", "")}</a>. '
@@ -136,7 +154,9 @@ T = {
         "hero_title": "All your PDF tools, offline",
         "hero_sub": "Merge, split, compress, convert, edit and sign your PDFs on your own computer. "
                     "Fast, private and ad-free.",
-        "download": "Download for Windows", "for": "Windows 10/11 · 64-bit",
+        "download": "Download installer (.exe)", "for": "Windows 10/11 · 64-bit",
+        "store_reco": "Recommended: Microsoft Store.",
+        "store_why": "It updates itself, with no Windows warnings. The GitHub installer (.exe) is the alternative.",
         "badges": "Open source · Free · No ads", "version": "Version",
         "shots_title": "Take a look", "shot_home": "Home screen, light mode", "shot_home_dark": "Home screen, dark mode",
         "shot_editor": "Editor: double-click any text to change it with its own font",
@@ -153,7 +173,12 @@ T = {
                         "you can type a web address, and that page is then downloaded to convert it.",
         "privacy_points": ["Works offline", "No accounts or sign-ups", "No trackers or ads",
                            "Open source: anyone can review it"],
-        "install_title": "Installation", "install_steps": [
+        "install_title": "Installation",
+        "install_store": "<strong>From the Microsoft Store (recommended):</strong> open "
+                         "<a href=\"{store}\">Pliegue's Store page</a> and install it from there. It updates "
+                         "itself and Windows does not show the SmartScreen warning.",
+        "install_alt": "With the GitHub installer (alternative)",
+        "install_steps": [
             "Download <strong>Pliegue_Setup.exe</strong> with the button above.",
             "Run it. If Windows shows \"Windows protected your PC\", click <strong>More info</strong> and then "
             "<strong>Run anyway</strong>.",
@@ -161,7 +186,7 @@ T = {
         "smartscreen_why": "Why does that warning appear? The installer has no paid code-signing certificate "
                            "(they cost hundreds of dollars a year), so Windows does not recognize the publisher. "
                            "It does not mean it has a virus: the code is public and you can check that the file "
-                           "is the original with its SHA-256.",
+                           "is the original with its SHA-256. The Microsoft Store version does not show this warning.",
         "ss_title": "Windows protected your PC",
         "ss_body": "Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this "
                    "app might put your PC at risk.",
@@ -175,6 +200,10 @@ T = {
                                            "if you type a web address."),
             ("Which Windows versions are supported?", "Windows 10 and Windows 11, 64-bit. Word, PowerPoint or "
              "LibreOffice are optional: they improve \"Word to PDF\" and \"PowerPoint to PDF\"."),
+            ("Where should I download it from?", "From the <a href=\"{store}\">Microsoft Store</a>: it updates itself "
+             "and Windows does not show the SmartScreen warning. The GitHub installer (Pliegue_Setup.exe) works "
+             "the same, but since it has no paid code-signing certificate, Windows shows that warning when you "
+             "open it."),
             ("How do I uninstall it?", "Go to <em>Settings → Apps → Installed apps</em>, find Pliegue and choose "
              "<em>Uninstall</em>."),
             ("Where is the source code?", f'On GitHub: <a href="{REPO_URL}">{REPO_URL.replace("https://", "")}</a>. '
@@ -303,8 +332,11 @@ def page(lang: str, version: dict) -> str:
         f'<figure class="shot"><img src="{prefix}img/{name}.webp" width="1280" height="800" loading="lazy" '
         f'decoding="async" alt="{e(t[alt])}"><figcaption>{e(t[cap])}</figcaption></figure>'
         for name, cap, alt in shots)
-    faq = "".join(f"<details><summary>{e(q)}</summary><p>{a}</p></details>" for q, a in t["faq"])
+    store = e(store_link(lang))
+    faq = "".join(f"<details><summary>{e(q)}</summary><p>{a.replace('{store}', store)}</p></details>"
+                  for q, a in t["faq"])
     steps = "".join(f"<li>{s}</li>" for s in t["install_steps"])
+    install_store = t["install_store"].replace("{store}", store)
     points = "".join(f"<li>{e(p)}</li>" for p in t["privacy_points"])
     size = f'{version["size_mb"]} MB · ' if version.get("size_mb") else ""
     sha = version.get("sha256", "")
@@ -351,10 +383,14 @@ def page(lang: str, version: dict) -> str:
         <img class="hero-icon" src="{prefix}assets/icon-192.png" width="96" height="96" alt="">
         <h1>{e(t['hero_title'])}</h1>
         <p class="lead">{e(t['hero_sub'])}</p>
-        <a class="btn-download" href="{DOWNLOAD_URL}">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-          {e(t['download'])}
-        </a>
+        <div class="get">
+          {store_badge(lang, prefix)}
+          <a class="btn-download btn-alt" href="{DOWNLOAD_URL}">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            {e(t['download'])}
+          </a>
+        </div>
+        <p class="get-note"><strong>{e(t['store_reco'])}</strong> {e(t['store_why'])}</p>
         <p class="meta"><span>{e(t['version'])} <span data-version>{e(version['version'])}</span></span> ·
           <span data-size>{e(size)}</span><span>{e(t['for'])}</span></p>
         <p class="badges">{e(t['badges'])}</p>
@@ -394,6 +430,9 @@ def page(lang: str, version: dict) -> str:
     <div class="wrap install-grid">
       <div>
         <h2 id="instalacion-titulo">{e(t['install_title'])}</h2>
+        <p class="install-store">{install_store}</p>
+        <div class="install-badge">{store_badge(lang, prefix)}</div>
+        <h3 class="install-alt">{e(t['install_alt'])}</h3>
         <ol class="steps">{steps}</ol>
         <p class="note">{e(t['smartscreen_why'])}</p>
         <p class="sha"><span>{e(t['sha_label'])}</span> <code data-sha>{e(sha or '—')}</code></p>
@@ -422,6 +461,20 @@ def page(lang: str, version: dict) -> str:
 </body>
 </html>
 """
+
+
+def store_link(lang: str) -> str:
+    return f"{STORE_URL}?hl={STORE_BADGE[lang][3]}"
+
+
+def store_badge(lang: str, prefix: str) -> str:
+    """Badge oficial de la Microsoft Store enlazado a la ficha: el oscuro con el tema claro y el
+    claro con el tema oscuro (las clases on-light/on-dark siguen el tema, como el logo)."""
+    dark, light, label, _hl = STORE_BADGE[lang]
+    w, h = STORE_BADGE_SIZE
+    return (f'<a class="store-badge" href="{html.escape(store_link(lang))}">'
+            f'<img class="on-light" src="{prefix}assets/store/{dark}" width="{w}" height="{h}" alt="{label}">'
+            f'<img class="on-dark" src="{prefix}assets/store/{light}" width="{w}" height="{h}" alt="{label}"></a>')
 
 
 def topbar(lang: str, prefix: str, home: str, other: str) -> str:

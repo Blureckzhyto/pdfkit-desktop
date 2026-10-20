@@ -63,10 +63,14 @@
         <img class="hero-icon" src="../assets/icon-192.png" width="96" height="96" alt="">
         <h1>All your PDF tools, offline</h1>
         <p class="lead">Merge, split, compress, convert, edit and sign your PDFs on your own computer. Fast, private and ad-free.</p>
-        <a class="btn-download" href="https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-          Download for Windows
-        </a>
+        <div class="get">
+          <a class="store-badge" href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=en-us"><img class="on-light" src="../assets/store/badge-en-dark.svg" width="176" height="48" alt="Download from the Microsoft Store"><img class="on-dark" src="../assets/store/badge-en-light.svg" width="176" height="48" alt="Download from the Microsoft Store"></a>
+          <a class="btn-download btn-alt" href="https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            Download installer (.exe)
+          </a>
+        </div>
+        <p class="get-note"><strong>Recommended: Microsoft Store.</strong> It updates itself, with no Windows warnings. The GitHub installer (.exe) is the alternative.</p>
         <p class="meta"><span>Version <span data-version>1.4.0</span></span> ·
           <span data-size>211 MB · </span><span>Windows 10/11 · 64-bit</span></p>
         <p class="badges">Open source · Free · No ads</p>
@@ -106,8 +110,11 @@
     <div class="wrap install-grid">
       <div>
         <h2 id="instalacion-titulo">Installation</h2>
+        <p class="install-store"><strong>From the Microsoft Store (recommended):</strong> open <a href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=en-us">Pliegue's Store page</a> and install it from there. It updates itself and Windows does not show the SmartScreen warning.</p>
+        <div class="install-badge"><a class="store-badge" href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=en-us"><img class="on-light" src="../assets/store/badge-en-dark.svg" width="176" height="48" alt="Download from the Microsoft Store"><img class="on-dark" src="../assets/store/badge-en-light.svg" width="176" height="48" alt="Download from the Microsoft Store"></a></div>
+        <h3 class="install-alt">With the GitHub installer (alternative)</h3>
         <ol class="steps"><li>Download <strong>Pliegue_Setup.exe</strong> with the button above.</li><li>Run it. If Windows shows "Windows protected your PC", click <strong>More info</strong> and then <strong>Run anyway</strong>.</li><li>Follow the wizard. Pliegue is added to the Start menu and the Desktop.</li></ol>
-        <p class="note">Why does that warning appear? The installer has no paid code-signing certificate (they cost hundreds of dollars a year), so Windows does not recognize the publisher. It does not mean it has a virus: the code is public and you can check that the file is the original with its SHA-256.</p>
+        <p class="note">Why does that warning appear? The installer has no paid code-signing certificate (they cost hundreds of dollars a year), so Windows does not recognize the publisher. It does not mean it has a virus: the code is public and you can check that the file is the original with its SHA-256. The Microsoft Store version does not show this warning.</p>
         <p class="sha"><span>Installer SHA-256:</span> <code data-sha>a6c6ab8934bc8e6e5f8bbca4861c9cafc61140c290732af2cbb275e335799bfb</code></p>
       </div>
       <figure class="smartscreen" aria-label="Windows protected your PC">
@@ -126,7 +133,7 @@
   <section class="section" id="preguntas" aria-labelledby="preguntas-titulo">
     <div class="wrap narrow">
       <h2 id="preguntas-titulo">Frequently asked questions</h2>
-      <div class="faq"><details><summary>Is it free?</summary><p>Yes, completely free and ad-free. It is free software under the AGPL-3.0 license.</p></details><details><summary>Does it need the internet?</summary><p>No. Every tool works offline. Only "HTML a PDF" uses the internet if you type a web address.</p></details><details><summary>Which Windows versions are supported?</summary><p>Windows 10 and Windows 11, 64-bit. Word, PowerPoint or LibreOffice are optional: they improve "Word to PDF" and "PowerPoint to PDF".</p></details><details><summary>How do I uninstall it?</summary><p>Go to <em>Settings → Apps → Installed apps</em>, find Pliegue and choose <em>Uninstall</em>.</p></details><details><summary>Where is the source code?</summary><p>On GitHub: <a href="https://github.com/Blureckzhyto/pliegue">github.com/Blureckzhyto/pliegue</a>. You can review it, build it yourself and suggest improvements.</p></details><details><summary>Is the app in English?</summary><p>The app interface is in Spanish. This page is available in both languages.</p></details></div>
+      <div class="faq"><details><summary>Is it free?</summary><p>Yes, completely free and ad-free. It is free software under the AGPL-3.0 license.</p></details><details><summary>Does it need the internet?</summary><p>No. Every tool works offline. Only "HTML a PDF" uses the internet if you type a web address.</p></details><details><summary>Which Windows versions are supported?</summary><p>Windows 10 and Windows 11, 64-bit. Word, PowerPoint or LibreOffice are optional: they improve "Word to PDF" and "PowerPoint to PDF".</p></details><details><summary>Where should I download it from?</summary><p>From the <a href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=en-us">Microsoft Store</a>: it updates itself and Windows does not show the SmartScreen warning. The GitHub installer (Pliegue_Setup.exe) works the same, but since it has no paid code-signing certificate, Windows shows that warning when you open it.</p></details><details><summary>How do I uninstall it?</summary><p>Go to <em>Settings → Apps → Installed apps</em>, find Pliegue and choose <em>Uninstall</em>.</p></details><details><summary>Where is the source code?</summary><p>On GitHub: <a href="https://github.com/Blureckzhyto/pliegue">github.com/Blureckzhyto/pliegue</a>. You can review it, build it yourself and suggest improvements.</p></details><details><summary>Is the app in English?</summary><p>The app interface is in Spanish. This page is available in both languages.</p></details></div>
     </div>
   </section>
 </main>

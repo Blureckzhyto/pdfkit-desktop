@@ -8,7 +8,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe"><b>⬇ Descargar para Windows · Download for Windows</b></a>
+  <a href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=es-mx"><img src="docs/assets/store/badge-es-dark.svg" alt="Descargar desde Microsoft Store" height="48"></a>
+  <a href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=en-us"><img src="docs/assets/store/badge-en-dark.svg" alt="Download from the Microsoft Store" height="48"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe"><b>⬇ Instalador (.exe) · Installer (.exe)</b></a>
   ·
   <a href="https://blureckzhyto.github.io/pliegue/">Página · Website</a>
   ·
@@ -46,6 +51,11 @@ Es gratis, de código abierto y sin anuncios.
 - Modo claro y oscuro.
 
 ### Descarga e instalación
+
+**Recomendado: [Microsoft Store](https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=es-mx).** Se actualiza
+sola y Windows no muestra el aviso de SmartScreen.
+
+Alternativa, con el instalador de GitHub:
 
 1. Descarga **[Pliegue_Setup.exe](https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe)**
    (versión más reciente en [Releases](https://github.com/Blureckzhyto/pliegue/releases)).
@@ -107,6 +117,11 @@ The interface is in Spanish.
 - Light and dark mode.
 
 ### Download and install
+
+**Recommended: [Microsoft Store](https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=en-us).** It updates
+itself and Windows does not show the SmartScreen warning.
+
+Alternatively, with the GitHub installer:
 
 1. Download **[Pliegue_Setup.exe](https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe)**
    (latest version in [Releases](https://github.com/Blureckzhyto/pliegue/releases)).

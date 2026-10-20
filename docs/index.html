@@ -63,10 +63,14 @@
         <img class="hero-icon" src="assets/icon-192.png" width="96" height="96" alt="">
         <h1>Todas tus herramientas PDF, sin internet</h1>
         <p class="lead">Une, divide, comprime, convierte, edita y firma tus PDFs en tu propia computadora. Rápido, privado y sin anuncios.</p>
-        <a class="btn-download" href="https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-          Descargar para Windows
-        </a>
+        <div class="get">
+          <a class="store-badge" href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=es-mx"><img class="on-light" src="assets/store/badge-es-dark.svg" width="176" height="48" alt="Descargar desde Microsoft Store"><img class="on-dark" src="assets/store/badge-es-light.svg" width="176" height="48" alt="Descargar desde Microsoft Store"></a>
+          <a class="btn-download btn-alt" href="https://github.com/Blureckzhyto/pliegue/releases/latest/download/Pliegue_Setup.exe">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            Descargar instalador (.exe)
+          </a>
+        </div>
+        <p class="get-note"><strong>Recomendado: Microsoft Store.</strong> Se actualiza sola y sin avisos de Windows. El instalador de GitHub (.exe) queda como alternativa.</p>
         <p class="meta"><span>Versión <span data-version>1.4.0</span></span> ·
           <span data-size>211 MB · </span><span>Windows 10/11 · 64 bits</span></p>
         <p class="badges">Código abierto · Gratis · Sin anuncios</p>
@@ -106,8 +110,11 @@
     <div class="wrap install-grid">
       <div>
         <h2 id="instalacion-titulo">Instalación</h2>
+        <p class="install-store"><strong>Con la Microsoft Store (recomendado):</strong> abre la <a href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=es-mx">ficha de Pliegue</a> e instálala desde ahí. Se actualiza sola y no aparece el aviso de SmartScreen de Windows.</p>
+        <div class="install-badge"><a class="store-badge" href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=es-mx"><img class="on-light" src="assets/store/badge-es-dark.svg" width="176" height="48" alt="Descargar desde Microsoft Store"><img class="on-dark" src="assets/store/badge-es-light.svg" width="176" height="48" alt="Descargar desde Microsoft Store"></a></div>
+        <h3 class="install-alt">Con el instalador de GitHub (alternativa)</h3>
         <ol class="steps"><li>Descarga <strong>Pliegue_Setup.exe</strong> con el botón de arriba.</li><li>Ábrelo. Si Windows muestra (Windows protegió su PC), haz clic en <strong>Más información</strong> y luego en <strong>Ejecutar de todas formas</strong>.</li><li>Sigue el asistente. Pliegue queda en el menú Inicio y en el Escritorio.</li></ol>
-        <p class="note">¿Por qué aparece ese aviso? El instalador no tiene una firma digital de pago (cuesta cientos de dólares al año), así que Windows no reconoce al autor. No significa que tenga virus: el código es público y puedes comprobar que el archivo es el original con su SHA-256.</p>
+        <p class="note">¿Por qué aparece ese aviso? El instalador no tiene una firma digital de pago (cuesta cientos de dólares al año), así que Windows no reconoce al autor. No significa que tenga virus: el código es público y puedes comprobar que el archivo es el original con su SHA-256. Con la Microsoft Store no aparece este aviso.</p>
         <p class="sha"><span>SHA-256 del instalador:</span> <code data-sha>a6c6ab8934bc8e6e5f8bbca4861c9cafc61140c290732af2cbb275e335799bfb</code></p>
       </div>
       <figure class="smartscreen" aria-label="Windows protegió su PC">
@@ -126,7 +133,7 @@
   <section class="section" id="preguntas" aria-labelledby="preguntas-titulo">
     <div class="wrap narrow">
       <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
-      <div class="faq"><details><summary>¿Es gratis?</summary><p>Sí, completamente gratis y sin anuncios. Es software libre con licencia AGPL-3.0.</p></details><details><summary>¿Necesita internet?</summary><p>No. Todas las herramientas funcionan sin conexión. Solo (HTML a PDF) usa internet si tú escribes la dirección de una página web.</p></details><details><summary>¿En qué versiones de Windows funciona?</summary><p>En Windows 10 y Windows 11 de 64 bits. Word, PowerPoint o LibreOffice son opcionales: mejoran (Word a PDF) y (PowerPoint a PDF).</p></details><details><summary>¿Cómo lo desinstalo?</summary><p>En <em>Configuración → Aplicaciones → Aplicaciones instaladas</em>, busca Pliegue y elige <em>Desinstalar</em>.</p></details><details><summary>¿Dónde está el código fuente?</summary><p>En GitHub: <a href="https://github.com/Blureckzhyto/pliegue">github.com/Blureckzhyto/pliegue</a>. Puedes revisarlo, compilarlo tú mismo y proponer mejoras.</p></details><details><summary>¿Está en otros idiomas?</summary><p>La aplicación está en español. Esta página también está en inglés.</p></details></div>
+      <div class="faq"><details><summary>¿Es gratis?</summary><p>Sí, completamente gratis y sin anuncios. Es software libre con licencia AGPL-3.0.</p></details><details><summary>¿Necesita internet?</summary><p>No. Todas las herramientas funcionan sin conexión. Solo (HTML a PDF) usa internet si tú escribes la dirección de una página web.</p></details><details><summary>¿En qué versiones de Windows funciona?</summary><p>En Windows 10 y Windows 11 de 64 bits. Word, PowerPoint o LibreOffice son opcionales: mejoran (Word a PDF) y (PowerPoint a PDF).</p></details><details><summary>¿Dónde conviene descargarlo?</summary><p>En la <a href="https://apps.microsoft.com/detail/9PB6SBF3HZVN?hl=es-mx">Microsoft Store</a>: se actualiza sola y Windows no muestra el aviso de SmartScreen. El instalador de GitHub (Pliegue_Setup.exe) funciona igual, pero como no tiene una firma digital de pago, Windows muestra ese aviso al abrirlo.</p></details><details><summary>¿Cómo lo desinstalo?</summary><p>En <em>Configuración → Aplicaciones → Aplicaciones instaladas</em>, busca Pliegue y elige <em>Desinstalar</em>.</p></details><details><summary>¿Dónde está el código fuente?</summary><p>En GitHub: <a href="https://github.com/Blureckzhyto/pliegue">github.com/Blureckzhyto/pliegue</a>. Puedes revisarlo, compilarlo tú mismo y proponer mejoras.</p></details><details><summary>¿Está en otros idiomas?</summary><p>La aplicación está en español. Esta página también está en inglés.</p></details></div>
     </div>
   </section>
 </main>

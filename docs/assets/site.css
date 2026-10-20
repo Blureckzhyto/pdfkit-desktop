@@ -85,6 +85,24 @@ h3 { font-size: 1.05rem; margin: 0 0 12px; font-weight: 600; }
   box-shadow: 0 6px 18px color-mix(in srgb, var(--btn) 35%, transparent); transition: background .15s, transform .15s; }
 .btn-download:hover { background: var(--btn-hover); transform: translateY(-1px); }
 .btn-download svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+/* Microsoft Store (recomendada) + instalador de GitHub */
+.get { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.store-badge { display: inline-flex; border-radius: 6px; }
+.store-badge img { width: 176px; height: 48px; }
+.on-dark { display: none !important; }
+:root[data-theme="dark"] .on-light { display: none !important; }
+:root[data-theme="dark"] .on-dark { display: block !important; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .on-light { display: none !important; }
+  :root:not([data-theme="light"]) .on-dark { display: block !important; }
+}
+.btn-alt { background: transparent; color: var(--text); border: 1px solid var(--border-strong); box-shadow: none;
+  font-size: .95rem; padding: 12px 18px; border-radius: 10px; gap: 8px; }
+.btn-alt:hover { background: var(--bg-alt); }
+.get-note { color: var(--text-2); margin: 14px 0 0; font-size: .95rem; max-width: 36em; }
+.install-store { margin: 0 0 14px; }
+.install-badge { margin: 0 0 8px; }
+.install-alt { margin: 28px 0 10px; font-size: 1.05rem; }
 .meta { color: var(--text-2); margin: 14px 0 4px; font-size: .95rem; }
 .badges { color: var(--muted); font-size: .9rem; margin: 0; font-weight: 600; }
 .hero-shot { border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--border); }
@@ -168,5 +186,7 @@ h3 { font-size: 1.05rem; margin: 0 0 12px; font-weight: 600; }
   .privacy { grid-template-columns: 1fr; gap: 16px; }
   .checks { grid-template-columns: 1fr; }
   .btn-download { width: 100%; justify-content: center; }
+  .get { flex-direction: column; align-items: stretch; }
+  .get .store-badge { justify-content: center; }
   .smartscreen figcaption { flex-direction: column; }
 }
