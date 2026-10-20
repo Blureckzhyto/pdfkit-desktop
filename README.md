@@ -31,7 +31,7 @@
 
 ## Español
 
-Pliegue es una caja de herramientas de PDF e imágenes para Windows, al estilo de iLovePDF,
+Pliegue es una caja de herramientas de PDF e imágenes para Windows
 que funciona **completamente sin internet**: tus archivos nunca salen de tu computadora.
 Es gratis, de código abierto y sin anuncios.
 
@@ -97,7 +97,7 @@ Poppler, Tesseract, WeasyPrint, fuentes libres, iconos Lucide y otros): ver
 
 ## English
 
-Pliegue is an iLovePDF-style PDF and image toolbox for Windows that works **completely
+Pliegue is a PDF and image toolbox for Windows that works **completely
 offline**: your files never leave your computer. It is free, open source and ad-free.
 The interface is in Spanish.
 

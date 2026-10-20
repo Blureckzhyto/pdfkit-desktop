@@ -141,7 +141,6 @@ T = {
         ],
         "footer_license": "Licencia AGPL-3.0", "footer_third": "Licencias de terceros",
         "footer_repo": "Código fuente en GitHub", "footer_changelog": "Cambios",
-        "footer_note": "Pliegue no está relacionado con iLovePDF.",
         "footer_privacy": "Política de privacidad", "privacy_file": "privacidad.html",
         "other_lang": "English", "other_lang_code": "en",
     },
@@ -212,7 +211,6 @@ T = {
         ],
         "footer_license": "AGPL-3.0 license", "footer_third": "Third-party licenses",
         "footer_repo": "Source code on GitHub", "footer_changelog": "Changelog",
-        "footer_note": "Pliegue is not affiliated with iLovePDF.",
         "footer_privacy": "Privacy policy", "privacy_file": "privacy.html",
         "other_lang": "Español", "other_lang_code": "es",
     },
@@ -521,7 +519,6 @@ def footer(lang: str, version: dict, prefix: str) -> str:
       <a href="{REPO_URL}/blob/main/CHANGELOG.md">{e(t['footer_changelog'])}</a>
       <a href="{t['privacy_file']}">{e(t['footer_privacy'])}</a>
     </nav>
-    <p class="fine">{e(t['footer_note'])}</p>
   </div>
 </footer>
 <script src="{prefix}assets/site.js" defer></script>"""
