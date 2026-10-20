@@ -93,7 +93,9 @@ Sin cuentas, anuncios ni rastreadores
 Gratis y de código abierto (AGPL-3.0)
 ```
 
-## Términos de búsqueda (7)
+## Términos de búsqueda (6)
+
+No usar nombres de otros productos (por ejemplo «PDF a Word»): la Store lo rechazó por la política 10.1.3.
 
 ```
 PDF
@@ -101,7 +103,6 @@ unir PDF
 dividir PDF
 comprimir PDF
 editar PDF
-PDF a Word
 OCR
 ```
 

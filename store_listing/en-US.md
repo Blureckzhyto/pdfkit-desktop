@@ -95,7 +95,9 @@ No accounts, ads or trackers
 Free and open source (AGPL-3.0)
 ```
 
-## Search terms (7)
+## Search terms (6)
+
+Don't use other product titles (e.g. "PDF to Word"): the Store rejected it under policy 10.1.3.
 
 ```
 PDF
@@ -103,7 +105,6 @@ merge PDF
 split PDF
 compress PDF
 edit PDF
-PDF to Word
 OCR
 ```
 
